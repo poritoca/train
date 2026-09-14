@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07131f">
+  <title>駅間ナビ</title>
+  <style>
+    :root{--bg:#06111c;--card:#0d2030;--card2:#10293d;--ink:#f3f8fb;--muted:#9bb2c3;--cyan:#36d6d0;--lime:#c9f45d;--orange:#ffb85c;--red:#ff6b70;--line:#29465a;--shadow:0 16px 44px #0007}
+    *{box-sizing:border-box}html{color-scheme:dark;font-family:Inter,"Hiragino Sans","Yu Gothic UI",sans-serif;background:var(--bg)}body{margin:0;min-height:100vh;background:radial-gradient(circle at 85% 0,#123b55 0,transparent 30rem),linear-gradient(160deg,#06111c,#081925 55%,#06111c);color:var(--ink)}button,input,textarea{font:inherit}button{cursor:pointer}
+    .app{width:min(720px,100%);margin:auto;padding:max(18px,env(safe-area-inset-top)) 16px max(30px,env(safe-area-inset-bottom))}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.brand{font-weight:900;letter-spacing:.08em}.live{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}.dot.on{background:var(--lime);box-shadow:0 0 12px var(--lime)}
+    .card{background:linear-gradient(145deg,#10283bde,#0a1b29ed);border:1px solid #28475c;border-radius:24px;box-shadow:var(--shadow);padding:20px;margin-bottom:14px}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.16em}.next{font-size:clamp(38px,12vw,68px);font-weight:950;letter-spacing:-.05em;line-height:1.05;margin:6px 0 10px}.next small{font-size:.27em;color:var(--muted);letter-spacing:.03em;margin-left:8px}.eta{display:flex;gap:8px;flex-wrap:wrap}.pill{background:#071520;border:1px solid #29475a;border-radius:100px;padding:8px 12px;font-size:13px;color:#cfe0e9}.pill strong{color:var(--ink)}
+    .routeHead{display:flex;justify-content:space-between;align-items:center;gap:10px}.station{font-weight:850;font-size:18px}.arrow{color:var(--muted);padding:0 6px}.track{position:relative;display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin:34px 2px 13px}.seg{height:12px;border-radius:4px;background:#294355;transition:.35s}.seg.done{background:linear-gradient(90deg,var(--cyan),var(--lime));box-shadow:0 0 12px #36d6d055}.train{position:absolute;top:-30px;transform:translateX(-50%);font-size:20px;transition:left .65s ease}.labels{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.progressText{text-align:center;margin-top:11px;color:#cfe0e9;font-weight:700}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{padding:13px 8px;text-align:center;background:#081925;border-radius:16px}.stat b{display:block;font-size:18px}.stat span{font-size:11px;color:var(--muted)}
+    .controls{display:grid;grid-template-columns:1fr 1fr;gap:10px}.primary,.secondary{border:0;border-radius:16px;padding:15px;font-weight:900}.primary{background:var(--lime);color:#12200a}.secondary{background:#17364a;color:var(--ink);border:1px solid #335a70}.wide{grid-column:1/-1}.danger{color:#ffc4c6}.notice{display:none;border:1px solid #a86924;background:#3a2814;color:#ffd9a9;border-radius:16px;padding:12px;margin-bottom:14px;font-size:13px}.notice.show{display:block}
+    details{margin-top:14px}summary{cursor:pointer;color:#c9d8e1;font-weight:750;padding:8px 2px}.settings{padding-top:8px}.settingRow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #244052}.toggle{accent-color:var(--lime);width:20px;height:20px}.stationsInput{width:100%;min-height:150px;background:#06131e;color:#dceaf1;border:1px solid #315167;border-radius:14px;padding:12px;resize:vertical;font-family:ui-monospace,monospace;font-size:12px}.help{color:var(--muted);font-size:12px;line-height:1.65}.history{list-style:none;margin:8px 0 0;padding:0;max-height:220px;overflow:auto}.history li{display:flex;justify-content:space-between;border-bottom:1px solid #203b4d;padding:11px 2px;color:#d7e4eb}.history time{color:var(--lime);font-variant-numeric:tabular-nums}.empty{color:var(--muted)}.footer{text-align:center;color:#70899a;font-size:11px;line-height:1.6;padding:8px 10px}
+    @media(max-width:430px){.card{border-radius:20px;padding:17px}.stats{gap:5px}.stat b{font-size:15px}.routeHead{font-size:13px}.station{font-size:16px}}
+  </style>
+</head>
+<body>
+<main class="app">
+  <header class="top"><div class="brand">EKIKAN / 駅間ナビ</div><div class="live"><i id="liveDot" class="dot"></i><span id="updateLabel">待機中</span></div></header>
+  <div id="notice" class="notice" role="alert"></div>
+  <section class="card" aria-live="polite">
+    <div class="eyebrow">NEXT STOP</div>
+    <div class="next"><span id="nextName">—</span><small>次の停車駅</small></div>
+    <div class="eta"><span class="pill">残り <strong id="remaining">—</strong></span><span class="pill">到着予測 <strong id="eta">—</strong></span><span class="pill">GPS精度 <strong id="accuracy">—</strong></span></div>
+  </section>
+  <section class="card">
+    <div class="routeHead"><span id="prevName" class="station">—</span><span class="arrow">→ 現在地 →</span><span id="routeNext" class="station">—</span></div>
+    <div id="track" class="track"><div id="train" class="train">●</div></div>
+    <div class="labels"><span>前の駅</span><span>10区間</span><span>次の駅</span></div>
+    <div id="progressText" class="progressText">GPSを開始してください</div>
+  </section>
+  <section class="card stats">
+    <div class="stat"><b id="passedAt">—</b><span>前駅の通過時刻</span></div><div class="stat"><b id="speed">—</b><span>速度 km/h</span></div><div class="stat"><b id="distance">—</b><span>次駅まで</span></div>
+  </section>
+  <section class="card">
+    <div class="controls"><button id="startBtn" class="primary wide">現在地の追跡を開始</button><button id="reverseBtn" class="secondary">方向を反転</button><button id="manualBtn" class="secondary">次駅を通過</button><button id="demoBtn" class="secondary wide">デモ移動で確認</button></div>
+    <details><summary>設定・駅リスト</summary><div class="settings">
+      <label class="settingRow"><span>次駅接近時に音声案内</span><input id="voiceToggle" class="toggle" type="checkbox" checked></label>
+      <label class="settingRow"><span>追跡中の画面スリープを防ぐ</span><input id="wakeToggle" class="toggle" type="checkbox" checked></label>
+      <p class="help">1行につき「駅名,緯度,経度」。走行順に並べて保存します。駅通過は駅から250m以内、または次の駅間へ進んだときに自動判定します。</p>
+      <textarea id="stationsInput" class="stationsInput" spellcheck="false"></textarea>
+      <button id="saveStationsBtn" class="secondary wide" style="width:100%;margin-top:8px">駅リストを保存</button>
+    </div></details>
+  </section>
+  <section class="card"><div class="routeHead"><strong>通過履歴</strong><button id="clearBtn" class="secondary danger" style="padding:8px 12px">消去</button></div><ul id="history" class="history"><li class="empty">まだ記録はありません</li></ul></section>
+  <p class="footer">位置情報は端末内だけで処理され、外部へ送信されません。GPSは屋内・地下・高速移動時にずれることがあります。実際の車内案内を優先してください。</p>
+</main>
+<script>
+(()=>{'use strict';
+const DEFAULT=[['横浜',35.465981,139.622038],['川崎',35.531311,139.696837],['品川',35.628471,139.73876],['新橋',35.666195,139.758587]];
+const $=id=>document.getElementById(id), R=6371000, key='ekikan-v1';
+let stations=[],idx=0,watchId=null,lastFix=null,lastUpdate=0,lastGpsRender=0,lastAnnounced='',demoTimer=null,wakeLock=null,history=[];
+const els={notice:$('notice'),dot:$('liveDot'),update:$('updateLabel'),next:$('nextName'),prev:$('prevName'),routeNext:$('routeNext'),remain:$('remaining'),eta:$('eta'),acc:$('accuracy'),track:$('track'),train:$('train'),progress:$('progressText'),passed:$('passedAt'),speed:$('speed'),distance:$('distance'),input:$('stationsInput'),history:$('history')};
+function load(){try{const s=JSON.parse(localStorage.getItem(key)||'{}');stations=s.stations||DEFAULT;idx=Math.min(s.idx||0,stations.length-2);history=s.history||[];$('voiceToggle').checked=s.voice!==false;$('wakeToggle').checked=s.wake!==false}catch{stations=DEFAULT}els.input.value=stations.map(x=>x.join(',')).join('\n');renderHistory();renderBase();}
+function save(){localStorage.setItem(key,JSON.stringify({stations,idx,history,voice:$('voiceToggle').checked,wake:$('wakeToggle').checked}))}
+function rad(x){return x*Math.PI/180}function dist(a,b){const dLat=rad(b[1]-a[1]),dLon=rad(b[2]-a[2]),q=Math.sin(dLat/2)**2+Math.cos(rad(a[1]))*Math.cos(rad(b[1]))*Math.sin(dLon/2)**2;return 2*R*Math.asin(Math.sqrt(q))}
+function project(p,a,b){const lat0=rad((a[1]+b[1]+p[1])/3),x=v=>rad(v[2])*Math.cos(lat0)*R,y=v=>rad(v[1])*R,abx=x(b)-x(a),aby=y(b)-y(a),apx=x(p)-x(a),apy=y(p)-y(a),den=abx*abx+aby*aby;const raw=den?(apx*abx+apy*aby)/den:0,t=Math.max(0,Math.min(1,raw)),cx=x(a)+t*abx,cy=y(a)+t*aby;return{t,raw,off:Math.hypot(x(p)-cx,y(p)-cy)}}
+function renderBase(){if(stations.length<2)return;els.prev.textContent=stations[idx][0];els.routeNext.textContent=stations[idx+1][0];els.next.textContent=stations[idx+1][0];els.passed.textContent=history.findLast?.(h=>h.name===stations[idx][0])?.time||'—';if(!els.track.querySelector('.seg')){for(let i=0;i<10;i++){const e=document.createElement('span');e.className='seg';els.track.insertBefore(e,els.train)}}setProgress(0);}
+function setProgress(p){p=Math.max(0,Math.min(1,p));const section=Math.min(10,Math.floor(p*10)+1);[...els.track.querySelectorAll('.seg')].forEach((e,i)=>e.classList.toggle('done',i<p*10));els.train.style.left=`${p*100}%`;els.progress.textContent=p?`10区間中 ${section} 区間目 ・ ${Math.round(p*100)}%`:'前の駅を出発';}
+function fmt(m){return m<1000?`${Math.round(m)} m`:`${(m/1000).toFixed(1)} km`}function time(){return new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
+function notice(msg,bad=false){els.notice.textContent=msg;els.notice.classList.add('show');els.notice.style.borderColor=bad?'#a84449':'#a86924';clearTimeout(notice.t);notice.t=setTimeout(()=>els.notice.classList.remove('show'),6000)}
+function passStation(auto=true){if(idx>=stations.length-2){notice('終点に到着しました');record(stations.at(-1)[0]);return}record(stations[idx+1][0]);idx++;save();renderBase();if(auto)announce(`${stations[idx][0]}を通過。次は${stations[idx+1][0]}です`);navigator.vibrate?.([120,80,120]);}
+function record(name){if(history[0]?.name===name&&Date.now()-history[0].ts<60000)return;history.unshift({name,time:time(),ts:Date.now()});history=history.slice(0,50);renderHistory();save()}
+function renderHistory(){els.history.innerHTML=history.length?history.map(h=>`<li><span>${escapeHtml(h.name)}</span><time>${h.time}</time></li>`).join(''):'<li class="empty">まだ記録はありません</li>'}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function announce(s){if(!$('voiceToggle').checked||!('speechSynthesis'in window))return;speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(s))}
+async function update(pos){lastUpdate=Date.now();els.dot.classList.add('on');els.update.textContent=`${time()} 更新`;const c=pos.coords,p=['現在地',c.latitude,c.longitude],a=stations[idx],b=stations[idx+1],pr=project(p,a,b),toNext=dist(p,b),kmh=Number.isFinite(c.speed)?Math.max(0,c.speed*3.6):lastFix?dist(lastFix.p,p)/((pos.timestamp-lastFix.t)/1000)*3.6:NaN;lastFix={p,t:pos.timestamp};setProgress(pr.t);els.remain.textContent=fmt(toNext);els.distance.textContent=fmt(toNext);els.acc.textContent=`±${Math.round(c.accuracy)}m`;els.speed.textContent=Number.isFinite(kmh)?kmh.toFixed(0):'—';els.eta.textContent=Number.isFinite(kmh)&&kmh>3?new Date(Date.now()+toNext/(kmh/3.6)*1000).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}):'計算中';if(pr.off>2000)notice(`路線から約${fmt(pr.off)}離れています。駅リストや進行方向を確認してください。`,true);if(toNext<250||pr.raw>1.03)passStation();else if(toNext<1000&&lastAnnounced!==b[0]){lastAnnounced=b[0];announce(`まもなく${b[0]}です。残り${Math.round(toNext/100)*100}メートルです`)} }
+function handleGps(pos){lastUpdate=Date.now();els.dot.classList.add('on');if(!lastGpsRender||Date.now()-lastGpsRender>=10000){lastGpsRender=Date.now();update(pos)}}
+async function start(){if(!navigator.geolocation)return notice('このブラウザは位置情報に対応していません',true);if(watchId!==null){navigator.geolocation.clearWatch(watchId);watchId=null;$('startBtn').textContent='現在地の追跡を開始';els.dot.classList.remove('on');return}lastGpsRender=0;watchId=navigator.geolocation.watchPosition(handleGps,e=>notice(e.code===1?'位置情報が許可されていません。ブラウザ設定を確認してください。':`GPSエラー: ${e.message}`,true),{enableHighAccuracy:true,maximumAge:5000,timeout:15000});$('startBtn').textContent='追跡を停止';if($('wakeToggle').checked&&'wakeLock'in navigator)try{wakeLock=await navigator.wakeLock.request('screen')}catch{} }
+function reverse(){stations.reverse();idx=Math.max(0,stations.length-2-idx);lastFix=null;lastAnnounced='';els.input.value=stations.map(x=>x.join(',')).join('\n');save();renderBase();notice('進行方向を反転しました')}
+function saveStations(){const rows=els.input.value.trim().split(/\n+/).map(r=>r.split(',').map(x=>x.trim()));if(rows.length<2||rows.some(r=>r.length<3||!r[0]||!Number.isFinite(+r[1])||!Number.isFinite(+r[2])))return notice('駅リストの形式を確認してください',true);stations=rows.map(r=>[r[0],+r[1],+r[2]]);idx=0;lastFix=null;save();renderBase();notice(`${stations.length}駅を保存しました`)}
+function demo(){if(demoTimer){clearInterval(demoTimer);demoTimer=null;$('demoBtn').textContent='デモ移動で確認';return}let t=0;$('demoBtn').textContent='デモを停止';demoTimer=setInterval(()=>{if(idx>=stations.length-1){clearInterval(demoTimer);demoTimer=null;return}t+=.055;const a=stations[idx],b=stations[idx+1],lat=a[1]+(b[1]-a[1])*t,lon=a[2]+(b[2]-a[2])*t;update({coords:{latitude:lat,longitude:lon,accuracy:8,speed:18},timestamp:Date.now()});if(t>=1)t=0},700)}
+$('startBtn').onclick=start;$('reverseBtn').onclick=reverse;$('manualBtn').onclick=()=>passStation(false);$('demoBtn').onclick=demo;$('saveStationsBtn').onclick=saveStations;$('clearBtn').onclick=()=>{history=[];save();renderHistory()};$('voiceToggle').onchange=save;$('wakeToggle').onchange=save;document.addEventListener('visibilitychange',async()=>{if(document.visibilityState==='visible'&&watchId!==null&&$('wakeToggle').checked&&'wakeLock'in navigator)try{wakeLock=await navigator.wakeLock.request('screen')}catch{}});setInterval(()=>{if(watchId!==null&&Date.now()-lastUpdate>30000){els.dot.classList.remove('on');els.update.textContent='GPS更新待ち'}},10000);load();
+})();
+</script>
+</body>
+</html>
