@@ -1,7 +1,7 @@
 'use strict';
 // Cache only this app's shell, and keep caches for other GitHub Pages projects intact.
 const PREFIX='ekikan-shell-'+encodeURIComponent(self.registration.scope)+'-';
-const CACHE=PREFIX+'05';
+const CACHE=PREFIX+'06';
 const SHELL=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];
 const urls=SHELL.map(p=>new URL(p,self.registration.scope).href);
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(urls);await self.skipWaiting()})()));
