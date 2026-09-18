@@ -1,0 +1,55 @@
+﻿route_id	route_name	station_count	coverage_kind	label	url
+tokaido	JR 東海道線｜東京〜熱海	21	online_in_app_all_stations	東海道線 全駅簡易版	https://wadattsu261.com/content/jt-tokaidohome-all-info/
+yokosuka	JR 横須賀線｜東京〜久里浜	19	online_in_app_all_stations	横須賀・総武快速線 全駅簡易版	https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/
+keihin	JR 京浜東北・根岸線｜大宮〜大船	47	online_in_app_all_stations	京浜東北・根岸線 全駅簡易版	https://wadattsu261.com/content/jk-keihin-negishiall-info/
+yokohama	JR 横浜線・根岸線直通｜八王子〜大船	32	online_in_app_all_stations	横浜・根岸線 全駅簡易版	https://wadattsu261.com/content/jh-yokohama-negishiall-info/
+shonan_u	JR 湘南新宿ライン｜宇都宮〜逗子	36	online_in_app_all_stations	湘南新宿ライン 全駅簡易版	https://wadattsu261.com/content/js-shonanshinjukuline-all-info/
+shonan_t	JR 湘南新宿ライン｜高崎〜小田原	42	online_in_app_all_stations	湘南新宿ライン 全駅簡易版	https://wadattsu261.com/content/js-shonanshinjukuline-all-info/
+keikyu	京急 本線｜泉岳寺〜浦賀	50	generic_route_list	京急線は路線一覧から確認	https://wadattsu261.com/stationhome-info/
+keikyu_k	京急 久里浜線直通｜泉岳寺〜三崎口	55	generic_route_list	京急線は路線一覧から確認	https://wadattsu261.com/stationhome-info/
+keikyu_a	京急 空港線直通｜横浜〜羽田空港	21	generic_route_list	京急線は路線一覧から確認	https://wadattsu261.com/stationhome-info/
+toyoko	東急東横線・みなとみらい線｜渋谷〜元町・中華街	26	verified_all_stations	東横・みなとみらい線 駅別停車位置一覧	https://wadattsu261.com/ty-tokyutoyokohome-info/
+mm	みなとみらい線｜横浜〜元町・中華街	6	verified_all_stations	東横・みなとみらい線 駅別停車位置一覧	https://wadattsu261.com/ty-tokyutoyokohome-info/
+sotetsu	相鉄 本線｜横浜〜海老名	18	verified_all_stations	相鉄線 駅別停車位置一覧	https://wadattsu261.com/so-sotetsuhome-info/
+izumino	相鉄 いずみ野線直通｜横浜〜湘南台	17	verified_all_stations	相鉄線 駅別停車位置一覧	https://wadattsu261.com/so-sotetsuhome-info/
+blue	横浜市営 ブルーライン｜あざみ野〜湘南台	32	online_in_app_all_stations	ブルーライン 全駅簡易版	https://wadattsu261.com/content/b-bluelinehome-all-info/
+keikyu_z	京急 逗子線直通｜横浜〜逗子・葉山	17	generic_route_list	京急線は路線一覧から確認	https://wadattsu261.com/stationhome-info/
+yamanote	JR 山手線｜環状運転	30	online_in_app_all_stations	山手線 全駅簡易版	https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/
+chuo	JR 中央線快速｜東京〜高尾	24	online_in_app_all_stations	中央線快速 全駅簡易版	https://wadattsu261.com/content/jc-chuorapidhome-all-info/
+chuo_sobu	JR 中央・総武線各停｜三鷹〜千葉	39	online_in_app_all_stations	中央・総武線 全駅簡易版	https://wadattsu261.com/content/jb-chuo-sobuslowhome-all-info/
+sobu	JR 総武線快速｜東京〜千葉	10	online_in_app_all_stations	横須賀・総武快速線 全駅簡易版	https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/
+saikyo	JR 埼京・川越線｜大崎〜川越	24	online_in_app_all_stations	埼京・川越線 全駅簡易版	https://wadattsu261.com/content/ja-saikyo-kawagoehome-all-info/
+joban	JR 常磐線快速｜品川〜取手	13	online_in_app_all_stations	常磐線快速 全駅簡易版	https://wadattsu261.com/content/jj-jobanrapidhome-all-info/
+joban_local	JR 常磐線各停｜綾瀬〜取手	14	generic_route_list	常磐線各停は路線一覧から確認	https://wadattsu261.com/stationhome-info/
+keiyo	JR 京葉線｜東京〜蘇我	18	online_in_app_all_stations	京葉線 全駅簡易版	https://wadattsu261.com/content/je-keiyohome-all-info/
+nambu	JR 南武線｜川崎〜立川	26	online_in_app_all_stations	南武線 全駅簡易版	https://wadattsu261.com/content/jn-nambuhome-all-info/
+musashino	JR 武蔵野線｜府中本町〜西船橋	26	online_in_app_all_stations	武蔵野線 全駅簡易版	https://wadattsu261.com/content/jm-musashinohome-all-info/
+utsunomiya	JR 宇都宮線｜東京〜宇都宮	24	online_in_app_all_stations	宇都宮線 全駅簡易版	https://wadattsu261.com/content/ju-utsunomiyahome-all-info/
+takasaki	JR 高崎線｜東京〜高崎	25	online_in_app_all_stations	高崎線 全駅簡易版	https://wadattsu261.com/content/ju-takasakihome-all-info/
+metro_g	東京メトロ 銀座線｜浅草〜渋谷	19	online_in_app_all_stations	銀座線 全駅簡易版	https://wadattsu261.com/content/g-metroginzahome-all-info/
+metro_m	東京メトロ 丸ノ内線｜池袋〜荻窪	25	online_in_app_all_stations	丸ノ内線 全駅簡易版	https://wadattsu261.com/content/m-metromarunouchihome-all-info/
+metro_h	東京メトロ 日比谷線｜北千住〜中目黒	22	online_in_app_all_stations	日比谷線 全駅簡易版	https://wadattsu261.com/content/h-metrohibiyahome-all-info/
+metro_t	東京メトロ 東西線｜中野〜西船橋	23	online_in_app_all_stations	東西線 全駅簡易版	https://wadattsu261.com/content/t-metrotozaihome-all-info/
+metro_c	東京メトロ 千代田線｜代々木上原〜北綾瀬	20	online_in_app_all_stations	千代田線 全駅簡易版	https://wadattsu261.com/content/c-metrochiyodahome-all-info/
+metro_z	東京メトロ 半蔵門線｜渋谷〜押上	14	online_in_app_all_stations	半蔵門線 全駅簡易版	https://wadattsu261.com/content/z-metrohanzomonhome-all-info/
+metro_n	東京メトロ 南北線｜目黒〜赤羽岩淵	19	online_in_app_all_stations	南北線 全駅簡易版	https://wadattsu261.com/content/n-metronambokuhome-all-info/
+metro_y	東京メトロ 有楽町線｜和光市〜新木場	24	online_in_app_all_stations	有楽町線 全駅簡易版	https://wadattsu261.com/content/y-metroyurakuchohome-all-info/
+metro_f	東京メトロ 副都心線｜和光市〜渋谷	16	verified_all_stations	副都心線 駅別停車位置一覧	https://wadattsu261.com/f-metrofukutoshinhome-info/
+denentoshi	東急 田園都市線｜渋谷〜中央林間	27	online_in_app_all_stations	田園都市線 全駅簡易版	https://wadattsu261.com/content/dt-tokyudenentoshihome-all-info/
+meguro	東急 目黒線｜目黒〜日吉	13	verified_all_stations	東急目黒線・新横浜線 駅別停車位置一覧	https://wadattsu261.com/mg-tokyumegurohome-info/
+odakyu	小田急 小田原線｜新宿〜小田原	47	generic_route_list	小田急線は路線一覧から確認	https://wadattsu261.com/stationhome-info/
+keio	京王線｜新宿〜京王八王子	32	online_in_app_all_stations	京王線 全駅簡易版	https://wadattsu261.com/content/ko-keiohome-all-info/
+seibu_ike	西武 池袋線｜池袋〜飯能	26	online_in_app_all_stations	西武池袋線 全駅簡易版	https://wadattsu261.com/content/si-seibuikebukurohome-all-info/
+tobu_tojo	東武 東上線｜池袋〜小川町	33	online_in_app_all_stations	東武東上線 全駅簡易版	https://wadattsu261.com/content/tj-tobutojohome-all-info/
+keio_new	京王新線｜新宿〜笹塚	4	online_in_app_all_stations	京王線・京王新線 停車位置案内	https://wadattsu261.com/content/ko-keiohome-all-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	東京 山手線 詳細	https://wadattsu261.com/content/tokyo-yamanote-keihinhome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	品川 山手線 詳細	https://wadattsu261.com/content/shinagawa-yamanotehome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	五反田 山手線 詳細	https://wadattsu261.com/content/gotanda-yamanotehome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	恵比寿 山手線 詳細	https://wadattsu261.com/content/ebisu-yamanotehome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	新宿 山手線・中央総武線 詳細	https://wadattsu261.com/content/shinjuku-yamanote-chuoslowhome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	高田馬場 山手線 詳細	https://wadattsu261.com/content/takadanobaba-yamanotehome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	日暮里 JRホーム 詳細	https://wadattsu261.com/content/nippori-joban-yamanote-keihinhome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	上野 山手線・京浜東北線 詳細	https://wadattsu261.com/content/ueno-yamanote-keihinhome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	秋葉原 山手線・京浜東北線 詳細	https://wadattsu261.com/content/akihabara-yamanote-keihinhome-info/
+yamanote	JR 山手線｜環状運転	30	internal_v12	神田 JRホーム 詳細	https://wadattsu261.com/content/kanda-yamanote-keihin-chuorapidhome-info/
+__reader__	Jina Reader API（取得経路）	0	online_parser_transport	公開ページをMarkdownとして取得（匿名利用）	https://r.jina.ai/
