@@ -1,17 +1,26 @@
-駅間ナビ v16 オンライン号車解析 回帰テスト
-PASS 上野サンプル件数 — 8
-PASS 基本号車 — 5
-PASS 設備はコロン以降 — 階段・エスカレーター
-PASS 括弧内号車を別条件へ — [{"car":"1","position":""}]
-PASS 10両編成注記 — 10両編成時
-PASS 号車が設備欄へ漏れない
-PASS 別ホーム注記 — 15番線ホーム到着時
-PASS 当駅止まりを別グループ化 — 当駅止まり(14・15番線ホーム)
-PASS 形式 １０号車：階段 — [{"car":"10","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
-PASS 形式 ５号車前方（１号車前方）：下り階段・下りエスカレーター — [{"car":"5","position":"前方","detail":"下り階段・下りエスカレーター","place":"","direction":"南行:東京方面","altPositions":[{"car":"1","position":"前方"}],"altContext":"掲載元の括弧表記"}]
-PASS 形式 ４・５号車：階段 — [{"car":"4","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""},{"car":"5","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
-PASS 形式 ４号車・５号車：階段 — [{"car":"4","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""},{"car":"5","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
-PASS 形式 ５号車（グリーン車）：階段 — [{"car":"5","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
-PASS 複数番線見出し
+駅間ナビ v17 オンライン号車案内 回帰テスト
 
-TOTAL PASS 14 / FAIL 0
+既存パーサ
+PASS v16の号車/設備解析関数群がバイト一致（今回未変更）
+PASS 上野型「5号車（1号車）」の括弧内別条件解析を保持
+PASS 設備欄へ号車文字列を漏らさない安全処理を保持
+PASS 複数号車・別ホーム・編成差解析を保持
+
+ページ解決 新規テスト（掲載元の横須賀・総武快速線のページ割りを模擬）
+PASS ページリンク3件を抽出
+PASS 新小岩 → 「新小岩〜東京」3ページ目
+PASS 錦糸町 → 「新小岩〜東京」3ページ目
+PASS 東京 → 「新小岩〜東京」3ページ目
+PASS 市川は3ページ目に誤一致しない
+PASS 稲毛 → 「稲毛〜市川」2ページ目
+
+初回取得安定化
+PASS Jina Reader + AllOrigins 第1波
+PASS 第1波失敗後700msの自動第2波
+PASS 第2波タイムアウト延長
+PASS ページ取得Promiseのセッション内共有
+PASS 候補ページ3件単位の並列確認
+PASS 掲載元ページリンク解決失敗時の推定候補フォールバック
+
+結果
+PASS 16 / FAIL 0

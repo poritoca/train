@@ -1,62 +1,71 @@
-駅間ナビ v16 検証結果（上野駅・括弧内号車誤解析修正版）
+駅間ナビ v17 検証結果（初回オンライン取得安定化）
 
-PASS 45/45
+PASS 58/58
 FAIL 0
 
-PASS  ROUTES v15完全保持 — base=30032 new=30032
-PASS  GUIDE_ONLY_ROUTES v15完全保持 — base=4276 new=4276
-PASS  GUIDE_DATA v15完全保持 — base=108736 new=108736
-PASS  GUIDE_SOURCES v15完全保持 — base=6711 new=6711
-PASS  GUIDE_FALLBACK v15完全保持 — base=12592 new=12592
-PASS  GUIDE_ROUTE_FALLBACK v15完全保持 — base=4354 new=4354
-PASS  GUIDE_MAPS v15完全保持 — base=181 new=181
-PASS  station_support.json JSON — stations=902 pairs=0
-PASS  index.html JavaScript syntax
-PASS  sw.js JavaScript syntax
-PASS  旧括弧誤解析regex撤去
-PASS  括弧内別条件解析
-PASS  設備欄はコロン以降
-PASS  表示に別条件ラベル
-PASS  号車だけの設備欄を安全抑止
-PASS  旧動的キャッシュ破棄
-PASS  Service Worker登録16.1
-PASS  Service Worker cache16.1
-PASS  パーサ回帰テスト14/14
-PASS  存在 index.html
-PASS  存在 sw.js
-PASS  存在 manifest.webmanifest
-PASS  存在 icon.svg
-PASS  存在 icon-192.png
-PASS  存在 icon-512.png
-PASS  存在 apple-touch-icon.png
-PASS  存在 README.txt
-PASS  存在 station_coverage_report.txt
-PASS  存在 station_coverage_report.tsv
-PASS  存在 station_support.json
-PASS  存在 all_station_support.txt
-PASS  存在 supported_stations.txt
-PASS  存在 unsupported_stations.txt
-PASS  存在 partially_supported_stations.txt
-PASS  存在 source_inventory.tsv
-PASS  存在 changes.txt
-PASS  存在 validation_report.txt
-PASS  存在 github_pages_fix.txt
-PASS  存在 parser_regression_tests.txt
-PASS  manifest.webmanifest v15バイト一致
-PASS  icon.svg v15バイト一致
-PASS  icon-192.png v15バイト一致
-PASS  icon-512.png v15バイト一致
-PASS  apple-touch-icon.png v15バイト一致
-PASS  デバッグJSなし
+既存データ保持 14/14
+PASS ROUTES v16完全保持
+PASS GUIDE_ONLY_ROUTES v16完全保持
+PASS GUIDE_DATA 189レコード相当の定義ブロックをv16から完全保持
+PASS GUIDE_SOURCES v16完全保持
+PASS GUIDE_FALLBACK v16完全保持
+PASS GUIDE_ROUTE_FALLBACK v16完全保持
+PASS GUIDE_MAPS v16完全保持
+PASS station_support.json は version/generatedAt 以外v16と一致
+PASS guideDynamicParenContext 変更なし
+PASS guideDynamicCarRefs 変更なし
+PASS guideDynamicFacilityEntry 変更なし
+PASS guideDynamicParse 変更なし
+PASS guideDynamicDetailParse 変更なし
+PASS guideDynamicRender 変更なし
 
-固定ファイル名化 検証
----------------------
-PASS 8/8
-PASS  版番号付き一覧・レポートファイル名が0件
-PASS  index.html / sw.js / README等に旧 `_16` ファイル参照が0件
-PASS  sw.js のSHELL 19参照がすべて実在
-PASS  station_support.json / manifest.webmanifest JSON解析成功
-PASS  index.html インラインJavaScript構文チェック成功
-PASS  sw.js JavaScript構文チェック成功
-PASS  index.html / sw.js はファイル名参照を旧名へ戻すと元v16と完全一致
-PASS  主要データ・アイコン等14ファイルは元v16とバイト一致
+初回取得修正 6/6
+PASS 掲載元の実ページリンクを解析する guideDynamicPageLinks を追加
+PASS 「A駅〜B駅」と路線駅順を照合する guideDynamicRangeMatch を追加
+PASS 初回失敗後700msで自動第2波を実行
+PASS 候補ページを3件ずつ並列確認
+PASS ページ取得Promiseをセッション内共有
+PASS 旧「候補URLを1件ずつ順番待ち」処理を撤去
+
+新小岩・錦糸町ページ解決 回帰テスト 6/6
+PASS ページリンク3件を抽出
+PASS 新小岩 → 「新小岩〜東京」3ページ目
+PASS 錦糸町 → 「新小岩〜東京」3ページ目
+PASS 東京 → 「新小岩〜東京」3ページ目
+PASS 市川は3ページ目に誤一致しない
+PASS 稲毛 → 「稲毛〜市川」2ページ目
+
+ファイル・GitHub Pages 28/28
+PASS 固定ファイル名運用を維持
+PASS index.html
+PASS sw.js
+PASS manifest.webmanifest
+PASS icon.svg
+PASS icon-192.png
+PASS icon-512.png
+PASS apple-touch-icon.png
+PASS README.txt
+PASS station_coverage_report.txt
+PASS station_coverage_report.tsv
+PASS station_support.json
+PASS all_station_support.txt
+PASS supported_stations.txt
+PASS unsupported_stations.txt
+PASS partially_supported_stations.txt
+PASS source_inventory.tsv
+PASS changes.txt
+PASS validation_report.txt
+PASS github_pages_fix.txt
+PASS parser_regression_tests.txt
+PASS manifest.webmanifest v16バイト一致
+PASS icon.svg v16バイト一致
+PASS icon-192.png v16バイト一致
+PASS icon-512.png v16バイト一致
+PASS station_coverage_report.tsv v16バイト一致
+PASS source_inventory.tsv v16バイト一致
+PASS Service Worker登録・キャッシュ 17.0
+
+補足
+- 動的キャッシュの名前空間 v16-parser2 は意図的に維持。v16で正常取得済みの駅を無駄に再取得させないため。
+- 「駅から探す」の選択状態キーも互換性維持のため変更していない。
+- 対応駅数や路線定義は今回変更していない。
