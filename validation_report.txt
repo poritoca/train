@@ -1,71 +1,131 @@
-駅間ナビ v17 検証結果（初回オンライン取得安定化）
+駅間ナビ v18 検証結果（方面判定・表記揺れ・初回取得の徹底修正）
 
-PASS 58/58
+PASS 94/94
 FAIL 0
 
-既存データ保持 14/14
-PASS ROUTES v16完全保持
-PASS GUIDE_ONLY_ROUTES v16完全保持
-PASS GUIDE_DATA 189レコード相当の定義ブロックをv16から完全保持
-PASS GUIDE_SOURCES v16完全保持
-PASS GUIDE_FALLBACK v16完全保持
-PASS GUIDE_ROUTE_FALLBACK v16完全保持
-PASS GUIDE_MAPS v16完全保持
-PASS station_support.json は version/generatedAt 以外v16と一致
-PASS guideDynamicParenContext 変更なし
-PASS guideDynamicCarRefs 変更なし
-PASS guideDynamicFacilityEntry 変更なし
-PASS guideDynamicParse 変更なし
-PASS guideDynamicDetailParse 変更なし
-PASS guideDynamicRender 変更なし
+検証項目
+PASS ROUTES v17完全保持
+PASS GUIDE_ONLY_ROUTES v17完全保持
+PASS GUIDE_DATA v17完全保持
+PASS GUIDE_SOURCES v17完全保持
+PASS GUIDE_FALLBACK v17完全保持
+PASS GUIDE_ROUTE_FALLBACK v17完全保持
+PASS GUIDE_MAPS v17完全保持
+PASS station_support.json 内容はversion/generatedAt以外v17完全保持
+PASS station_support version=18
+PASS 全ガイド対象56路線
+PASS 1359駅×路線
+PASS 902ユニーク駅
+PASS 1211対応駅×路線
+PASS 813アプリ内表示ユニーク駅
+PASS manifest.webmanifest v17バイト一致
+PASS icon.svg v17バイト一致
+PASS icon-192.png v17バイト一致
+PASS icon-512.png v17バイト一致
+PASS apple-touch-icon.png v17バイト一致
+PASS station_coverage_report.tsv v17バイト一致
+PASS source_inventory.tsv v17バイト一致
+PASS all_station_support.txt 本体内容保持
+PASS supported_stations.txt 本体内容保持
+PASS unsupported_stations.txt 本体内容保持
+PASS partially_supported_stations.txt 本体内容保持
+PASS 画面バージョン18
+PASS 方面別グループUI
+PASS 方面共通ラベル
+PASS 方面専用正規化
+PASS 方面スコア判定
+PASS 方面駅トークン抽出
+PASS 路線別主要方面辞書
+PASS 方向軸辞書
+PASS 複数系統ページの路線文脈フィルタ
+PASS 駅名リンク境界一致
+PASS ケ/ヶ正規化
+PASS 駅別詳細リンク探索
+PASS 候補ページ最大16
+PASS 900ms全体再探索
+PASS 動的キャッシュparser4
+PASS 旧方面不一致警告文をUIから撤去
+PASS 失敗UIに内部英語エラーを直接表示しない
+PASS 固定ファイル index.html
+PASS 固定ファイル sw.js
+PASS 固定ファイル manifest.webmanifest
+PASS 固定ファイル icon.svg
+PASS 固定ファイル icon-192.png
+PASS 固定ファイル icon-512.png
+PASS 固定ファイル apple-touch-icon.png
+PASS 固定ファイル README.txt
+PASS 固定ファイル station_coverage_report.txt
+PASS 固定ファイル station_coverage_report.tsv
+PASS 固定ファイル station_support.json
+PASS 固定ファイル all_station_support.txt
+PASS 固定ファイル supported_stations.txt
+PASS 固定ファイル unsupported_stations.txt
+PASS 固定ファイル partially_supported_stations.txt
+PASS 固定ファイル source_inventory.tsv
+PASS 固定ファイル changes.txt
+PASS 固定ファイル validation_report.txt
+PASS 固定ファイル github_pages_fix.txt
+PASS 固定ファイル parser_regression_tests.txt
+PASS 版番号付き配布レポートなし
+PASS Service Worker cache 18.1
+PASS SW shell参照 index.html
+PASS SW shell参照 manifest.webmanifest
+PASS SW shell参照 icon.svg
+PASS SW shell参照 icon-192.png
+PASS SW shell参照 icon-512.png
+PASS SW shell参照 apple-touch-icon.png
+PASS SW shell参照 station_coverage_report.txt
+PASS SW shell参照 station_coverage_report.tsv
+PASS SW shell参照 station_support.json
+PASS SW shell参照 all_station_support.txt
+PASS SW shell参照 supported_stations.txt
+PASS SW shell参照 unsupported_stations.txt
+PASS SW shell参照 partially_supported_stations.txt
+PASS SW shell参照 source_inventory.tsv
+PASS SW shell参照 changes.txt
+PASS SW shell参照 validation_report.txt
+PASS SW shell参照 github_pages_fix.txt
+PASS SW shell参照 parser_regression_tests.txt
+PASS node --check app.js
+PASS node --check sw.js
+PASS index.html inline JavaScript構文
+PASS 既存号車解析回帰テスト
+PASS 個別方面判定30/30
+PASS 全登録路線方面マトリクス406/406
+PASS README v18 parser4
+PASS README SW18.1
+PASS changes parser4
+PASS changes 406/406
+PASS github_pages_fix 18.1
+PASS parser_regression 406/406
 
-初回取得修正 6/6
-PASS 掲載元の実ページリンクを解析する guideDynamicPageLinks を追加
-PASS 「A駅〜B駅」と路線駅順を照合する guideDynamicRangeMatch を追加
-PASS 初回失敗後700msで自動第2波を実行
-PASS 候補ページを3件ずつ並列確認
-PASS ページ取得Promiseをセッション内共有
-PASS 旧「候補URLを1件ずつ順番待ち」処理を撤去
+方面判定の追加回帰
+- 個別ケース: 30/30 PASS
+- 全登録路線マトリクス: 406/406 PASS
+- plus/minus主要方面別名、方向軸、路線両端駅名について、正方向スコアが逆方向より高いことを確認。
+- 錦糸町では中央・総武各停と総武快速をserviceContextで分離し、それぞれの方面だけを選択可能。
+- 方面共通の簡易版は不一致扱いせず「両方向共通の案内」。
+- 判定不能時のみ方面ごとの独立グループを残し、混在表示しない。
 
-新小岩・錦糸町ページ解決 回帰テスト 6/6
-PASS ページリンク3件を抽出
-PASS 新小岩 → 「新小岩〜東京」3ページ目
-PASS 錦糸町 → 「新小岩〜東京」3ページ目
-PASS 東京 → 「新小岩〜東京」3ページ目
-PASS 市川は3ページ目に誤一致しない
-PASS 稲毛 → 「稲毛〜市川」2ページ目
+駅名・ページ探索
+- 保土ケ谷/保土ヶ谷、市ケ谷/市ヶ谷、茅ケ崎/茅ヶ崎、四ツ谷/四谷を同一視。
+- 上野/上野広小路、新宿/新宿三丁目など前方一致の誤解決を避ける境界判定。
+- 全駅ページ、駅別詳細リンク、既知詳細URLを順に利用。
+- Jina Reader / AllOrigins 二重経路、自動第2波、900ms後の全体再探索。
 
-ファイル・GitHub Pages 28/28
-PASS 固定ファイル名運用を維持
-PASS index.html
-PASS sw.js
-PASS manifest.webmanifest
-PASS icon.svg
-PASS icon-192.png
-PASS icon-512.png
-PASS apple-touch-icon.png
-PASS README.txt
-PASS station_coverage_report.txt
-PASS station_coverage_report.tsv
-PASS station_support.json
-PASS all_station_support.txt
-PASS supported_stations.txt
-PASS unsupported_stations.txt
-PASS partially_supported_stations.txt
-PASS source_inventory.tsv
-PASS changes.txt
-PASS validation_report.txt
-PASS github_pages_fix.txt
-PASS parser_regression_tests.txt
-PASS manifest.webmanifest v16バイト一致
-PASS icon.svg v16バイト一致
-PASS icon-192.png v16バイト一致
-PASS icon-512.png v16バイト一致
-PASS station_coverage_report.tsv v16バイト一致
-PASS source_inventory.tsv v16バイト一致
-PASS Service Worker登録・キャッシュ 17.0
+既存データ保持
+- GPS対応43路線
+- ガイド専用13路線
+- 全ガイド対象56路線 / 1359駅×路線 / 902ユニーク駅
+- アプリ内表示1211駅×路線 / 813ユニーク駅
+- GUIDE_DATA 189レコード
+- v17の主要定義ブロックを完全保持。
 
-補足
-- 動的キャッシュの名前空間 v16-parser2 は意図的に維持。v16で正常取得済みの駅を無駄に再取得させないため。
-- 「駅から探す」の選択状態キーも互換性維持のため変更していない。
-- 対応駅数や路線定義は今回変更していない。
+GitHub Pages
+- index.html と sw.js を同時に上書き。
+- Service Worker cache 18.1。
+- 動的キャッシュ parser4 へ更新し、旧解析キャッシュは自動破棄。
+
+限界
+- 掲載元または第三者取得サービス自体が停止・制限された場合、オンライン案内は失敗する可能性があります。
+- その場合も内部英語エラーは画面へ直接出さず、掲載元リンクは残します。
