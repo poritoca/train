@@ -9,7 +9,7 @@
 
 body.large .ride .status,body.large .ride .hint,body.large .ride .mini,body.large .ride .current-note,body.large .ride .routeName{font-size:15px}body.large .progress{display:block}textarea{font-size:16px}
 .route-prompt{border-top:1px solid #e8caa733;margin:8px 0 3px;padding-top:5px}.candidate-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}.candidate{font-size:12px;text-align:left;min-height:46px;padding:8px;white-space:normal;background:linear-gradient(125deg,#afa7ee20,#7bdcca0d);border-color:#bfbee640}.route-prompt .hint{font-size:12px;margin:2px 0 8px}.guide-entry{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:10px;text-align:left;background:linear-gradient(105deg,#d4b7fc13,#98e8d712);font-size:13px}.guide-entry:after{content:"↗";font-size:20px}.train-cars{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:16px 0}.car{border:1px solid #c4c5e430;border-radius:8px;padding:7px 2px;text-align:center;background:#bac5ee0a;color:#b6c0d6}.car.active{background:linear-gradient(140deg,#cbaff547,#8ae0d22b);border-color:#cfc4f6;color:#fff}.car b{font-size:23px;display:block}.car small{font-size:10px}.facility{padding:14px 0;border-top:1px solid #d1d6eb25}.facility strong{display:block;font-size:17px}.facility p{font-size:13px;color:#b9c5da}.guide-subtitle{font-size:27px;margin:8px 0}.guide-links{display:flex;gap:12px;flex-wrap:wrap}.guide-links a{padding:9px 0;font-size:13px}.guide-note{min-height:100px}.guide-empty{padding:12px 0;color:#c6c9dc}.guide-count{letter-spacing:.1em;font-size:12px;color:#c9b7f8}.guide-variant{position:relative;border:1px solid #cfd7ff30;border-radius:21px;margin:0 0 14px;padding:18px;background:linear-gradient(140deg,#bdabef13,#b2f6e609);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}.guide-variant:before{content:'';display:block;height:2px;margin:-18px 4px 16px;background:var(--rainbow);border-radius:3px}.variant-heading{font-size:22px;margin:0 0 3px;font-weight:650}.variant-direction{font-size:14px;color:#ddd7fa;margin:0 0 8px}.variant-note{border-left:2px solid #d9bca5;padding-left:10px}.train-cars{grid-template-columns:repeat(var(--car-cols,5),minmax(0,1fr));margin:12px 0}.car b{font-size:20px}.car small{font-size:10px}.facility-destination{font-size:13px!important;color:#d3d7ed!important;margin:0 0 6px}.door-position{font-size:24px!important;font-weight:650;letter-spacing:.01em}.facility-kind{color:#b7f0df!important;margin:5px 0}.green-note{color:#b5dfc1!important}.source-credit{border-top:1px solid #e0e5ff20;padding-top:11px;font-size:11px;line-height:1.6}.guide-refine{margin-bottom:12px}.guide-refine select{font-size:14px;padding:8px}.guide-links a{overflow-wrap:anywhere}.guide-count{letter-spacing:.07em;font-size:10px}.large .door-position{font-size:28px!important}.large .facility p{font-size:15px}.guide-mode-card{padding-bottom:15px}.guide-mode-card h2{margin-bottom:4px}.guide-mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:12px 0 4px;padding:4px;border:1px solid #ced8ff20;border-radius:14px;background:#0c102177}.guide-mode-switch button{min-height:42px;border:0;background:transparent;color:#b8c2d9}.guide-mode-switch button[aria-pressed=true]{color:#fff;background:linear-gradient(120deg,#d8c6ff22,#8de9d315);box-shadow:inset 0 1px #fff2}.guide-mode-card .grid{align-items:end}#guideBrowseControls{margin-top:10px}#guideBrowseControls .field{margin-top:7px}.guide-mode-note{border-left:2px solid #a9d9d0;padding-left:10px}</style></head><body><main>
-<header><div class="brand"><span class="brandIcon" aria-hidden="true">◈</span><div><h1>駅間ナビ</h1><small>SILENT JOURNEY · 15</small></div></div><button id="gpsState" class="chip" aria-label="GPSの状態と設定案内">GPS 未開始</button></header>
+<header><div class="brand"><span class="brandIcon" aria-hidden="true">◈</span><div><h1>駅間ナビ</h1><small>SILENT JOURNEY · 16</small></div></div><button id="gpsState" class="chip" aria-label="GPSの状態と設定案内">GPS 未開始</button></header>
 <nav class="tabs" role="tablist" aria-label="画面切替"><button id="tabRide" role="tab" aria-controls="panelRide" aria-selected="true">乗車</button><button id="tabGuide" role="tab" aria-controls="panelGuide" aria-selected="false">降車位置</button><button id="tabSettings" role="tab" aria-controls="panelSettings" aria-selected="false">設定</button><button id="tabHistory" role="tab" aria-controls="panelHistory" aria-selected="false">履歴</button></nav>
 <aside id="alarmBanner" class="alarm-banner" role="status" aria-live="assertive" hidden><strong id="alarmTitle"></strong><p id="alarmBody"></p><button id="ackBtn" class="primary full">確認しました</button></aside>
 <div id="panelRide" class="panel ride" role="tabpanel" aria-labelledby="tabRide">
@@ -21,7 +21,7 @@ body.large .ride .status,body.large .ride .hint,body.large .ride .mini,body.larg
 <div id="panelGuide" class="panel" role="tabpanel" aria-labelledby="tabGuide" hidden>
 <section class="card guide-mode-card"><h2>降車位置ガイド</h2><p class="hint">乗車中の降車駅を自動で見るか、駅と方面を選んで直接調べられます。</p><div class="guide-mode-switch" role="group" aria-label="降車位置ガイドの使い方"><button id="guideModeRide" type="button" aria-pressed="true">乗車中の降車駅</button><button id="guideModeBrowse" type="button" aria-pressed="false">駅から探す</button></div><div id="guideBrowseControls" hidden><label class="field">路線<select id="guideBrowseRoute"></select></label><div class="grid"><label class="field">駅<select id="guideBrowseStation"></select></label><label class="field">方面<select id="guideBrowseDirection"><option value="0">両方向を見る</option></select></label></div><p class="mini">GPSや乗車設定は不要です。駅と方面だけで降車位置を確認できます。</p></div></section>
 <section class="card rainbow"><div class="row"><span class="guide-count">降車位置・設備に近い号車</span><span id="guideState" class="chip"></span></div><h2 id="guideStation" class="guide-subtitle">降りる駅を選択</h2><p id="guideContext" class="hint"></p><button id="chooseGuideStation" class="small ghost">乗車画面で降車駅を変更</button><div id="guideFilters"><label for="facilityFilter" class="field">近くで降りたい設備</label><select id="facilityFilter"><option value="all">階段・エレベーター・エスカレーター</option><option value="elevator">エレベーター</option><option value="stairs">階段</option><option value="escalator">エスカレーター</option></select><label id="guideExitField" class="field">改札・乗換先<select id="guideExit"><option value="all">すべて</option></select></label><details class="guide-refine"><summary>編成・到着ホームで絞る</summary><div class="grid"><label class="field">編成<select id="guideLength"><option value="all">編成不明</option></select></label><label class="field">到着ホーム<select id="guidePlatform"><option value="all">ホーム不明</option></select></label></div><p class="mini">分からない場合は選択不要です。乗車のたびに条件が変わるため、この絞り込みは次回に持ち越しません。</p></details></div><p id="guideStatus" class="hint" role="status"></p></section>
-<div id="guideCases"></div><div id="guideDynamic"></div><section class="card"><div id="guideLinks" class="guide-links"></div><p class="mini"><a href="./station_coverage_report_15.txt" download>v15の収録状況メモ</a> · <a href="./station_support_15.json" download>全駅の対応true/false JSON</a></p><p id="guideCaution" class="mini"></p><p class="mini">内蔵データはオフライン表示。オンライン案内は初回取得時に通信し、成功後は同じ駅の結果を端末にキャッシュします。</p></section></div>
+<div id="guideCases"></div><div id="guideDynamic"></div><section class="card"><div id="guideLinks" class="guide-links"></div><p class="mini"><a href="./station_coverage_report.txt" download>v16の収録状況メモ</a> · <a href="./station_support.json" download>全駅の対応true/false JSON</a></p><p id="guideCaution" class="mini"></p><p class="mini">内蔵データはオフライン表示。オンライン案内は初回取得時に通信し、成功後は同じ駅の結果を端末にキャッシュします。</p></section></div>
 <div id="panelSettings" class="panel" role="tabpanel" aria-labelledby="tabSettings" hidden>
 <section class="card rainbow"><h2>いつもの通勤を自動で</h2><label class="toggle">次回からGPSを自動開始<input id="autoStart" type="checkbox" checked></label><label class="toggle">降車駅を復元して見守りを自動開始<input id="autoGuard" type="checkbox" checked></label><p class="hint">位置情報が許可済みなら、開くだけで開始します。初回だけ「開始」で許可してください。路線・方向・降車駅・見守りの順に自動で進みます。</p><label><span class="field">進行方向</span><select id="direction"><option value="auto">自動で判定</option><option value="1">路線順</option><option value="-1">逆方向</option></select></label><div class="grid"><label><span class="field">画面の更新間隔</span><select id="interval"><option value="1000">1秒</option><option value="3000">3秒</option><option value="5000" selected>5秒</option><option value="10000">10秒</option><option value="15000">15秒</option><option value="30000">30秒</option><option value="60000">60秒</option></select></label><label><span class="field">文字サイズ</span><select id="textSize"><option value="normal">標準</option><option value="large">大きめ</option></select></label></div><div id="wakeOptions"><label class="toggle">追跡中の画面スリープを防ぐ<input id="wakeToggle" type="checkbox" checked></label><span id="wakeState" class="chip">画面保持 未開始</span></div><p class="hint">画面を閉じた間はGPSの取得を休止し、戻ったら再開します。iPhoneは画面を開いてご利用ください。</p></section>
 <section class="card"><h2>降車のお知らせ</h2><div class="grid"><label><span class="field">距離</span><select id="alertDistance"><option value="300">300 m以内</option><option value="500">500 m以内</option><option value="1000" selected>1 km以内</option><option value="1500">1.5 km以内</option></select></label><label><span class="field">到着の目安</span><select id="alertLead"><option value="60">1分以内</option><option value="120" selected>2分以内</option><option value="180">3分以内</option><option value="300">5分以内</option></select></label></div><label class="toggle">1駅前に停車した時も知らせる<input id="oneBefore" type="checkbox" checked></label><div id="hapticOptions" hidden><label class="toggle">バイブを使う<input id="hapticToggle" type="checkbox" checked></label><label class="toggle">未確認なら20秒おきに再通知（最大3回）<input id="repeatToggle" type="checkbox" checked></label><button id="hapticTest" class="full ghost">バイブを試す</button><p id="hapticStatus" class="hint"></p></div><label><span class="field">時間でも確認する（画面表示中のみ）</span><select id="timerMinutes"><option value="0">使わない</option><option value="3">3分後</option><option value="5">5分後</option><option value="10">10分後</option><option value="15">15分後</option><option value="20">20分後</option><option value="30">30分後</option><option value="60">60分後</option></select></label></section>
@@ -203,7 +203,7 @@ function resumeTracking(){
 }
 function setupOffline(){
  if(!('serviceWorker'in navigator)||!window.isSecureContext){$('offlineStatus').textContent='オフライン起動はHTTPSでの公開時に利用できます。';return}
- navigator.serviceWorker.register('./sw.js',{scope:'./'}).then(()=>{navigator.serviceWorker.ready.then(()=>$('offlineStatus').textContent='オフライン起動の準備ができました。').catch(()=>{});$('offlineStatus').textContent='初回のオフライン起動を準備しています。';}).catch(()=>{$('offlineStatus').textContent='オフライン起動の準備ができませんでした。ZIP内のファイルをすべて配置してください。'});
+ navigator.serviceWorker.register('./sw.js?v=16.1',{scope:'./'}).then(reg=>{let reloading=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(reloading)return;reloading=true;location.reload()},{once:true});reg.update().catch(()=>{});navigator.serviceWorker.ready.then(()=>$('offlineStatus').textContent='オフライン起動の準備ができました。').catch(()=>{});$('offlineStatus').textContent='初回のオフライン起動を準備しています。';}).catch(()=>{$('offlineStatus').textContent='オフライン起動の準備ができませんでした。ZIP内のファイルをすべて配置してください。'});
 }
 $('alarmTarget').onchange=()=>{cancelAlarm();guardPaused=false;alarm.target=$('alarmTarget').value===''?null:+$('alarmTarget').value;const name=targetIsValid()?stations[alarm.target][0]:null;pendingGoalName=!dir?name:null;if(route.loop&&name)alarm.target=goalIndex(name);save();autoArm();renderGoal(viewPosition(Date.now()))};
 $('armBtn').onclick=()=>{
@@ -538,8 +538,9 @@ const GUIDE_DYNAMIC_PAIRS=(()=>{const out=new Set();for(const r of ALL_GUIDE_ROU
 const GUIDE_DYNAMIC_STATIONS=new Set([...GUIDE_DYNAMIC_PAIRS].map(k=>k.split(':').slice(1).join(':')));
 const GUIDE_INAPP_PAIRS=new Set([...GUIDE_STATIC_PAIRS,...GUIDE_DYNAMIC_PAIRS]);
 const GUIDE_INAPP_STATIONS=new Set([...GUIDE_INAPP_PAIRS].map(k=>k.split(':').slice(1).join(':')));
-const GUIDE_DYNAMIC_CACHE_PREFIX='ekikan-guide-dynamic-v15:';
+const GUIDE_DYNAMIC_CACHE_PREFIX='ekikan-guide-dynamic-v16-parser2:';
 const GUIDE_DYNAMIC_CACHE_MS=1000*60*60*24*90;
+try{for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i)||'';if(/^ekikan-guide-dynamic-v(?:13|14|15|16):/.test(k))localStorage.removeItem(k)}}catch{}
 const guideDynamicHubTextCache=new Map();
 let guideDynamicTaskId=0;
 function guideDynNorm(v){return String(v||'').normalize('NFKC').replace(/\r/g,'').replace(/[\u00a0\u3000]/g,' ').trim()}
@@ -555,18 +556,38 @@ function guideDynamicSection(text,name){
 function guideDynamicDirection(line){
  const t=guideDynNorm(line).replace(/[*_]/g,'');
  if(/^停車位置[（(].+[）)]$/.test(t))return t;
- if(/^\d+番線(?:ホーム)?\s*[：:].+/.test(t))return t;
+ if(/^\d+(?:[・･,，\/／]\d+)*番線(?:ホーム)?(?:\s*[：:].+|\s*[（(].+[）)])?$/.test(t))return t;
+ if(/^当駅止まり(?:\s*[（(].*番線.*[）)])?$/.test(t))return t;
  if(/^(?:外回り|内回り|上り|下り|南行|北行)(?:\s*[：:].+|\s*方面.*)?$/.test(t))return t;
  return '';
 }
+function guideDynamicParenContext(line){
+ const t=guideDynNorm(line).replace(/[*_`]/g,'').trim();
+ const m=t.match(/^[（(]\s*[）)]内は[、,:：]?\s*(.+?)(?:の)?(?:号車|停止位置)(?:です)?[。.]?$/);
+ return m?m[1].replace(/[。.]$/,'').trim():'';
+}
+function guideDynamicCarRefs(text){
+ const t=guideDynNorm(text);const refs=[];const re=/((?:増)?\d+(?:[・･,，\/／](?:増)?\d+)*)号車(?:\s*(前方|中方|後方))?/g;let m;
+ while((m=re.exec(t))){for(const car of m[1].split(/[・･,，\/／]/).map(x=>x.trim()).filter(Boolean)){const n=Number(car.replace(/^増/,''));if(!Number.isFinite(n)||n<1||n>20)continue;refs.push({car,position:m[2]||''})}}
+ const seen=new Set();return refs.filter(x=>{const k=x.car+'|'+x.position;if(seen.has(k))return false;seen.add(k);return true});
+}
+function guideDynamicFacilityEntry(line){
+ const t=guideDynNorm(line).replace(/[*_`]/g,'').trim(),colon=t.search(/[：:]/);if(colon<0)return null;
+ const lhs=t.slice(0,colon).trim(),detail=t.slice(colon+1).trim();if(!detail||!/号車/.test(lhs))return null;
+ const pm=lhs.match(/^(.*?)(?:[（(]([^）)]+)[）)])?$/);if(!pm)return null;
+ const primary=guideDynamicCarRefs(pm[1]),alt=pm[2]&&/号車/.test(pm[2])?guideDynamicCarRefs(pm[2]):[];if(!primary.length)return null;
+ return {primary,alt,detail};
+}
 function guideDynamicParse(section){
- const lines=String(section||'').split('\n');let direction='',place='';const items=[];
- const carRe=/((?:増)?\d+(?:[・･,，\/／](?:増)?\d+)*)号車(?:\s*(前方|中方|後方))?\s*[（(]([^）)\n]+)[）)]/g;
- for(const raw of lines){let line=guideDynNorm(raw).replace(/[*_`]/g,'').trim();if(!line)continue;const d=guideDynamicDirection(line);if(d){direction=d;place='';continue}
-  if(!/号車/.test(line)&&line.length<=90&&/(改札|出口|乗り換え|乗換|コンコース|連絡|\dF|\d階|方面)/.test(line)&&!/^詳細/.test(line))place=line;
-  carRe.lastIndex=0;let m;while((m=carRe.exec(line))){const cars=m[1].split(/[・･,，\/／]/).map(x=>x.trim()).filter(Boolean),position=m[2]||'',detail=m[3].trim();for(const car of cars){const n=Number(car.replace(/^増/,''));if(!Number.isFinite(n)||n<1||n>20)continue;items.push({car,position,detail,place,direction:direction||'掲載元の停車位置案内'})}}
+ const lines=String(section||'').split('\n');let direction='',place='',parenContext='';const items=[];
+ for(const raw of lines){let line=guideDynNorm(raw).replace(/[*_`]/g,'').trim();if(!line)continue;
+  const pc=guideDynamicParenContext(line);if(pc){parenContext=pc;continue}
+  const d=guideDynamicDirection(line);if(d){direction=d;place='';continue}
+  if(!/号車/.test(line)&&line.length<=120&&/(改札|出口|乗り換え|乗換|コンコース|連絡|\dF|\d階|方面)/.test(line)&&!/^詳細/.test(line))place=line;
+  const parsed=guideDynamicFacilityEntry(line);if(!parsed)continue;
+  parsed.primary.forEach((ref,i)=>{const alts=parsed.alt.length===parsed.primary.length?[parsed.alt[i]]:parsed.alt;items.push({car:ref.car,position:ref.position,detail:parsed.detail,place,direction:direction||'掲載元の停車位置案内',altPositions:alts||[],altContext:alts?.length?(parenContext||'掲載元の括弧表記'):''})});
  }
- const seen=new Set();return items.filter(x=>{const k=[x.direction,x.car,x.position,x.detail,x.place].join('|');if(seen.has(k))return false;seen.add(k);return true});
+ const seen=new Set();return items.filter(x=>{const alt=(x.altPositions||[]).map(a=>a.car+':'+(a.position||'')).join(',');const k=[x.direction,x.car,x.position,x.detail,x.place,x.altContext||'',alt].join('|');if(seen.has(k))return false;seen.add(k);return true});
 }
 function guideDynamicDetailParse(text,name){
  const lines=String(text||'').replace(/\r/g,'').split('\n');let direction='掲載元の停車位置案内',place='',facility='';const items=[];
@@ -586,12 +607,27 @@ function guideDynamicDetailParse(text,name){
  const seen=new Set();return items.filter(x=>{const k=[x.direction,x.car,x.position,x.detail,x.place].join('|');if(seen.has(k))return false;seen.add(k);return true});
 }
 function guideDynamicPages(routeId,name){
- const cfg=guideDynamicConfig(routeId,name);if(!cfg||cfg.mode!=='all')return[];const base=String(cfg.url).split('#')[0].replace(/\/+$/,'')+'/',r=guideRouteById(routeId);if(!r)return[base];const names=guideStationNames(r),idx=Math.max(0,names.indexOf(name)),n=names.length,order=[1];
- for(const size of [5,6,7]){order.push(Math.floor(idx/size)+1,Math.floor((Math.max(0,n-1-idx))/size)+1)}
- const max=Math.min(14,Math.max(1,Math.ceil(n/4)+1));for(let i=2;i<=max;i++)order.push(i);const uniq=[...new Set(order.filter(x=>x>=1&&x<=max))];return uniq.map(pg=>pg===1?base:base+pg+'/');
+ const cfg=guideDynamicConfig(routeId,name);if(!cfg||cfg.mode!=='all')return[];const base=String(cfg.url).split('#')[0].replace(/\/+$/,'')+'/',r=guideRouteById(routeId);if(!r)return[base];const names=guideStationNames(r),idx=Math.max(0,names.indexOf(name)),n=names.length;
+ // 掲載元は多くの路線で1ページ5〜6駅。順方向・逆方向の候補を先に試し、
+ // GitHub Pages上で全ページ総当たりにならないよう最大5ページに制限する。
+ const order=[];for(const size of [5,6]){order.push(Math.floor(idx/size)+1,Math.floor(Math.max(0,n-1-idx)/size)+1)}order.push(1);
+ const max=Math.min(20,Math.max(1,Math.ceil(n/4)+1)),uniq=[...new Set(order.filter(x=>x>=1&&x<=max))].slice(0,5);return uniq.map(pg=>pg===1?base:base+pg+'/');
+}
+function guideHtmlToMarkdown(html,baseUrl){
+ const doc=new DOMParser().parseFromString(String(html||''),'text/html'),root=doc.querySelector('article,main,.entry-content,.post-content')||doc.body;if(!root)return'';const out=[];
+ for(const el of root.querySelectorAll('h1,h2,h3,h4,p,li')){const clone=el.cloneNode(true);for(const a of clone.querySelectorAll('a[href]')){let href=a.getAttribute('href')||'';try{href=new URL(href,baseUrl).href}catch{}const label=(a.textContent||'').trim();a.replaceWith(document.createTextNode(label?`[${label}](${href})`:href))}const text=guideDynNorm(clone.textContent);if(!text)continue;const level=/^H[1-4]$/.test(el.tagName)?Number(el.tagName[1]):0;out.push((level?'#'.repeat(level)+' ':'')+text)}return out.join('\n');
+}
+async function guideFetchText(fetchUrl,kind,targetUrl,ms){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),ms);try{const res=await fetch(fetchUrl,{signal:controller.signal,cache:'no-store',referrerPolicy:'no-referrer',headers:{Accept:kind==='jina'?'text/plain':'application/json'}});if(!res.ok)throw new Error(`HTTP ${res.status}`);if(kind==='allorigins'){const json=await res.json(),html=String(json?.contents||'');if(html.length<80)throw new Error('empty');const text=guideHtmlToMarkdown(html,targetUrl);if(text.length<80)throw new Error('parse empty');return text}const text=await res.text();if(text.length<80)throw new Error('empty');return text}finally{clearTimeout(timer)}
 }
 async function guideDynamicFetch(url){
- const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);try{const res=await fetch('https://r.jina.ai/'+url,{signal:controller.signal,cache:'no-store',headers:{Accept:'text/plain'}});if(!res.ok)throw new Error('HTTP '+res.status);const text=await res.text();if(text.length<80)throw new Error('empty');return text}finally{clearTimeout(timer)}
+ // GitHub Pagesは静的ホスティングなので、他サイトのHTMLを同一オリジンでは取得できない。
+ // Reader APIを第一経路、CORS用AllOriginsを第二経路として競争させ、片方が使えれば表示する。
+ const target=String(url),attempts=[
+  guideFetchText('https://r.jina.ai/'+target,'jina',target,8000),
+  guideFetchText('https://api.allorigins.win/get?url='+encodeURIComponent(target),'allorigins',target,10000)
+ ];
+ try{return await Promise.any(attempts)}catch(e){const reasons=(e?.errors||[]).map(x=>x?.message||String(x)).filter(Boolean);throw new Error(reasons.join(' / ')||'外部取得に失敗')}
 }
 async function guideDynamicHubUrl(cfg,name){
  let text=guideDynamicHubTextCache.get(cfg.url);if(!text){text=await guideDynamicFetch(cfg.url);guideDynamicHubTextCache.set(cfg.url,text)}
@@ -611,19 +647,19 @@ function guideDirectionFilteredGroups(routeId,data,selectedDir){
 function guideDynamicRender(routeId,name,data,cached,selectedDir=0){
  const holder=$('guideDynamic');holder.replaceChildren();const r=guideRouteById(routeId),box=guideNode('section','guide-variant');box.append(guideNode('h3','variant-heading','オンライン号車案内'),guideNode('p','variant-direction',`${name} · ${(r?.name||routeId).split('｜')[0]}`));
  const filtered=guideDirectionFilteredGroups(routeId,data,selectedDir);if(filtered.note)box.append(guideNode('p','mini guide-mode-note',filtered.note));
- for(const [direction,items] of filtered.groups){box.append(guideNode('p','variant-direction',direction));for(const item of items){const row=guideNode('div','facility'),pos=item.position?' '+item.position:'';row.append(guideNode('strong','door-position',item.car+'号車'+pos+'付近'),guideNode('p','facility-kind',item.detail||'階段・エレベーター等'),guideNode('p','facility-destination',item.place||'掲載元の案内位置'));box.append(row)}}
+ for(const [direction,items] of filtered.groups){box.append(guideNode('p','variant-direction',direction));for(const item of items){const row=guideNode('div','facility'),pos=item.position?' '+item.position:'',rawDetail=String(item.detail||'').trim(),detail=/^(?:増?\d+(?:[・･,，\/／]増?\d+)*号車(?:\s*(?:前方|中方|後方))?)+$/.test(rawDetail)?'階段・エレベーター等':(rawDetail||'階段・エレベーター等');row.append(guideNode('strong','door-position',item.car+'号車'+pos+'付近'));if(Array.isArray(item.altPositions)&&item.altPositions.length){const alt=item.altPositions.map(a=>a.car+'号車'+(a.position?' '+a.position:'')+'付近').join('・'),ctx=item.altContext||'別条件';row.append(guideNode('p','mini guide-alt-position',ctx+'：'+alt))}row.append(guideNode('p','facility-kind',detail),guideNode('p','facility-destination',item.place||'掲載元の案内位置'));box.append(row)}}
  const src=guideNode('p','mini source-credit',(cached?'端末キャッシュ':'公開ページから取得')+' · 掲載元から取得できた位置だけを表示します。ドア番号は推測しません。');box.append(src);guideLink(box,'掲載元を開く',data.sourceUrl);holder.append(box);
 }
 async function guideLoadDynamic(routeId,name,selectedDir=0,force=false){
  const holder=$('guideDynamic'),cfg=guideDynamicConfig(routeId,name);if(!holder||!cfg){if(holder)holder.replaceChildren();return}const task=++guideDynamicTaskId;if(!force){const cached=guideDynamicCacheGet(routeId,name);if(cached){guideDynamicRender(routeId,name,cached,true,selectedDir);return}}
- holder.replaceChildren(guideDynamicBox('オンライン号車案内','公開済みの全駅簡易版／駅別詳細から、この駅の号車位置を取得しています… 初回のみ通信が必要です。'));
+ holder.replaceChildren(guideDynamicBox('オンライン号車案内','号車位置を取得しています… GitHub Pagesでは2つの取得経路を自動で試します。通常は数秒〜十数秒です。'));
  let lastError=null;
  if(cfg.mode==='hub'){
   try{const detailUrl=await guideDynamicHubUrl(cfg,name);if(task!==guideDynamicTaskId)return;if(!detailUrl)throw new Error('station detail link not found');const text=await guideDynamicFetch(detailUrl);if(task!==guideDynamicTaskId)return;const items=guideDynamicDetailParse(text,name);if(!items.length)throw new Error('station detail parse empty');const data={items,sourceUrl:detailUrl,sourceBase:cfg.url};guideDynamicCacheSet(routeId,name,data);guideDynamicRender(routeId,name,data,false,selectedDir);return}catch(e){lastError=e}
  }else{
   const urls=guideDynamicPages(routeId,name);for(let i=0;i<urls.length;i++){if(task!==guideDynamicTaskId)return;try{const text=await guideDynamicFetch(urls[i]);if(task!==guideDynamicTaskId)return;const section=guideDynamicSection(text,name);if(!section)continue;const items=guideDynamicParse(section);if(!items.length)continue;const data={items,sourceUrl:urls[i],sourceBase:cfg.url};guideDynamicCacheSet(routeId,name,data);guideDynamicRender(routeId,name,data,false,selectedDir);return}catch(e){lastError=e}}
  }
- if(task!==guideDynamicTaskId)return;const box=guideDynamicBox('オンライン号車案内','この駅の自動取得に失敗しました。通信状態や掲載元のページ構成変更が考えられます。下の掲載元リンクからも確認できます。');const btn=guideNode('button','ghost small','再取得');btn.type='button';btn.onclick=()=>guideLoadDynamic(routeId,name,selectedDir,true);box.append(btn);holder.replaceChildren(box);if(lastError)console.warn('guide dynamic fetch failed',lastError);
+ if(task!==guideDynamicTaskId)return;const reason=lastError?.message?('（'+lastError.message.slice(0,120)+'）'):'';const box=guideDynamicBox('オンライン号車案内','自動取得に失敗しました'+reason+'。通信状態・取得サービスの混雑・掲載元の変更が考えられます。掲載元リンクは引き続き利用できます。');const btn=guideNode('button','ghost small','再取得');btn.type='button';btn.onclick=()=>guideLoadDynamic(routeId,name,selectedDir,true);box.append(btn);holder.replaceChildren(box);if(lastError)console.warn('guide dynamic fetch failed',lastError);
 }
 // Built-in boarding-position facts. GPS cannot determine formation or arrival platform.
 let guideRenderKey='',guideFilterContext='';
@@ -680,12 +716,12 @@ function guideSourceCard(name,routeObj,coverage){
   guideNode('p','facility-kind','階段・エスカレーター・エレベーター'),
   guideNode('p','mini',direct?'駅別ページへ直接移動します。通信が必要です。':'駅名を強調するリンクで掲載元を開きます。Safari/Chromeでは該当駅名へスクロールできます。'));
  box.append(row);
- box.append(guideNode('p','mini source-credit','v15 収録確認済み案内 · 号車やドア番号を推測して補完していません。'));
+ box.append(guideNode('p','mini source-credit','v16 収録確認済み案内 · 号車やドア番号を推測して補完していません。'));
  return box;
 }
 let guideMode='ride';
-function guideBrowseLoad(){try{return JSON.parse(localStorage.getItem('ekikan-guide-browse-v15')||'{}')}catch{return{}}}
-function guideBrowseSave(){try{localStorage.setItem('ekikan-guide-browse-v15',JSON.stringify({routeId:$('guideBrowseRoute')?.value||'',station:$('guideBrowseStation')?.value||'',direction:Number($('guideBrowseDirection')?.value||0)}))}catch{}}
+function guideBrowseLoad(){try{return JSON.parse(localStorage.getItem('ekikan-guide-browse-v16')||'{}')}catch{return{}}}
+function guideBrowseSave(){try{localStorage.setItem('ekikan-guide-browse-v16',JSON.stringify({routeId:$('guideBrowseRoute')?.value||'',station:$('guideBrowseStation')?.value||'',direction:Number($('guideBrowseDirection')?.value||0)}))}catch{}}
 function guideSetMode(mode){guideMode=mode==='browse'?'browse':'ride';$('guideModeRide').setAttribute('aria-pressed',String(guideMode==='ride'));$('guideModeBrowse').setAttribute('aria-pressed',String(guideMode==='browse'));$('guideBrowseControls').hidden=guideMode!=='browse';$('chooseGuideStation').hidden=guideMode==='browse';guideRenderKey='';renderGuide()}
 function guideFillBrowseStations(preferred){const r=guideRouteById($('guideBrowseRoute').value);$('guideBrowseStation').replaceChildren();for(const n of guideStationNames(r))option($('guideBrowseStation'),n,n);if(preferred&&[...$('guideBrowseStation').options].some(o=>o.value===preferred))$('guideBrowseStation').value=preferred;guideFillBrowseDirections();}
 function guideFillBrowseDirections(){const r=guideRouteById($('guideBrowseRoute').value),el=$('guideBrowseDirection'),prev=el.value;el.replaceChildren();option(el,'0','両方向を見る');if(r){if(r.directionLabels?.length===2){option(el,'1',r.directionLabels[0]);option(el,'-1',r.directionLabels[1])}else{option(el,'1',guideEndpointName(r,1)+'方面');option(el,'-1',guideEndpointName(r,-1)+'方面')}}if([...el.options].some(o=>o.value===prev))el.value=prev;}

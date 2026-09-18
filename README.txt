@@ -1,9 +1,9 @@
-駅間ナビ v15
+駅間ナビ v16
 ============
 
 概要
 ----
-GPSで現在位置・前駅・次駅・目的駅を表示する乗車ナビに、独立した「降車位置ガイド」を追加した版です。v14のGPS対応43路線とGUIDE_DATA 189レコードはそのまま保持しています。
+GPSで現在位置・前駅・次駅・目的駅を表示する乗車ナビに、独立した「降車位置ガイド」を追加した版です。v15のGPS対応43路線・ガイド専用13路線・GUIDE_DATA 189レコードをそのまま保持しています。
 
 降車位置ガイドの2つの使い方
 --------------------------
@@ -18,7 +18,7 @@ GPSで現在位置・前駅・次駅・目的駅を表示する乗車ナビに�
 アプリ内表示: 1211駅×路線 / 813ユニーク駅
 静的内蔵: GUIDE_DATA 189レコード / 71駅×路線
 
-v15で追加したガイド専用路線
+v15までに追加済みのガイド専用路線
 ---------------------------
 都営浅草線、都営三田線、都営新宿線、都営大江戸線、西武新宿線、西武拝島線、京王井の頭線、りんかい線、東急大井町線、つくばエクスプレス、東京モノレール、東武スカイツリーライン等、京成本線。
 これらは降車位置ガイド専用で、GPS路線判定には使用しません。
@@ -33,9 +33,28 @@ v15で追加したガイド専用路線
 
 一覧ファイル
 ------------
-station_support_15.json: 全駅・全駅×路線の true/false と対応方式
-all_station_support_15.txt: 全駅の supported / inApp 一覧
-supported_stations_15.txt / unsupported_stations_15.txt / partially_supported_stations_15.txt
-station_coverage_report_15.tsv: 全駅×路線の明細
-source_inventory_15.tsv: v15追加ソース
-validation_report_15.txt: 検証結果
+station_support.json: 全駅・全駅×路線の true/false と対応方式
+all_station_support.txt: 全駅の supported / inApp 一覧
+supported_stations.txt / unsupported_stations.txt / partially_supported_stations.txt
+station_coverage_report.tsv: 全駅×路線の明細
+source_inventory.tsv: 対応ソース一覧（v15内容を継承）
+validation_report.txt: 検証結果
+
+
+[v16 GitHub Pages 修正]
+- オンライン号車案内の取得を GitHub Pages 向けに二重化しました。
+- 第1経路: Jina Reader (r.jina.ai)
+- 第2経路: AllOrigins 経由で元HTMLを取得し、ブラウザ内で見出し・本文・リンクを解析
+- 全駅ページの総当たりを廃止し、駅位置から推定した最大5ページだけを確認します。
+- 取得中メッセージと失敗理由を画面に表示します。
+- v15の路線・駅・静的GUIDE_DATA・対応状況は変更していません。
+
+
+[v16 追加修正]
+簡易版ページの「5号車（1号車）：階段」のような表記について、括弧内の号車を設備名として誤表示しないよう解析を修正しました。括弧内が10両編成時や別ホーム時の号車である場合は、「10両編成時：1号車付近」のように別条件として表示します。旧オンライン解析キャッシュは自動的に無効化されます。
+
+[固定ファイル名運用]
+GitHub Pages への更新時に同名ファイルとして上書きできるよう、v16以降の配布ZIP内ではレポート・一覧ファイル名に版番号を付けません。
+例: station_support.json / station_coverage_report.txt / validation_report.txt
+外側のZIP名だけは履歴管理のためバージョン・連番を残します。
+GitHub上に残っている *_15.* / *_16.* など旧版レポートは、参照されなくなったため一度だけ削除して構いません。

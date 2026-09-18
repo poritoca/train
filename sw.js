@@ -1,8 +1,8 @@
 'use strict';
 // Cache only this app's shell, and keep caches for other GitHub Pages projects intact.
 const PREFIX='ekikan-shell-'+encodeURIComponent(self.registration.scope)+'-';
-const CACHE=PREFIX+'15';
-const SHELL=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./station_coverage_report_15.txt','./station_coverage_report_15.tsv','./station_support_15.json','./all_station_support_15.txt','./supported_stations_15.txt','./unsupported_stations_15.txt','./partially_supported_stations_15.txt','./source_inventory_15.tsv','./changes_15.txt','./validation_report_15.txt'];
+const CACHE=PREFIX+'16.1';
+const SHELL=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./station_coverage_report.txt','./station_coverage_report.tsv','./station_support.json','./all_station_support.txt','./supported_stations.txt','./unsupported_stations.txt','./partially_supported_stations.txt','./source_inventory.tsv','./changes.txt','./validation_report.txt','./github_pages_fix.txt','./parser_regression_tests.txt'];
 const urls=SHELL.map(p=>new URL(p,self.registration.scope).href);
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(urls);await self.skipWaiting()})()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})()));

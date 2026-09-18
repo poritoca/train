@@ -1,0 +1,18 @@
+routeId	routeName	mode	verified	url	note
+toei_a	都営浅草線｜西馬込〜押上	all	true	https://wadattsu261.com/content/a-toeiasakusahome-all-info/	降車位置ガイド専用路線
+toei_i	都営三田線｜目黒〜西高島平	all	true	https://wadattsu261.com/content/i-toeimitahome-all-info/	降車位置ガイド専用路線
+toei_s	都営新宿線｜新宿〜本八幡	all	true	https://wadattsu261.com/content/s-toeishinjukuhome-all-info/	降車位置ガイド専用路線
+toei_e	都営大江戸線｜光が丘〜都庁前〜環状部	all	true	https://wadattsu261.com/content/e-toeioedohome-all-info/	降車位置ガイド専用路線
+seibu_shinjuku	西武新宿線｜西武新宿〜本川越	all	true	https://wadattsu261.com/content/ss-seibushinjukuhome-all-info/	降車位置ガイド専用路線
+rinkai	りんかい線｜大崎〜新木場	all	true	https://wadattsu261.com/content/r-rinkaihome-all-info/	降車位置ガイド専用路線
+oimachi	東急大井町線｜大井町〜溝の口	all	true	https://wadattsu261.com/content/om-tokyuoimachihome-all-info/	降車位置ガイド専用路線
+tx	つくばエクスプレス｜秋葉原〜つくば	hub	true	https://wadattsu261.com/tx-tsukubaexpresshome-info/	降車位置ガイド専用路線
+monorail	東京モノレール｜浜松町〜羽田空港第2ターミナル	hub	true	https://wadattsu261.com/mo-tokyomonorailhome-info/	降車位置ガイド専用路線
+tobu_skytree	東武スカイツリーライン等｜浅草・押上〜久喜（詳細掲載駅）	hub	true	https://wadattsu261.com/ts-tobuisezakihome-info/	降車位置ガイド専用路線
+keisei_main	京成本線｜京成上野〜成田空港	hub	true	https://wadattsu261.com/ks-keiseihome-info/	降車位置ガイド専用路線
+keio_inokashira	京王井の頭線｜渋谷〜吉祥寺	all	true	https://wadattsu261.com/content/in-keioinokashirahome-all-info/	降車位置ガイド専用路線
+seibu_haijima	西武拝島線｜小平〜拝島	all	true	https://wadattsu261.com/content/ss-seibuhaijimahome-all-info/	降車位置ガイド専用路線
+joban_local	JR 常磐線各停｜綾瀬〜取手	all	true	https://wadattsu261.com/content/jl-jobanslowhome-all-info/	既存ナビ路線をv15でアプリ内取得へ格上げ
+metro_f	東京メトロ 副都心線｜和光市〜渋谷	hub	true	https://wadattsu261.com/f-metrofukutoshinhome-info/	既存ナビ路線をv15でアプリ内取得へ格上げ
+meguro	東急 目黒線｜目黒〜日吉	hub	true	https://wadattsu261.com/mg-tokyumegurohome-info/	既存ナビ路線をv15でアプリ内取得へ格上げ
+odakyu	小田急 小田原線｜新宿〜小田原	hub	false	https://wadattsu261.com/odakyu-list-of-transfer-routes/	掲載元が「一部の駅を除く」と明記するため自動取得候補。対応数には加算しない

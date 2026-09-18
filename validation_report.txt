@@ -1,0 +1,62 @@
+駅間ナビ v16 検証結果（上野駅・括弧内号車誤解析修正版）
+
+PASS 45/45
+FAIL 0
+
+PASS  ROUTES v15完全保持 — base=30032 new=30032
+PASS  GUIDE_ONLY_ROUTES v15完全保持 — base=4276 new=4276
+PASS  GUIDE_DATA v15完全保持 — base=108736 new=108736
+PASS  GUIDE_SOURCES v15完全保持 — base=6711 new=6711
+PASS  GUIDE_FALLBACK v15完全保持 — base=12592 new=12592
+PASS  GUIDE_ROUTE_FALLBACK v15完全保持 — base=4354 new=4354
+PASS  GUIDE_MAPS v15完全保持 — base=181 new=181
+PASS  station_support.json JSON — stations=902 pairs=0
+PASS  index.html JavaScript syntax
+PASS  sw.js JavaScript syntax
+PASS  旧括弧誤解析regex撤去
+PASS  括弧内別条件解析
+PASS  設備欄はコロン以降
+PASS  表示に別条件ラベル
+PASS  号車だけの設備欄を安全抑止
+PASS  旧動的キャッシュ破棄
+PASS  Service Worker登録16.1
+PASS  Service Worker cache16.1
+PASS  パーサ回帰テスト14/14
+PASS  存在 index.html
+PASS  存在 sw.js
+PASS  存在 manifest.webmanifest
+PASS  存在 icon.svg
+PASS  存在 icon-192.png
+PASS  存在 icon-512.png
+PASS  存在 apple-touch-icon.png
+PASS  存在 README.txt
+PASS  存在 station_coverage_report.txt
+PASS  存在 station_coverage_report.tsv
+PASS  存在 station_support.json
+PASS  存在 all_station_support.txt
+PASS  存在 supported_stations.txt
+PASS  存在 unsupported_stations.txt
+PASS  存在 partially_supported_stations.txt
+PASS  存在 source_inventory.tsv
+PASS  存在 changes.txt
+PASS  存在 validation_report.txt
+PASS  存在 github_pages_fix.txt
+PASS  存在 parser_regression_tests.txt
+PASS  manifest.webmanifest v15バイト一致
+PASS  icon.svg v15バイト一致
+PASS  icon-192.png v15バイト一致
+PASS  icon-512.png v15バイト一致
+PASS  apple-touch-icon.png v15バイト一致
+PASS  デバッグJSなし
+
+固定ファイル名化 検証
+---------------------
+PASS 8/8
+PASS  版番号付き一覧・レポートファイル名が0件
+PASS  index.html / sw.js / README等に旧 `_16` ファイル参照が0件
+PASS  sw.js のSHELL 19参照がすべて実在
+PASS  station_support.json / manifest.webmanifest JSON解析成功
+PASS  index.html インラインJavaScript構文チェック成功
+PASS  sw.js JavaScript構文チェック成功
+PASS  index.html / sw.js はファイル名参照を旧名へ戻すと元v16と完全一致
+PASS  主要データ・アイコン等14ファイルは元v16とバイト一致

@@ -1,0 +1,17 @@
+駅間ナビ v16 オンライン号車解析 回帰テスト
+PASS 上野サンプル件数 — 8
+PASS 基本号車 — 5
+PASS 設備はコロン以降 — 階段・エスカレーター
+PASS 括弧内号車を別条件へ — [{"car":"1","position":""}]
+PASS 10両編成注記 — 10両編成時
+PASS 号車が設備欄へ漏れない
+PASS 別ホーム注記 — 15番線ホーム到着時
+PASS 当駅止まりを別グループ化 — 当駅止まり(14・15番線ホーム)
+PASS 形式 １０号車：階段 — [{"car":"10","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
+PASS 形式 ５号車前方（１号車前方）：下り階段・下りエスカレーター — [{"car":"5","position":"前方","detail":"下り階段・下りエスカレーター","place":"","direction":"南行:東京方面","altPositions":[{"car":"1","position":"前方"}],"altContext":"掲載元の括弧表記"}]
+PASS 形式 ４・５号車：階段 — [{"car":"4","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""},{"car":"5","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
+PASS 形式 ４号車・５号車：階段 — [{"car":"4","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""},{"car":"5","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
+PASS 形式 ５号車（グリーン車）：階段 — [{"car":"5","position":"","detail":"階段","place":"","direction":"南行:東京方面","altPositions":[],"altContext":""}]
+PASS 複数番線見出し
+
+TOTAL PASS 14 / FAIL 0
