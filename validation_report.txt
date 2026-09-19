@@ -1,40 +1,24 @@
-駅間ナビ v20 検証結果
-
-構造・データ検証: PASS 65/65
-オンライン解析回帰: PASS 13/13
-ローカルHTTP配信: PASS 2/2（index.html / station_support.json をバイト一致確認）
-ZIP再展開・CRC: PASS
-FAIL 0
+駅間ナビ v21 検証結果
 
 主な検証項目
 - index.html インラインJavaScript構文 PASS
 - sw.js JavaScript構文 PASS
-- SILENT JOURNEY · 20 PASS
-- Service Worker登録 20.0 / キャッシュ 20.0 PASS
-- オンライン解析キャッシュ parser5 PASS
-- 三ツ沢/三ッ沢の小さい「ッ」表記揺れ PASS
-- コロン無し簡易版設備表記 PASS
-- 総合停車位置一覧フォールバック PASS
-- サイト内検索フォールバック PASS
-- AllOrigins HTMLの独立リンク抽出 PASS
-- 最近の駅別詳細ページ形式に対応する解析開始条件 PASS
-- 三ツ沢上町・三ツ沢下町の直接フォールバック PASS
-- v19のROUTES 完全一致 PASS
-- v19のGUIDE_ONLY_ROUTES 完全一致 PASS
-- v19のGUIDE_DATA 完全一致（189レコード） PASS
-- v19のGUIDE_SOURCES 完全一致 PASS
-- v19のGUIDE_MAPS 完全一致 PASS
-- v19のGUIDE_FALLBACK既存項目を全件保持 PASS
-- v19の動的オーバーライドは小田急以外完全一致 PASS
-- 小田急47駅×路線を dynamic_hub / supported / inApp に格上げ PASS
-- 非小田急の対応状態をv19から変更していない PASS
-- 56路線 / 1359駅×路線 / 902ユニーク駅 PASS
-- 対応1258駅×路線 / 853ユニーク駅 PASS
-- 完全未対応49ユニーク駅 PASS
-- 残る未対応駅×路線が京急系のみであること PASS
-- station_support.json と全TXT/TSV一覧の整合 PASS
-- manifestとアイコン類はv19とバイト一致 PASS
-- ZIP内部の固定ファイル名運用 PASS
+- SILENT JOURNEY · 21 PASS
+- Service Worker登録 21.0 / キャッシュ 21.0 PASS
+- オンライン解析キャッシュ parser6 PASS
+- 両方向まとめ設備見出しの誤採用防止 PASS
+- 路線意味と矛盾する上り/下りラベルの補正ロジック PASS
+- 反町の「渋谷・池袋方面(下り)」矛盾を上りへ補正する条件 PASS
+- v20のROUTES / GUIDE_ONLY_ROUTES / GUIDE_DATA 189レコードを保持 PASS
+- 56路線 / 1359駅×路線 / 902ユニーク駅を保持 PASS
+- 対応1258駅×路線 / 853ユニーク駅を保持 PASS
+- station_support.json 等の対応一覧を変更しない PASS
+- 固定ファイル名運用 PASS
 
 補足
-実際のGitHub PagesからJina Reader / AllOrigins / 掲載元へ通信するネットワーク状態そのものはコンテナでは完全再現できないため、取得経路は構造テスト・フォールバック順序・ローカル配信で検証しています。公開元のレスポンス停止時は掲載元リンクを残す設計です。
+掲載元の反町詳細ページは、冒頭・簡易版では2番線を上り(渋谷方面)と記載する一方、詳細節の一部に下りという矛盾があります。v21は単一の上り/下り語だけを信用せず、方面駅と路線順を併用して表示を補正します。
+
+実行回帰
+--------
+PASS 反町の矛盾方向ラベル補正
+PASS 両方向まとめ設備見出し検出
