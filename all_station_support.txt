@@ -1,4 +1,4 @@
-v18 全登録駅 対応状況
+v20 全登録駅 対応状況
 true=少なくとも1路線で対応 / false=全登録路線で未対応
 
 false	false	YRP野比
@@ -73,7 +73,7 @@ true	true	下高井戸
 true	true	不動前
 true	true	与野
 true	true	与野本町
-false	false	世田谷代田
+true	true	世田谷代田
 true	true	両国
 true	true	中井
 true	true	中央林間
@@ -142,14 +142,14 @@ true	true	仏子
 true	true	仙川
 true	true	代々木
 true	true	代々木上原
-false	false	代々木八幡
+true	true	代々木八幡
 true	true	代々木公園
 true	true	代官山
 true	true	代田橋
 true	true	仲御徒町
 true	true	仲町台
 true	true	伊勢佐木長者町
-false	false	伊勢原
+true	true	伊勢原
 true	true	住吉
 true	true	保土ケ谷
 true	true	保谷
@@ -209,7 +209,7 @@ true	true	十条
 true	true	千住大橋
 true	true	千川
 true	true	千歳烏山
-false	false	千歳船橋
+true	true	千歳船橋
 true	true	千石
 true	true	千葉
 true	true	千葉みなと
@@ -224,7 +224,7 @@ true	true	南多摩
 true	true	南大塚
 false	false	南太田
 true	true	南平
-false	false	南新宿
+true	true	南新宿
 true	true	南柏
 true	true	南流山
 true	true	南浦和
@@ -234,10 +234,10 @@ true	true	南船橋
 true	true	南行徳
 true	true	南越谷
 true	true	南阿佐ケ谷
-false	false	厚木
+true	true	厚木
 true	true	原宿
 true	true	原木中山
-false	false	参宮橋
+true	true	参宮橋
 true	true	反町
 true	true	取手
 true	true	古河
@@ -246,15 +246,15 @@ true	true	吉川
 true	true	吉川美南
 true	true	吉祥寺
 true	true	吉野町
-false	false	向ヶ丘遊園
+true	true	向ヶ丘遊園
 true	true	向河原
 true	true	吹上
 true	true	和光市
-false	false	和泉多摩川
+true	true	和泉多摩川
 true	true	和田町
 true	true	品川
 true	true	品川シーサイド
-false	false	喜多見
+true	true	喜多見
 true	true	四ツ谷
 true	true	四谷三丁目
 true	true	国会議事堂前
@@ -319,7 +319,7 @@ true	true	宮崎台
 true	true	宿河原
 true	true	富士見ヶ丘
 true	true	富士見台
-false	false	富水
+true	true	富水
 true	true	小伝馬町
 true	true	小山
 true	true	小岩
@@ -330,7 +330,7 @@ true	true	小平
 true	true	小手指
 true	true	小机
 true	true	小田原
-false	false	小田急相模原
+true	true	小田急相模原
 true	true	小竹向原
 true	true	小菅
 true	true	小金井
@@ -370,7 +370,7 @@ true	true	平間
 true	true	広尾
 true	true	府中
 true	true	府中本町
-false	false	座間
+true	true	座間
 false	false	弘明寺
 true	true	弘明寺（地下鉄）
 true	true	弥生台
@@ -384,8 +384,8 @@ true	true	志村坂上
 true	true	志津
 true	true	志茂
 true	true	恵比寿
-false	false	愛甲石田
-false	false	成城学園前
+true	true	愛甲石田
+true	true	成城学園前
 true	true	成増
 true	true	成瀬
 true	true	成田空港
@@ -429,7 +429,7 @@ true	true	新日本橋
 true	true	新木場
 true	true	新杉田
 true	true	新松戸
-false	false	新松田
+true	true	新松田
 true	true	新板橋
 true	true	新検見川
 true	true	新横浜
@@ -441,7 +441,7 @@ true	true	新狭山
 true	true	新田
 true	true	新町
 true	true	新白岡
-false	false	新百合ヶ丘
+true	true	新百合ヶ丘
 true	true	新秋津
 true	true	新羽
 true	true	新習志野
@@ -476,7 +476,7 @@ true	true	朝霞台
 true	true	木場
 true	true	末広町
 true	true	本八幡
-false	false	本厚木
+true	true	本厚木
 true	true	本川越
 true	true	本庄
 true	true	本所吾妻橋
@@ -491,7 +491,7 @@ true	true	東久留米
 true	true	東京
 true	true	東京テレポート
 true	true	東伏見
-false	false	東北沢
+true	true	東北沢
 true	true	東十条
 true	true	東向島
 true	true	東大前
@@ -513,7 +513,7 @@ true	true	東武動物公園
 true	true	東武練馬
 true	true	東池袋
 true	true	東浦和
-false	false	東海大学前
+true	true	東海大学前
 true	true	東白楽
 true	true	東神奈川
 true	true	東船橋
@@ -533,9 +533,9 @@ true	true	柏たなか
 true	true	柏の葉キャンパス
 true	true	柳瀬川
 true	true	柴崎
-false	false	柿生
+true	true	柿生
 true	true	栗橋
-false	false	栢山
+true	true	栢山
 true	true	根岸
 true	true	根府川
 true	true	根津
@@ -545,7 +545,7 @@ true	true	桜新町
 true	true	桜木町
 true	true	桜田門
 true	true	桶川
-false	false	梅ヶ丘
+true	true	梅ヶ丘
 false	false	梅屋敷
 true	true	梅島
 true	true	梶が谷
@@ -611,7 +611,7 @@ true	true	深谷
 true	true	淵野辺
 true	true	清澄白河
 true	true	清瀬
-false	false	渋沢
+true	true	渋沢
 true	true	渋谷
 true	true	港南中央
 true	true	港南台
@@ -629,16 +629,16 @@ true	true	片倉町
 true	true	牛田
 true	true	牛込柳町
 true	true	牛込神楽坂
-false	false	狛江
+true	true	狛江
 true	true	狭山ヶ丘
 true	true	狭山市
 true	true	獨協大学前
 true	true	玉川上水
-false	false	玉川学園前
+true	true	玉川学園前
 true	true	王子
 true	true	王子神谷
 true	true	瑞江
-false	false	生田
+true	true	生田
 false	false	生麦
 true	true	用賀
 true	true	田原町
@@ -656,15 +656,15 @@ true	true	白岡
 true	true	白楽
 true	true	白金台
 true	true	白金高輪
-false	false	百合ヶ丘
+true	true	百合ヶ丘
 true	true	百草園
 true	true	目白
 true	true	目黒
 true	true	相原
 true	true	相模原
 true	true	相模大塚
-false	false	相模大野
-false	false	相武台前
+true	true	相模大野
+true	true	相武台前
 false	false	県立大学
 true	true	真鶴
 true	true	矢向
@@ -677,7 +677,7 @@ true	true	石神井公園
 true	true	研究学園
 true	true	磯子
 true	true	祐天寺
-false	false	祖師ヶ谷大蔵
+true	true	祖師ヶ谷大蔵
 true	true	神保原
 true	true	神保町
 false	false	神奈川
@@ -689,7 +689,7 @@ true	true	神田
 true	true	神谷町
 true	true	秋津
 true	true	秋葉原
-false	false	秦野
+true	true	秦野
 true	true	稲城長沼
 true	true	稲毛
 true	true	稲毛海岸
@@ -710,7 +710,7 @@ true	true	築地市場
 true	true	篠崎
 true	true	籠原
 false	false	糀谷
-false	false	経堂
+true	true	経堂
 true	true	綱島
 true	true	綾瀬
 true	true	緑が丘
@@ -765,7 +765,7 @@ true	true	藤沢
 true	true	蘇我
 true	true	虎ノ門
 true	true	虎ノ門ヒルズ
-false	false	螢田
+true	true	螢田
 true	true	行徳
 true	true	行田
 true	true	衣笠
@@ -803,7 +803,7 @@ true	true	西谷
 true	true	西馬込
 true	true	西高島平
 true	true	要町
-false	false	読売ランド前
+true	true	読売ランド前
 true	true	調布
 true	true	護国寺
 true	true	谷保
@@ -812,7 +812,7 @@ true	true	谷津
 true	true	豊島園
 true	true	豊洲
 true	true	豊田
-false	false	豪徳寺
+true	true	豪徳寺
 true	true	赤坂
 true	true	赤坂見附
 true	true	赤羽
@@ -821,7 +821,7 @@ true	true	赤羽橋
 true	true	越中島
 true	true	越谷
 true	true	越谷レイクタウン
-false	false	足柄
+true	true	足柄
 true	true	踊場
 true	true	辰巳
 true	true	辻堂
@@ -845,7 +845,7 @@ true	true	鐘ヶ淵
 true	true	長沼
 true	true	長津田
 true	true	門前仲町
-false	false	開成
+true	true	開成
 true	true	間々田
 true	true	関内
 true	true	阪東橋
@@ -892,8 +892,8 @@ true	true	鴻巣
 true	true	鶯谷
 true	true	鶴ケ峰
 true	true	鶴ヶ島
-false	false	鶴川
-false	false	鶴巻温泉
+true	true	鶴川
+true	true	鶴巻温泉
 true	true	鶴瀬
 true	true	鶴見
 false	false	鶴見市場

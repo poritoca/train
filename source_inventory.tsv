@@ -15,4 +15,4 @@ seibu_haijima	西武拝島線｜小平〜拝島	all	true	https://wadattsu261.com
 joban_local	JR 常磐線各停｜綾瀬〜取手	all	true	https://wadattsu261.com/content/jl-jobanslowhome-all-info/	既存ナビ路線をv15でアプリ内取得へ格上げ
 metro_f	東京メトロ 副都心線｜和光市〜渋谷	hub	true	https://wadattsu261.com/f-metrofukutoshinhome-info/	既存ナビ路線をv15でアプリ内取得へ格上げ
 meguro	東急 目黒線｜目黒〜日吉	hub	true	https://wadattsu261.com/mg-tokyumegurohome-info/	既存ナビ路線をv15でアプリ内取得へ格上げ
-odakyu	小田急 小田原線｜新宿〜小田原	hub	false	https://wadattsu261.com/odakyu-list-of-transfer-routes/	掲載元が「一部の駅を除く」と明記するため自動取得候補。対応数には加算しない
+odakyu	小田急 小田原線｜新宿〜小田原	hub	true	https://wadattsu261.com/odakyu-list-of-transfer-routes/	v20で対応済みに格上げ。総合停車位置一覧 stationhome-info で47駅を確認し、専用一覧＋総合一覧＋サイト内検索で駅別詳細を解決

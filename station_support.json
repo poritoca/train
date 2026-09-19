@@ -1,6 +1,6 @@
 {
-  "version": 18,
-  "generatedAt": "2026-09-19T07:37:28+09:00",
+  "version": 20,
+  "generatedAt": "2026-09-19T19:08:51+09:00",
   "definitions": {
     "supported": "true = static data, verified all-stations source, or verified station-detail hub exists for this route/station. false = not yet verified.",
     "inApp": "true = app can show static data or fetch/parse the verified source in the guide UI. Online dynamic sources require network on first fetch.",
@@ -17,13 +17,13 @@
     "guideOnlyRouteStationPairs": 283,
     "allRouteStationPairs": 1359,
     "registeredUniqueStations": 902,
-    "supportedRouteStationPairs": 1211,
-    "unsupportedRouteStationPairs": 148,
-    "inAppRouteStationPairs": 1211,
-    "supportedUniqueStations": 813,
-    "unsupportedUniqueStations": 89,
-    "partiallySupportedUniqueStations": 9,
-    "inAppUniqueStations": 813,
+    "supportedRouteStationPairs": 1258,
+    "unsupportedRouteStationPairs": 101,
+    "inAppRouteStationPairs": 1258,
+    "supportedUniqueStations": 853,
+    "unsupportedUniqueStations": 49,
+    "partiallySupportedUniqueStations": 2,
+    "inAppUniqueStations": 853,
     "staticGuideRecords": 189,
     "staticRouteStationPairs": 71,
     "newGuideOnlyUniqueStations": 208,
@@ -416,9 +416,9 @@
       "navigationRoute": true,
       "manualGuideOnly": false,
       "stations": 47,
-      "supported": 0,
-      "inApp": 0,
-      "unsupported": 47
+      "supported": 47,
+      "inApp": 47,
+      "unsupported": 0
     },
     {
       "routeId": "keio",
@@ -1837,18 +1837,18 @@
     {
       "station": "下北沢",
       "supported": true,
-      "fullySupported": false,
+      "fullySupported": true,
       "inApp": true,
-      "fullyInApp": false,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         },
         {
           "routeId": "keio_inokashira",
@@ -2061,19 +2061,19 @@
     },
     {
       "station": "世田谷代田",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -3583,9 +3583,9 @@
     {
       "station": "代々木上原",
       "supported": true,
-      "fullySupported": false,
+      "fullySupported": true,
       "inApp": true,
-      "fullyInApp": false,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "metro_c",
@@ -3601,27 +3601,27 @@
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
     {
       "station": "代々木八幡",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -3735,19 +3735,19 @@
     },
     {
       "station": "伊勢原",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -5031,19 +5031,19 @@
     },
     {
       "station": "千歳船橋",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -5346,19 +5346,19 @@
     },
     {
       "station": "南新宿",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -5544,19 +5544,19 @@
     },
     {
       "station": "厚木",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -5598,19 +5598,19 @@
     },
     {
       "station": "参宮橋",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -5796,19 +5796,19 @@
     },
     {
       "station": "向ヶ丘遊園",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -5895,19 +5895,19 @@
     },
     {
       "station": "和泉多摩川",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -6030,19 +6030,19 @@
     },
     {
       "station": "喜多見",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -7596,19 +7596,19 @@
     },
     {
       "station": "富水",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -7795,9 +7795,9 @@
     {
       "station": "小田原",
       "supported": true,
-      "fullySupported": false,
+      "fullySupported": true,
       "inApp": true,
-      "fullyInApp": false,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "tokaido",
@@ -7822,27 +7822,27 @@
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
     {
       "station": "小田急相模原",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -8721,19 +8721,19 @@
     },
     {
       "station": "座間",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -9063,37 +9063,37 @@
     },
     {
       "station": "愛甲石田",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
     {
       "station": "成城学園前",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -9667,9 +9667,9 @@
     {
       "station": "新宿",
       "supported": true,
-      "fullySupported": false,
+      "fullySupported": true,
       "inApp": true,
-      "fullyInApp": false,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "shonan_u",
@@ -9739,9 +9739,9 @@
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         },
         {
           "routeId": "keio",
@@ -10161,19 +10161,19 @@
     },
     {
       "station": "新松田",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -10458,19 +10458,19 @@
     },
     {
       "station": "新百合ヶ丘",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -11277,19 +11277,19 @@
     },
     {
       "station": "本厚木",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -11691,19 +11691,19 @@
     },
     {
       "station": "東北沢",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -12123,19 +12123,19 @@
     },
     {
       "station": "東海大学前",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -12528,19 +12528,19 @@
     },
     {
       "station": "柿生",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -12573,19 +12573,19 @@
     },
     {
       "station": "栢山",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -12789,19 +12789,19 @@
     },
     {
       "station": "梅ヶ丘",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -14311,9 +14311,9 @@
     {
       "station": "海老名",
       "supported": true,
-      "fullySupported": false,
+      "fullySupported": true,
       "inApp": true,
-      "fullyInApp": false,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "sotetsu",
@@ -14329,9 +14329,9 @@
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -14445,19 +14445,19 @@
     },
     {
       "station": "渋沢",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -14895,19 +14895,19 @@
     },
     {
       "station": "狛江",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -14985,19 +14985,19 @@
     },
     {
       "station": "玉川学園前",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -15066,19 +15066,19 @@
     },
     {
       "station": "生田",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -15319,9 +15319,9 @@
     {
       "station": "町田",
       "supported": true,
-      "fullySupported": false,
+      "fullySupported": true,
       "inApp": true,
-      "fullyInApp": false,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "yokohama",
@@ -15337,18 +15337,18 @@
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
     {
       "station": "登戸",
       "supported": true,
-      "fullySupported": false,
+      "fullySupported": true,
       "inApp": true,
-      "fullyInApp": false,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "nambu",
@@ -15364,9 +15364,9 @@
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -15489,19 +15489,19 @@
     },
     {
       "station": "百合ヶ丘",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -15642,37 +15642,37 @@
     },
     {
       "station": "相模大野",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
     {
       "station": "相武台前",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -15930,19 +15930,19 @@
     },
     {
       "station": "祖師ヶ谷大蔵",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -16272,19 +16272,19 @@
     },
     {
       "station": "秦野",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -16695,19 +16695,19 @@
     },
     {
       "station": "経堂",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -17847,19 +17847,19 @@
     },
     {
       "station": "螢田",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -18648,19 +18648,19 @@
     },
     {
       "station": "読売ランド前",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -18810,19 +18810,19 @@
     },
     {
       "station": "豪徳寺",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -19026,19 +19026,19 @@
     },
     {
       "station": "足柄",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -19602,19 +19602,19 @@
     },
     {
       "station": "開成",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -20700,37 +20700,37 @@
     },
     {
       "station": "鶴川",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
     {
       "station": "鶴巻温泉",
-      "supported": false,
-      "fullySupported": false,
-      "inApp": false,
-      "fullyInApp": false,
+      "supported": true,
+      "fullySupported": true,
+      "inApp": true,
+      "fullyInApp": true,
       "routes": [
         {
           "routeId": "odakyu",
           "routeName": "小田急 小田原線｜新宿〜小田原",
           "navigationRoute": true,
           "manualGuideOnly": false,
-          "supported": false,
-          "inApp": false,
-          "supportType": "unverified_hub_candidate"
+          "supported": true,
+          "inApp": true,
+          "supportType": "dynamic_hub"
         }
       ]
     },
@@ -34026,10 +34026,10 @@
       "lat": 35.6896,
       "lon": 139.7006,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34040,10 +34040,10 @@
       "lat": 35.6835,
       "lon": 139.6987,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34054,10 +34054,10 @@
       "lat": 35.6786,
       "lon": 139.6937,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34068,10 +34068,10 @@
       "lat": 35.6699,
       "lon": 139.6889,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34082,10 +34082,10 @@
       "lat": 35.6691,
       "lon": 139.6798,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34096,10 +34096,10 @@
       "lat": 35.665,
       "lon": 139.673,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34110,10 +34110,10 @@
       "lat": 35.6615,
       "lon": 139.6668,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34124,10 +34124,10 @@
       "lat": 35.658,
       "lon": 139.6615,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34138,10 +34138,10 @@
       "lat": 35.655,
       "lon": 139.6536,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34152,10 +34152,10 @@
       "lat": 35.6536,
       "lon": 139.6476,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34166,10 +34166,10 @@
       "lat": 35.6516,
       "lon": 139.6366,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34180,10 +34180,10 @@
       "lat": 35.6479,
       "lon": 139.6236,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34194,10 +34194,10 @@
       "lat": 35.6434,
       "lon": 139.6099,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34208,10 +34208,10 @@
       "lat": 35.64,
       "lon": 139.599,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34222,10 +34222,10 @@
       "lat": 35.6361,
       "lon": 139.5872,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34236,10 +34236,10 @@
       "lat": 35.6328,
       "lon": 139.5771,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34250,10 +34250,10 @@
       "lat": 35.6278,
       "lon": 139.5739,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34264,10 +34264,10 @@
       "lat": 35.6207,
       "lon": 139.57,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34278,10 +34278,10 @@
       "lat": 35.6174,
       "lon": 139.5648,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34292,10 +34292,10 @@
       "lat": 35.6152,
       "lon": 139.542,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34306,10 +34306,10 @@
       "lat": 35.6147,
       "lon": 139.5274,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34320,10 +34320,10 @@
       "lat": 35.6089,
       "lon": 139.5167,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34334,10 +34334,10 @@
       "lat": 35.6038,
       "lon": 139.5076,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34348,10 +34348,10 @@
       "lat": 35.5895,
       "lon": 139.4972,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34362,10 +34362,10 @@
       "lat": 35.5839,
       "lon": 139.4804,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34376,10 +34376,10 @@
       "lat": 35.563,
       "lon": 139.463,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34390,10 +34390,10 @@
       "lat": 35.542,
       "lon": 139.4451,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34404,10 +34404,10 @@
       "lat": 35.532,
       "lon": 139.4379,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34418,10 +34418,10 @@
       "lat": 35.5158,
       "lon": 139.4231,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34432,10 +34432,10 @@
       "lat": 35.4994,
       "lon": 139.4077,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34446,10 +34446,10 @@
       "lat": 35.4802,
       "lon": 139.399,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34460,10 +34460,10 @@
       "lat": 35.4522,
       "lon": 139.3909,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34474,10 +34474,10 @@
       "lat": 35.4432,
       "lon": 139.3788,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34488,10 +34488,10 @@
       "lat": 35.439,
       "lon": 139.3644,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34502,10 +34502,10 @@
       "lat": 35.4177,
       "lon": 139.3443,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34516,10 +34516,10 @@
       "lat": 35.3952,
       "lon": 139.3135,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34530,10 +34530,10 @@
       "lat": 35.3827,
       "lon": 139.2788,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34544,10 +34544,10 @@
       "lat": 35.3738,
       "lon": 139.2717,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34558,10 +34558,10 @@
       "lat": 35.3701,
       "lon": 139.2254,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34572,10 +34572,10 @@
       "lat": 35.3749,
       "lon": 139.1838,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34586,10 +34586,10 @@
       "lat": 35.3457,
       "lon": 139.1399,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34600,10 +34600,10 @@
       "lat": 35.3269,
       "lon": 139.1356,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34614,10 +34614,10 @@
       "lat": 35.3102,
       "lon": 139.1423,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34628,10 +34628,10 @@
       "lat": 35.294,
       "lon": 139.1526,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34642,10 +34642,10 @@
       "lat": 35.2818,
       "lon": 139.1586,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34656,10 +34656,10 @@
       "lat": 35.2719,
       "lon": 139.1548,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -34670,10 +34670,10 @@
       "lat": 35.2564,
       "lon": 139.1559,
       "yokohamaServing": false,
-      "supported": false,
-      "inApp": false,
-      "supportType": "unverified_hub_candidate",
-      "source": "https://wadattsu261.com/odakyu-list-of-transfer-routes/",
+      "supported": true,
+      "inApp": true,
+      "supportType": "dynamic_hub",
+      "source": "https://wadattsu261.com/stationhome-info/",
       "navigationRoute": true,
       "manualGuideOnly": false
     },
@@ -40040,6 +40040,7 @@
     "不動前",
     "与野",
     "与野本町",
+    "世田谷代田",
     "両国",
     "中井",
     "中央林間",
@@ -40101,12 +40102,14 @@
     "仙川",
     "代々木",
     "代々木上原",
+    "代々木八幡",
     "代々木公園",
     "代官山",
     "代田橋",
     "仲御徒町",
     "仲町台",
     "伊勢佐木長者町",
+    "伊勢原",
     "住吉",
     "保土ケ谷",
     "保谷",
@@ -40161,6 +40164,7 @@
     "千住大橋",
     "千川",
     "千歳烏山",
+    "千歳船橋",
     "千石",
     "千葉",
     "千葉みなと",
@@ -40174,6 +40178,7 @@
     "南多摩",
     "南大塚",
     "南平",
+    "南新宿",
     "南柏",
     "南流山",
     "南浦和",
@@ -40183,8 +40188,10 @@
     "南行徳",
     "南越谷",
     "南阿佐ケ谷",
+    "厚木",
     "原宿",
     "原木中山",
+    "参宮橋",
     "反町",
     "取手",
     "古河",
@@ -40193,12 +40200,15 @@
     "吉川美南",
     "吉祥寺",
     "吉野町",
+    "向ヶ丘遊園",
     "向河原",
     "吹上",
     "和光市",
+    "和泉多摩川",
     "和田町",
     "品川",
     "品川シーサイド",
+    "喜多見",
     "四ツ谷",
     "四谷三丁目",
     "国会議事堂前",
@@ -40257,6 +40267,7 @@
     "宿河原",
     "富士見ヶ丘",
     "富士見台",
+    "富水",
     "小伝馬町",
     "小山",
     "小岩",
@@ -40267,6 +40278,7 @@
     "小手指",
     "小机",
     "小田原",
+    "小田急相模原",
     "小竹向原",
     "小菅",
     "小金井",
@@ -40305,6 +40317,7 @@
     "広尾",
     "府中",
     "府中本町",
+    "座間",
     "弘明寺（地下鉄）",
     "弥生台",
     "後楽園",
@@ -40317,6 +40330,8 @@
     "志津",
     "志茂",
     "恵比寿",
+    "愛甲石田",
+    "成城学園前",
     "成増",
     "成瀬",
     "成田空港",
@@ -40358,6 +40373,7 @@
     "新木場",
     "新杉田",
     "新松戸",
+    "新松田",
     "新板橋",
     "新検見川",
     "新横浜",
@@ -40369,6 +40385,7 @@
     "新田",
     "新町",
     "新白岡",
+    "新百合ヶ丘",
     "新秋津",
     "新羽",
     "新習志野",
@@ -40402,6 +40419,7 @@
     "木場",
     "末広町",
     "本八幡",
+    "本厚木",
     "本川越",
     "本庄",
     "本所吾妻橋",
@@ -40416,6 +40434,7 @@
     "東京",
     "東京テレポート",
     "東伏見",
+    "東北沢",
     "東十条",
     "東向島",
     "東大前",
@@ -40437,6 +40456,7 @@
     "東武練馬",
     "東池袋",
     "東浦和",
+    "東海大学前",
     "東白楽",
     "東神奈川",
     "東船橋",
@@ -40456,7 +40476,9 @@
     "柏の葉キャンパス",
     "柳瀬川",
     "柴崎",
+    "柿生",
     "栗橋",
+    "栢山",
     "根岸",
     "根府川",
     "根津",
@@ -40466,6 +40488,7 @@
     "桜木町",
     "桜田門",
     "桶川",
+    "梅ヶ丘",
     "梅島",
     "梶が谷",
     "森下",
@@ -40526,6 +40549,7 @@
     "淵野辺",
     "清澄白河",
     "清瀬",
+    "渋沢",
     "渋谷",
     "港南中央",
     "港南台",
@@ -40543,13 +40567,16 @@
     "牛田",
     "牛込柳町",
     "牛込神楽坂",
+    "狛江",
     "狭山ヶ丘",
     "狭山市",
     "獨協大学前",
     "玉川上水",
+    "玉川学園前",
     "王子",
     "王子神谷",
     "瑞江",
+    "生田",
     "用賀",
     "田原町",
     "田園調布",
@@ -40566,12 +40593,15 @@
     "白楽",
     "白金台",
     "白金高輪",
+    "百合ヶ丘",
     "百草園",
     "目白",
     "目黒",
     "相原",
     "相模原",
     "相模大塚",
+    "相模大野",
+    "相武台前",
     "真鶴",
     "矢向",
     "矢川",
@@ -40583,6 +40613,7 @@
     "研究学園",
     "磯子",
     "祐天寺",
+    "祖師ヶ谷大蔵",
     "神保原",
     "神保町",
     "神奈川新町",
@@ -40592,6 +40623,7 @@
     "神谷町",
     "秋津",
     "秋葉原",
+    "秦野",
     "稲城長沼",
     "稲毛",
     "稲毛海岸",
@@ -40610,6 +40642,7 @@
     "築地市場",
     "篠崎",
     "籠原",
+    "経堂",
     "綱島",
     "綾瀬",
     "緑が丘",
@@ -40662,6 +40695,7 @@
     "蘇我",
     "虎ノ門",
     "虎ノ門ヒルズ",
+    "螢田",
     "行徳",
     "行田",
     "衣笠",
@@ -40699,6 +40733,7 @@
     "西馬込",
     "西高島平",
     "要町",
+    "読売ランド前",
     "調布",
     "護国寺",
     "谷保",
@@ -40707,6 +40742,7 @@
     "豊島園",
     "豊洲",
     "豊田",
+    "豪徳寺",
     "赤坂",
     "赤坂見附",
     "赤羽",
@@ -40715,6 +40751,7 @@
     "越中島",
     "越谷",
     "越谷レイクタウン",
+    "足柄",
     "踊場",
     "辰巳",
     "辻堂",
@@ -40734,6 +40771,7 @@
     "長沼",
     "長津田",
     "門前仲町",
+    "開成",
     "間々田",
     "関内",
     "阪東橋",
@@ -40777,6 +40815,8 @@
     "鶯谷",
     "鶴ケ峰",
     "鶴ヶ島",
+    "鶴川",
+    "鶴巻温泉",
     "鶴瀬",
     "鶴見",
     "鷺ノ宮",
@@ -40789,7 +40829,6 @@
     "YRP野比",
     "三崎口",
     "三浦海岸",
-    "世田谷代田",
     "井土ヶ谷",
     "京急久里浜",
     "京急大津",
@@ -40797,95 +40836,49 @@
     "京急新子安",
     "京急田浦",
     "京急長沢",
-    "代々木八幡",
-    "伊勢原",
     "八丁畷",
     "六浦",
     "六郷土手",
     "北久里浜",
     "北品川",
-    "千歳船橋",
     "南太田",
-    "南新宿",
-    "厚木",
-    "参宮橋",
-    "向ヶ丘遊園",
-    "和泉多摩川",
-    "喜多見",
     "堀ノ内",
     "大森海岸",
     "大森町",
     "大鳥居",
     "子安",
     "安針塚",
-    "富水",
-    "小田急相模原",
     "屏風浦",
-    "座間",
     "弘明寺",
-    "愛甲石田",
-    "成城学園前",
     "戸部",
     "新大津",
-    "新松田",
-    "新百合ヶ丘",
     "新馬場",
-    "本厚木",
-    "東北沢",
-    "東海大学前",
-    "柿生",
-    "栢山",
-    "梅ヶ丘",
     "梅屋敷",
     "横須賀中央",
     "汐入",
     "津久井浜",
     "浦賀",
-    "渋沢",
-    "狛江",
-    "玉川学園前",
-    "生田",
     "生麦",
-    "百合ヶ丘",
-    "相模大野",
-    "相武台前",
     "県立大学",
-    "祖師ヶ谷大蔵",
     "神奈川",
     "神武寺",
-    "秦野",
     "穴守稲荷",
     "糀谷",
-    "経堂",
     "能見台",
     "花月総持寺",
-    "螢田",
-    "読売ランド前",
-    "豪徳寺",
-    "足柄",
     "追浜",
     "逗子・葉山",
     "逸見",
     "金沢八景",
-    "開成",
     "雑色",
     "馬堀海岸",
     "鮫洲",
-    "鶴川",
-    "鶴巻温泉",
     "鶴見市場",
     "黄金町"
   ],
   "partiallySupportedStations": [
-    "下北沢",
     "京急鶴見",
-    "代々木上原",
-    "天空橋",
-    "小田原",
-    "新宿",
-    "海老名",
-    "町田",
-    "登戸"
+    "天空橋"
   ],
   "inAppStations": [
     "あざみ野",
@@ -40957,6 +40950,7 @@
     "不動前",
     "与野",
     "与野本町",
+    "世田谷代田",
     "両国",
     "中井",
     "中央林間",
@@ -41018,12 +41012,14 @@
     "仙川",
     "代々木",
     "代々木上原",
+    "代々木八幡",
     "代々木公園",
     "代官山",
     "代田橋",
     "仲御徒町",
     "仲町台",
     "伊勢佐木長者町",
+    "伊勢原",
     "住吉",
     "保土ケ谷",
     "保谷",
@@ -41078,6 +41074,7 @@
     "千住大橋",
     "千川",
     "千歳烏山",
+    "千歳船橋",
     "千石",
     "千葉",
     "千葉みなと",
@@ -41091,6 +41088,7 @@
     "南多摩",
     "南大塚",
     "南平",
+    "南新宿",
     "南柏",
     "南流山",
     "南浦和",
@@ -41100,8 +41098,10 @@
     "南行徳",
     "南越谷",
     "南阿佐ケ谷",
+    "厚木",
     "原宿",
     "原木中山",
+    "参宮橋",
     "反町",
     "取手",
     "古河",
@@ -41110,12 +41110,15 @@
     "吉川美南",
     "吉祥寺",
     "吉野町",
+    "向ヶ丘遊園",
     "向河原",
     "吹上",
     "和光市",
+    "和泉多摩川",
     "和田町",
     "品川",
     "品川シーサイド",
+    "喜多見",
     "四ツ谷",
     "四谷三丁目",
     "国会議事堂前",
@@ -41174,6 +41177,7 @@
     "宿河原",
     "富士見ヶ丘",
     "富士見台",
+    "富水",
     "小伝馬町",
     "小山",
     "小岩",
@@ -41184,6 +41188,7 @@
     "小手指",
     "小机",
     "小田原",
+    "小田急相模原",
     "小竹向原",
     "小菅",
     "小金井",
@@ -41222,6 +41227,7 @@
     "広尾",
     "府中",
     "府中本町",
+    "座間",
     "弘明寺（地下鉄）",
     "弥生台",
     "後楽園",
@@ -41234,6 +41240,8 @@
     "志津",
     "志茂",
     "恵比寿",
+    "愛甲石田",
+    "成城学園前",
     "成増",
     "成瀬",
     "成田空港",
@@ -41275,6 +41283,7 @@
     "新木場",
     "新杉田",
     "新松戸",
+    "新松田",
     "新板橋",
     "新検見川",
     "新横浜",
@@ -41286,6 +41295,7 @@
     "新田",
     "新町",
     "新白岡",
+    "新百合ヶ丘",
     "新秋津",
     "新羽",
     "新習志野",
@@ -41319,6 +41329,7 @@
     "木場",
     "末広町",
     "本八幡",
+    "本厚木",
     "本川越",
     "本庄",
     "本所吾妻橋",
@@ -41333,6 +41344,7 @@
     "東京",
     "東京テレポート",
     "東伏見",
+    "東北沢",
     "東十条",
     "東向島",
     "東大前",
@@ -41354,6 +41366,7 @@
     "東武練馬",
     "東池袋",
     "東浦和",
+    "東海大学前",
     "東白楽",
     "東神奈川",
     "東船橋",
@@ -41373,7 +41386,9 @@
     "柏の葉キャンパス",
     "柳瀬川",
     "柴崎",
+    "柿生",
     "栗橋",
+    "栢山",
     "根岸",
     "根府川",
     "根津",
@@ -41383,6 +41398,7 @@
     "桜木町",
     "桜田門",
     "桶川",
+    "梅ヶ丘",
     "梅島",
     "梶が谷",
     "森下",
@@ -41443,6 +41459,7 @@
     "淵野辺",
     "清澄白河",
     "清瀬",
+    "渋沢",
     "渋谷",
     "港南中央",
     "港南台",
@@ -41460,13 +41477,16 @@
     "牛田",
     "牛込柳町",
     "牛込神楽坂",
+    "狛江",
     "狭山ヶ丘",
     "狭山市",
     "獨協大学前",
     "玉川上水",
+    "玉川学園前",
     "王子",
     "王子神谷",
     "瑞江",
+    "生田",
     "用賀",
     "田原町",
     "田園調布",
@@ -41483,12 +41503,15 @@
     "白楽",
     "白金台",
     "白金高輪",
+    "百合ヶ丘",
     "百草園",
     "目白",
     "目黒",
     "相原",
     "相模原",
     "相模大塚",
+    "相模大野",
+    "相武台前",
     "真鶴",
     "矢向",
     "矢川",
@@ -41500,6 +41523,7 @@
     "研究学園",
     "磯子",
     "祐天寺",
+    "祖師ヶ谷大蔵",
     "神保原",
     "神保町",
     "神奈川新町",
@@ -41509,6 +41533,7 @@
     "神谷町",
     "秋津",
     "秋葉原",
+    "秦野",
     "稲城長沼",
     "稲毛",
     "稲毛海岸",
@@ -41527,6 +41552,7 @@
     "築地市場",
     "篠崎",
     "籠原",
+    "経堂",
     "綱島",
     "綾瀬",
     "緑が丘",
@@ -41579,6 +41605,7 @@
     "蘇我",
     "虎ノ門",
     "虎ノ門ヒルズ",
+    "螢田",
     "行徳",
     "行田",
     "衣笠",
@@ -41616,6 +41643,7 @@
     "西馬込",
     "西高島平",
     "要町",
+    "読売ランド前",
     "調布",
     "護国寺",
     "谷保",
@@ -41624,6 +41652,7 @@
     "豊島園",
     "豊洲",
     "豊田",
+    "豪徳寺",
     "赤坂",
     "赤坂見附",
     "赤羽",
@@ -41632,6 +41661,7 @@
     "越中島",
     "越谷",
     "越谷レイクタウン",
+    "足柄",
     "踊場",
     "辰巳",
     "辻堂",
@@ -41651,6 +41681,7 @@
     "長沼",
     "長津田",
     "門前仲町",
+    "開成",
     "間々田",
     "関内",
     "阪東橋",
@@ -41694,6 +41725,8 @@
     "鶯谷",
     "鶴ケ峰",
     "鶴ヶ島",
+    "鶴川",
+    "鶴巻温泉",
     "鶴瀬",
     "鶴見",
     "鷺ノ宮",
@@ -46702,6 +46735,288 @@
       "supportType": "dynamic_hub"
     },
     {
+      "routeId": "odakyu",
+      "station": "新宿",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "南新宿",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "参宮橋",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "代々木八幡",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "代々木上原",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "東北沢",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "下北沢",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "世田谷代田",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "梅ヶ丘",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "豪徳寺",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "経堂",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "千歳船橋",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "祖師ヶ谷大蔵",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "成城学園前",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "喜多見",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "狛江",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "和泉多摩川",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "登戸",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "向ヶ丘遊園",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "生田",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "読売ランド前",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "百合ヶ丘",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "新百合ヶ丘",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "柿生",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "鶴川",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "玉川学園前",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "町田",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "相模大野",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "小田急相模原",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "相武台前",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "座間",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "海老名",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "厚木",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "本厚木",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "愛甲石田",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "伊勢原",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "鶴巻温泉",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "東海大学前",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "秦野",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "渋沢",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "新松田",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "開成",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "栢山",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "富水",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "螢田",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "足柄",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
+      "routeId": "odakyu",
+      "station": "小田原",
+      "inApp": true,
+      "supportType": "dynamic_hub"
+    },
+    {
       "routeId": "keio",
       "station": "新宿",
       "inApp": true,
@@ -49374,194 +49689,6 @@
     {
       "routeId": "keikyu_z",
       "station": "逗子・葉山"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "新宿"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "南新宿"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "参宮橋"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "代々木八幡"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "代々木上原"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "東北沢"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "下北沢"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "世田谷代田"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "梅ヶ丘"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "豪徳寺"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "経堂"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "千歳船橋"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "祖師ヶ谷大蔵"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "成城学園前"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "喜多見"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "狛江"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "和泉多摩川"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "登戸"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "向ヶ丘遊園"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "生田"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "読売ランド前"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "百合ヶ丘"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "新百合ヶ丘"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "柿生"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "鶴川"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "玉川学園前"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "町田"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "相模大野"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "小田急相模原"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "相武台前"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "座間"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "海老名"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "厚木"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "本厚木"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "愛甲石田"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "伊勢原"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "鶴巻温泉"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "東海大学前"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "秦野"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "渋沢"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "新松田"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "開成"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "栢山"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "富水"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "螢田"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "足柄"
-    },
-    {
-      "routeId": "odakyu",
-      "station": "小田原"
     }
   ]
 }
