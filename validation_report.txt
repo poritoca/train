@@ -1,44 +1,30 @@
-駅間ナビ v42 validation report
-Generated: 2026-09-21 19:10 JST
+駅間ナビ v43 検証結果
+====================
 
-Base / rollback check
-- 作業元: 202609211823_ekikan_gps_41_32.zip (SILENT JOURNEY 41) PASS
-- v41を新規展開した pristine とv42作業ディレクトリを比較 PASS
-- 変更ファイルは8ファイルのみ PASS
-- 変更対象外13ファイルはv41と差分なし PASS
+基準版
+------
+作業元: 202609211910_ekikan_gps_42_33.zip
+画面版: SILENT JOURNEY 42 → 43
 
-今回の修正
-- 元住吉×東急目黒線: 確認済み詳細URLを直接優先 PASS
-- 元住吉: 複数路線・複数番線が同一到着文にある場合も、選択路線の事実だけを抽出 PASS
-- 元住吉: 3番線=日吉方面(+1)、4番線=目黒方面(-1)を保持 PASS
-- 元住吉: 東横線2番線・5番線が目黒線解析へ混入しない PASS
-- 元住吉: 両方向の設備ブロックでエレベーター設備を保持 PASS
-- 共通安全性: 選択路線内で+1/-1が同時に残る曖昧ケースは文脈を採用せず fail-closed PASS
+実施済み
+--------
+- ZIPからv42を新規展開し、その内容を直接編集。古い版を作業元にしていない。
+- index.html 内インラインJavaScriptを抽出し `node --check` で構文エラーなし。
+- sw.js を `node --check` で構文エラーなし。
+- 検索UIがメイン4タブより前に配置されていることを確認。
+- 検索inputが type=search / inputmode=search / enterkeyhint=search を持つことを確認。
+- 検索候補が ALL_GUIDE_ROUTES + guideStationNames() から生成され、別の駅リストを追加していないことを確認。
+- 完全一致が存在する場合に score=0 の候補だけへ絞る処理を確認。
+- 同じ短縮路線名が複数ある場合のみ区間名を付ける表示ロジックを確認。
+- 候補1件で駅・路線を自動選択して方面欄へ進む処理を確認。
+- 方面選択時に既存 guideBrowseRoute / guideBrowseStation / guideBrowseDirection へ同期し、既存 renderGuide() で描画する処理を確認。
+- v42のエレベーターカード強調CSS / 静的・動的判定処理が残っていることを確認。
+- Service Worker shell cache を43.0へ更新。動的オンライン案内のparser28キャッシュは解析仕様未変更のため維持。
+- headless Chromiumでは localhost / file URL への直接遷移が実行環境ポリシーで遮断されたため、同一HTMLを `page.set_content()` で読み込むDOM E2Eを実施。日吉検索→東急目黒線選択→目黒方面選択→降車位置タブ自動移動、`新宿` 完全一致時の部分一致除外、`浜松町` から東京モノレール候補が出ること、検索欄がタブより上にあることを確認し `QUICK_SEARCH_E2E_PASS`。
 
-エレベーターカード
-- 動的オンライン案内: 実解析detailに「エレベーター」を含む号車だけ `.elevator` 強調を付与 PASS
-- 静的収録案内: typesに `elevator` を持つ号車だけ `.elevator` 強調を付与 PASS
-- `.car.active.elevator` 専用の背景・枠線・軽いbox-shadowあり PASS
-- 対象カードに `号車 · EV` とエレベーターaria-labelあり PASS
-- 駅別ハードコードではなく設備実データ駆動のため、エレベーター情報を持つ全駅に共通適用 PASS
-
-Version / cache
-- SILENT JOURNEY · 42 PASS
-- semantic parser dom-semantic-1.18.0 PASS
-- dynamic cache prefix ekikan-guide-dynamic-v42-parser28 PASS
-- service worker shell 42.0 PASS
-
-Syntax / data / regression
-- index.html inline JavaScript node --check PASS
-- sw.js node --check PASS
-- guide-source-index.json parse PASS
-- 元住吉実ページ構造相当 Node parser regression: V42_MOTOSUMIYOSHI_REGRESSION_PASS
-- 反対方向同時残存のfail-closed regression: V42_AMBIGUITY_FAIL_CLOSED_PASS
-- エレベーター動的/静的データ駆動実装 source assertion PASS
-
-Packaging
-- 202609211910_ekikan_gps_42_33.zip 作成 PASS
-- unzip -t PASS
-- ZIP再展開内容とv42作業ディレクトリの全21ファイルがバイト一致 PASS
-- ZIP再展開内容とv41の差分は上記8ファイルのみ PASS
-- 変更対象外13ファイルはZIP内でもv41とバイト一致 PASS
+安全側の仕様
+--------------
+- 駅名が完全一致すれば部分一致駅を混ぜず、誤選択を減らす。
+- 検索は既存の降車位置対象路線だけを使う。
+- 方面が未選択のまま自動表示しない。
+- 実際の降車案内取得・方向判定はv42までの既存ロジックをそのまま再利用する。

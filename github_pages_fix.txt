@@ -1,3 +1,10 @@
+v43 配布時の確認
+----------------
+- `index.html` と `sw.js` を同時に上書きしてください。
+- 初回表示で `SILENT JOURNEY · 43` を確認してください。
+- 4タブの直上に「駅名で降車位置を検索」が表示されます。
+- Service Worker shell cache は43.0です。表示が42のままならSafariを再読み込みしてください。
+
 GitHub Pages 向けメモ v42
 
 更新方法
