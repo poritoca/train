@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0d10">
+<title>iPhoneの通知・振動 — 駅間ナビ</title>
+<style>
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;background:#0b0d10;color:#eee9e0}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#52493735,transparent 50%)}main{max-width:760px;margin:auto;padding:24px 20px 60px}a{color:#e4cba0;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:2px solid #ead2a7;outline-offset:5px}.back{display:inline-flex;min-height:44px;align-items:center;font-size:14px}.eyebrow{font-size:12px;color:#b8a47e;margin:22px 0 7px}h1{font-size:clamp(24px,5vw,34px);line-height:1.4;margin:0 0 14px;letter-spacing:0}h2{font-size:20px;margin:0 0 14px;line-height:1.6}h3{font-size:16px;margin:22px 0 9px}p,li{font-size:14px;line-height:1.95;color:#bcc2ca}b,strong{color:#f0e7d7;font-weight:600}.lead{font-size:16px;color:#e1d9ca}.meta,.note{font-size:12px;color:#9da8b4}.card{padding:23px;margin-top:20px;background:linear-gradient(135deg,#23272c,#151b21);border:1px solid #bdaa823b;border-radius:18px;box-shadow:inset 0 1px #ffedcd12}.recommended{border-color:#cbb18470}.steps{padding-left:23px}.steps li{padding:0 0 13px 4px}.button{display:flex;align-items:center;justify-content:center;min-height:48px;border:1px solid #e4cda6;background:linear-gradient(135deg,#e7d6b8,#bda178);color:#221e17;border-radius:12px;padding:12px;text-decoration:none;font-size:15px;font-weight:600;margin:18px 0 8px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.7}caption{text-align:left;color:#aab3bd;font-size:12px;padding-bottom:10px}th,td{text-align:left;vertical-align:top;padding:12px 8px;border-bottom:1px solid #beae8730;overflow-wrap:anywhere}th{color:#dbc49c;font-weight:600}td{color:#bdc5ce}th:first-child{width:31%}td:first-child{color:#ede6da}summary{min-height:44px;padding-block:9px;font-size:14px;color:#e2c99c;cursor:pointer}.sources li{font-size:12px;padding-bottom:8px}.sources a{overflow-wrap:anywhere}code{font-size:.95em;color:#d7c69f}footer{margin-top:26px;color:#929ca6;font-size:12px;line-height:1.8}@media(max-width:370px){main{padding-inline:13px}.card{padding:18px 14px}th,td{padding-inline:6px;font-size:12px}}@media print{:root{color-scheme:light;background:white;color:#111}body,.card{background:white;box-shadow:none}p,li,td,.meta,.note,footer{color:#333}a,h1,h2,h3,b,strong,th,td:first-child{color:#111}.button,.back{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<a class="back" href="./">‹ 駅間ナビを開く</a>
+<p class="eyebrow">駅間ナビ 46</p>
+<h1>iPhoneの通知・振動</h1>
+<p class="lead">画面を開いて使うならBrrrowserを試す。画面を閉じて使うなら、標準のショートカットで通知を設定する。用途に合わせて選べます。</p>
+<p>どちらも開発者登録や、自作アプリのストア公開は不要です。駅間ナビには、ブラウザ移行用のURLコピー、振動テスト、各区間の降車駅をコピーする設定補助を追加しました。</p>
+<p class="meta">調査：2026年9月22日。公式資料・公開仕様に基づく整理です。iPhone実機での通知・振動の確認は未実施です。</p>
+
+<section class="card recommended" id="brrrowser">
+<h2>画面を開いて使う：Brrrowserを試す</h2>
+<p><b>Brrrowser</b>は、Webページ向けの振動機能を追加したiPhone用ブラウザです。開発元が<code>navigator.vibrate()</code>への対応を明記しています。<a href="#source-brrrowser-api">[12]</a> 日本のApp Storeでは無料、iOS 16.6以降対応と案内されています。<a href="#source-brrrowser-store">[13]</a></p>
+<ol class="steps">
+<li>Safari側で保存済みプリセットを使っている場合は、「保存した経路 → ファイルに書き出し」でJSONを保存します。別のブラウザには自動では引き継がれません。</li>
+<li>駅間ナビの「その他 → iPhoneの通知・振動の設定」で、このページのURLをコピーします。公開済みのHTTPSのURLを使用してください。</li>
+<li>Brrrowserをインストールして、コピーした駅間ナビのURLを開きます。必要ならプリセットJSONを「保存した経路 → 読み込み」で取り込みます。</li>
+<li>「その他 → iPhoneの通知・振動の設定」から<b>「バイブを試す」</b>を押します。バイブAPIが見つかるブラウザではテストボタンが表示されます。</li>
+<li><b>「10秒後に試す」</b>も押し、画面を開いたまま触れずに待ちます。ボタンに触れた瞬間だけでなく、少し時間がたっても振動するか確認できます。この案内や画面を閉じるとテストは中止します。</li>
+<li>屋外などで位置情報を許可し、GPSの現在駅が取得できることを確認してから見守りを試してください。</li>
+</ol>
+<a class="button" href="https://apps.apple.com/jp/app/brrrowser/id6747417026" target="_blank" rel="noopener noreferrer">App StoreでBrrrowserを確認</a>
+<p class="note"><b>開発元の案内に基づく候補です。</b>このアプリとのGPSの組み合わせ、実際の振動、画面保持はiPhone実機で未確認です。位置情報が取得できない場合は駅間ナビの見守りに使えません。画面ロック中のGPS動作も確認できていないため、Brrrowserでも画面を開いて利用する前提です。</p>
+<p>駅間ナビはブラウザ名ではなく、実行中のバイブAPIを検出します。APIが提供されていれば既存の距離・1駅前・時間によるお知らせから呼び出します。音は追加していません。</p>
+</section>
+
+<section class="card recommended" id="shortcuts">
+<h2>画面を閉じて使う：ショートカット</h2>
+<p>普段使う降車駅・乗換駅ごとに「到着」のオートメーションを作ります。ブラウザを開き続ける必要がある駅間ナビのGPSとは別に、iPhone側の位置に基づいて実行します。<a href="#source-travel">[1]</a></p>
+<ol class="steps">
+<li>駅間ナビの「その他 → iPhoneの通知・振動の設定」、またはプリセットの「通知の設定」を開き、駅名をコピーします。見守り中は「その他の操作 → iPhoneの通知・振動」からも開けます。</li>
+<li>「ショートカット」アプリで、<b>オートメーション → ＋ → 到着</b>を選びます。項目名はiOSのバージョンによって異なります。</li>
+<li>「場所」で駅を検索し、同名駅と間違っていないか路線・地図を確認します。<b>地図の円で検知範囲を調整</b>できます。早めに知りたい場合は範囲を広げるか、1つ前の停車駅を使います。停車する列車かどうかも確認してください。</li>
+<li>必要なら<b>時間範囲</b>を指定します。往路は朝、復路は夕方などに分けると、通過するたびに振動するのを減らせます。</li>
+<li><b>「すぐに実行」</b>を選びます。「実行の前に尋ねる」がある場合はオフにします。「到着」は確認なしで実行できる作動条件です。<a href="#source-auto">[2]</a></li>
+<li>「新規の空のオートメーション」などから、<b>「デバイスを振動させる」</b>を追加します。「繰り返す」を3回にしてその内側に置くと、振動を3回にできます。<a href="#source-vibrate">[3]</a></li>
+<li>表示も必要なら<b>「通知を表示」</b>を追加し、「〇〇駅の近くです」などと入力します。<a href="#source-notification">[4]</a> 音を出したくない場合は、アクションの詳細で「サウンドを再生」をオフにしてください。端末側の通知・触覚・集中モードの設定も確認します。</li>
+<li>設定を保存し、まず目が覚めている状態で実際の移動中に試します。ロック中にも振動・通知するか、ご自身の端末で確認してください。</li>
+</ol>
+<a class="button" href="shortcuts://">ショートカットを開く</a>
+<p class="note">上のボタンはiPhone用です。アプリを開くだけで、オートメーションは自動作成されません。未インストールならAppleの<a href="https://apps.apple.com/jp/app/shortcuts/id1462947752" target="_blank" rel="noopener noreferrer">「ショートカット」</a>を使用してください。</p>
+<h3>経路を変更したとき・使い終わったとき</h3>
+<p><b>駅間ナビとショートカットは別管理です。</b>プリセットの変更・削除や「今回の設定を全解除」は、ショートカット側には反映されません。不要になったオートメーションは「ショートカット」で無効化・削除してください。<a href="#source-auto">[2]</a></p>
+<p>到着オートメーションは、設定した範囲への進入が条件です。すでに範囲内にいる場合や、地下などで位置が取れない場合は期待どおりに作動しないことがあります。通知に遅れもあるため、正確な「駅到着」の判定には使わず、車内案内と合わせて利用してください。</p>
+</section>
+
+<section class="card" id="browsers">
+<h2>ブラウザを替えると使える？</h2>
+<div class="table-wrap"><table>
+<caption>通常のiPhone版と、振動機能を独自に追加するBrrrowserの比較。アプリ自身の通知とWeb通知は別です。</caption>
+<thead><tr><th scope="col">開き方</th><th scope="col">HTMLからの自動バイブ</th><th scope="col">Web Push通知</th></tr></thead>
+<tbody>
+<tr><td>Safariのタブ</td><td>標準APIは非対応</td><td>通常のタブでは利用不可</td></tr>
+<tr><td>Chromeのタブ</td><td>標準APIは非対応</td><td>通常のタブでは利用不可</td></tr>
+<tr><td>Edgeのタブ</td><td>標準APIは非対応</td><td>通常のタブでは利用不可</td></tr>
+<tr><td>Firefoxのタブ</td><td>標準APIは非対応</td><td>通常のタブでは利用不可</td></tr>
+<tr><td>Brrrowser</td><td>開発元が対応を明記。実機未確認</td><td>対応を確認できず</td></tr>
+<tr><td>ホーム画面に追加したWebアプリ</td><td>標準APIは非対応</td><td>iOS 16.4以降で対応。許可と配信の仕組みが必要</td></tr>
+</tbody></table></div>
+<p>「Chromeならバイブが使える」という説明は、Android版と混同しやすい点です。iPhone版は同じ条件ではありません。MDNの対応データではSafari/iOS WebViewの<code>navigator.vibrate()</code>は非対応です。<a href="#source-vibration-api">[5]</a> Chrome・Edge・Firefoxの通常のiPhone版がWebKitを使うことから、同様の制約になると判断しています。<a href="#source-engine">[6]</a> ChromeのWeb通知についてはGoogleも非対応と案内しています。<a href="#source-chrome">[7]</a></p>
+<p>配布地域・ブラウザの実装変更や、独自APIを追加した特殊なブラウザは別です。駅間ナビはブラウザ名だけで決めず、実行中のブラウザにバイブAPIがあるかを調べて表示します。APIがあっても実際の振動は端末設定に左右されるので、テストで確認してください。</p>
+<h3>スイッチを使って振動させる方法について</h3>
+<p>SafariのHTMLスイッチを利用した触覚フィードバックの実装例があります。<a href="#source-switch">[8]</a> ただし、標準バイブAPIへの対応を意味するものではありません。駅に近づいた際の自動実行や、画面ロック中の動作を裏付ける確認が取れないため、今回の自動通知には組み込んでいません。</p>
+</section>
+
+<section class="card" id="other-options">
+<h2>ほかの方法との比較</h2>
+<h3>ホーム画面への追加とWeb Push</h3>
+<p>ホーム画面のWebアプリなら、通知の許可を得てWeb Pushを受け取れます。Apple Developer Programへの加入は不要です。<a href="#source-push">[9]</a></p>
+<p>ただし、Web Pushは外部から届く通知の仕組みです。<b>ホーム画面への追加だけでは、ロック中のGPS監視はできません。</b>位置情報APIは表示状態の制約を受けます。<a href="#source-gps">[10]</a> 配信用サーバーを追加しても、駅への接近を検知する別の仕組みが必要です。今回の駅間ナビにはWeb Push配信を追加していません。</p>
+<h3>ストアに公開せず、自作のiPhoneアプリを使う</h3>
+<p>MacのXcodeと無料のApple Accountを使い、自分のiPhoneへ入れてテストする方法はあります。ただし無料のPersonal Teamではプロビジョニングが7日で期限切れになり、再ビルド・再インストールが必要です。<a href="#source-xcode">[11]</a></p>
+<p>位置監視と通知をネイティブ側に実装すれば設計の自由度は上がりますが、Macの準備、初期設定、定期的な入れ直しが増えます。手軽な個人利用を優先する現状では、先に対応ブラウザの試用や標準ショートカットを検討するのがよいと判断しました。</p>
+</section>
+
+<section class="card"><details><summary>確認した資料</summary><ol class="sources">
+<li id="source-travel"><a href="https://support.apple.com/ja-jp/guide/shortcuts/apd8ebfc4e8e/ios" target="_blank" rel="noopener noreferrer">Apple：移動作動機能（到着・場所・範囲・時間）</a></li>
+<li id="source-auto"><a href="https://support.apple.com/ja-jp/guide/shortcuts/apd602971e63/ios" target="_blank" rel="noopener noreferrer">Apple：パーソナルオートメーションの有効化・無効化と確認なしの実行</a></li>
+<li id="source-vibrate"><a href="https://support.apple.com/ja-jp/guide/shortcuts/apdc11deb2c1/ios" target="_blank" rel="noopener noreferrer">Apple：「繰り返す」と「デバイスを振動させる」</a></li>
+<li id="source-notification"><a href="https://support.apple.com/ja-jp/guide/shortcuts/apd2175adcab/ios" target="_blank" rel="noopener noreferrer">Apple：「通知を表示」</a></li>
+<li id="source-vibration-api"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate" target="_blank" rel="noopener noreferrer">MDN：Navigator.vibrate()</a> ／ <a href="https://github.com/mdn/browser-compat-data/blob/main/api/Navigator.json" target="_blank" rel="noopener noreferrer">対応データ（vibrate項目）</a></li>
+<li id="source-engine"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/User-Agent" target="_blank" rel="noopener noreferrer">MDN：iPhoneブラウザのWebKit構成</a> ／ <a href="https://firefox-source-docs.mozilla.org/overview/ios.html" target="_blank" rel="noopener noreferrer">Mozilla：Firefox for iOS</a></li>
+<li id="source-chrome"><a href="https://support.google.com/chrome/answer/3220216?co=GENIE.Platform%3DiOS&amp;hl=ja" target="_blank" rel="noopener noreferrer">Google：iPhone・iPadのChromeの通知</a></li>
+<li id="source-switch"><a href="https://webkit.org/blog/15054/an-html-switch-control/" target="_blank" rel="noopener noreferrer">WebKit：HTMLスイッチ</a> ／ <a href="https://github.com/tijnjh/ios-haptics" target="_blank" rel="noopener noreferrer">ios-haptics作者による実装説明</a> ／ <a href="https://github.com/lochie/web-haptics" target="_blank" rel="noopener noreferrer">WebHaptics</a></li>
+<li id="source-push"><a href="https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/" target="_blank" rel="noopener noreferrer">WebKit：ホーム画面のWebアプリとWeb Push</a></li>
+<li id="source-gps"><a href="https://www.w3.org/TR/geolocation/#request-a-position" target="_blank" rel="noopener noreferrer">W3C：位置取得と表示状態の制約</a></li>
+<li id="source-xcode"><a href="https://developer.apple.com/jp/help/account/basics/about-your-developer-account" target="_blank" rel="noopener noreferrer">Apple：Personal Teamの制限</a></li>
+<li id="source-brrrowser-api"><a href="https://github.com/Web3Kev/Brrrowser" target="_blank" rel="noopener noreferrer">Brrrowser開発元：バイブAPIの説明</a></li>
+<li id="source-brrrowser-store"><a href="https://apps.apple.com/jp/app/brrrowser/id6747417026" target="_blank" rel="noopener noreferrer">Brrrowser：日本のApp Store掲載</a></li>
+</ol></details></section>
+<footer>見守りを続けるときは、元の駅間ナビの画面に戻ってください。このページはオフラインでも参照できますが、外部資料を開くには通信が必要です。</footer>
+</main></body></html>

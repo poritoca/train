@@ -1,48 +1,85 @@
-v43 駅名クイック検索 回帰項目
-=============================
-1. 検索欄は4タブより上にあり、input type=search / enterkeyhint=search を持つこと。
-2. `日吉` の完全一致検索では、日吉を通る路線との組み合わせのみを候補化し、「日吉｜東急 目黒線」を含むこと。
-3. `新宿` の完全一致検索では `新宿三丁目` や `西武新宿` を同じ候補一覧へ混ぜないこと。
-4. `浜松町` は既存駅名正規化により、JR系の浜松町だけでなく `モノレール浜松町｜東京モノレール` も候補化できること。
-4a. 同じ短縮路線名が複数候補になる場合（湘南新宿ライン等）は区間名も表示して区別できること。
-5. 完全一致がない入力は前方一致→部分一致の順で候補化すること。
-6. 駅・路線候補を選ぶまで方面欄を表示せず、選択後は方面欄を表示すること。
-7. 候補が1件だけなら駅・路線を自動選択して方面欄を表示すること。
-8. 方面選択後、guideBrowseRoute / guideBrowseStation / guideBrowseDirection に同じ値を同期し、guideMode=browse で降車位置タブを開くこと。
-9. クイック検索から既存renderGuide()を使い、独自の別描画ロジックを持たないこと。
-10. v42のエレベーター強調（動的detail / 静的types）が維持されること。
+v46 動作・回帰確認
+=================
+本番HTML/JavaScriptをjsdom 26.1.0で実行し、測位・時刻・ダイアログ・外部取得・バイブAPIを模擬して確認しました。
+実機の描画・GPS・物理振動の試験ではありません。テスト用の内部状態公開は配布コードに含みません。
 
-駅間ナビ v42 オンライン号車案内 回帰テスト
+v46の変更（15項目）
+------------
+1. PASS: Guide search is first inside its tab; other tabs hide it and opening Guide returns to the search
+2. PASS: Visible first-route action replaces the duplicate and saved-route actions return after save
+3. PASS: Guide search handles IME, visible results, selection and aria state without changing a live journey
+4. PASS: Clear, empty results, escape and revisiting the guide keep the correct search state
+5. PASS: An unsupported browser shows the explanation and setup help without starting GPS or a permission request
+6. PASS: Native vibration remains opt-in to the existing test action and is not triggered by opening help
+7. PASS: Preset setup lists every transfer destination, copies only the chosen station and leaves local data unchanged
+8. PASS: Current journey setup shows remaining legs and never mutates or stops the active trip
+9. PASS: Clipboard rejection offers selectable station text without reporting notification setup success
+10. PASS: A late clipboard failure does not reopen or overwrite another dialog
+11. PASS: Return-folder setup escapes preset labels and does not select an outbound route
+12. PASS: Clearing the current trip removes its helper destinations while both saved folders remain available
+13. PASS: Browser migration copies the app URL without query parameters or fragment
+14. PASS: Delayed vibration is explicitly scheduled, can be cancelled, and fires only once while visible
+15. PASS: Closing the guide or hiding the page cancels pending vibration tests
 
-今回提示された駅
-----------------
-- 元住吉×東急目黒線: 確認済み詳細URLを直接優先 PASS
-- 元住吉×東急目黒線: 同一文の「2番線=東横線下り / 3番線=目黒線下り」から目黒線3番線を抽出 PASS
-- 元住吉×東急目黒線: 3番線「日吉方面」を directionSelected=+1 で保持 PASS
-- 元住吉×東急目黒線: 4番線「目黒方面」を directionSelected=-1 で保持 PASS
-- 元住吉×東急目黒線: 東横線2番線・5番線が目黒線の解析結果へ混入しない PASS
-- 元住吉×東急目黒線: 両方向の設備ブロックでエレベーター情報を保持 PASS
+v45機能の回帰（17項目）
+--------------
+1. PASS: Initial setup uses station-and-route suggestions for both transfer legs
+2. PASS: Unselected or invalid typed station cannot silently reuse a saved station
+3. PASS: Editor IME suppresses intermediate search and exact match excludes longer names
+4. PASS: Station suggestion can change route without keeping an incompatible other station
+5. PASS: Editing search and separate local save preserve active target until Apply
+6. PASS: Existing v44 presets migrate to outbound and reversed presets save under return
+7. PASS: Preset category can be moved without duplicating it and tabs support keyboard
+8. PASS: Delete a stored preset without stopping the currently running journey
+9. PASS: Clear current journey stops GPS, removes resume and target, preserves both folders
+10. PASS: Clear editor draft resets all legs but retains the stored original
+11. PASS: Clear during current-journey editing stops monitoring and keeps preset
+12. PASS: Local storage failure leaves the unsaved draft visible and reports failure
+13. PASS: Ten divisions show halfway to the next stop in reverse route order
+14. PASS: Next-stop progress follows selected stopping pattern across skipped stations
+15. PASS: Forward direction, stale GPS and manual position are represented correctly
+16. PASS: Loop progress follows the selected reverse direction over the wrap
+17. PASS: Both direction folders survive export and import with legacy import support
 
-似たページへの共通安全性
-------------------------
-- 複数到着情報から選択路線に一致する事実だけを採用 PASS
-- 選択路線内の候補が同一方向へ収束する場合のみ文脈を継承 PASS
-- 選択路線内で+1/-1の正反対方向が同時に残るケースは null として fail-closed PASS
+既存機能の回帰（26項目）
+-------------
+1. PASS: Boot / three tabs / no GPS watcher on guide-only launch
+2. PASS: Create and save two-leg preset through form controls
+3. PASS: One tap starts first leg with correct route and direction
+4. PASS: Remaining stops exclude current station
+5. PASS: Arrival guide includes the next transfer and keeps monitoring active
+6. PASS: Search presents direction buttons and preserves active target
+7. PASS: Exact station matching / IME composition / native submit
+8. PASS: Measured arrival offers transfer; never starts next leg automatically
+9. PASS: Temporary destination edit does not mutate saved preset
+10. PASS: Manual position cannot cause automatic arrival transition
+11. PASS: Finish releases location watcher and clears saved session
+12. PASS: Start from second leg and reverse editor retains origin
+13. PASS: Reject invalid / unsupported / skipped destination presets
+14. PASS: Adaptive power reduces accuracy requests only on long stable leg
+15. PASS: Stale GPS leaves power-saving mode and shows estimated position
+16. PASS: App update is held during monitoring
+17. PASS: Reload proposes resume without starting GPS or alarm
+18. PASS: Proximity suggestion selects matching transfer origin
+19. PASS: Other tab and history stay under the same navigation tab
+20. PASS: Live geolocation callback initializes the chosen leg without replacing target
+21. PASS: Permission denial pauses clearly; retry creates only one watcher
+22. PASS: Long interruption keeps a recoverable session without active tracking
+23. PASS: Unknown loop direction is rejected
+24. PASS: Legacy current-position start can still change its destination
+25. PASS: Legacy direction-specific goals become nearby suggestions
+26. PASS: No runtime DOM errors through tested flow
 
-エレベーターカード
-------------------
-- 動的案内: `detail` に「エレベーター」がある号車だけ `.elevator` クラスを付与する実装を確認 PASS
-- 静的案内: `types.includes('elevator')` の号車だけ `.elevator` クラスを付与する実装を確認 PASS
-- `.car.active.elevator` の専用背景・枠線・軽いbox-shadowを確認 PASS
-- エレベーター対象カードの小ラベル `号車 · EV` とaria-labelを確認 PASS
+Service Worker（5項目）
+----------------------
+1. PASS: Service worker precaches every referenced shell asset
+2. PASS: Offline navigation falls back to cached index without a URL error
+3. PASS: Versioned CSS and JavaScript use the matching shell cache
+4. PASS: Different asset versions and external guide requests bypass the worker
+5. PASS: Cache migration preserves other applications
 
-掲載元インデックス
-------------------
-- meguro:元住吉 詳細URLあり PASS
-- v41までの既存インデックスを維持 PASS
-
-構文
-----
-- index.html inline JavaScript: node --check PASS
-- sw.js: node --check PASS
-- guide-source-index.json: JSON parse PASS
+維持確認
+--------
+v45との路線定義と、降車位置解析・案内描画の範囲が同一であることを確認。
+パーサー範囲のSHA-256: 8cb25f2259097eea923d66984c9c4ac6e59e67474dc6a54b814e318909e7def5
+掲載元へのライブ取得・解析テストの再実行ではありません。
