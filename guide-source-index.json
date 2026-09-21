@@ -1,0 +1,3072 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T18:23:00+09:00",
+  "description": "v41 verified station source index: v40 mappings plus direct pages for Keio New Line Shinjuku and Tokyu Oimachi Line Oimachi; Hiyoshi route-name collision/direction preservation and terminal/access-position parser hardening.",
+  "pairs": {
+    "tokaido:東京": {
+      "routeId": "tokaido",
+      "station": "東京",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tokyo-tokaido-uenotokyoline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:新橋": {
+      "routeId": "tokaido",
+      "station": "新橋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinbashi-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:品川": {
+      "routeId": "tokaido",
+      "station": "品川",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinagawa-tokaidohome-info/",
+        "https://wadattsu261.com/content/shinagawa-tokaido-joban-uenotokyoline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:川崎": {
+      "routeId": "tokaido",
+      "station": "川崎",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kawasaki-tokaido-keihin-nambuhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:横浜": {
+      "routeId": "tokaido",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:戸塚": {
+      "routeId": "tokaido",
+      "station": "戸塚",
+      "detailUrls": [
+        "https://wadattsu261.com/content/totsuka-yokosuka-shonanshinjuku-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:大船": {
+      "routeId": "tokaido",
+      "station": "大船",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ofuna-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:藤沢": {
+      "routeId": "tokaido",
+      "station": "藤沢",
+      "detailUrls": [
+        "https://wadattsu261.com/content/fujisawa-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:辻堂": {
+      "routeId": "tokaido",
+      "station": "辻堂",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tsujido-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:茅ケ崎": {
+      "routeId": "tokaido",
+      "station": "茅ケ崎",
+      "detailUrls": [
+        "https://wadattsu261.com/content/chigasaki-sagami-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:平塚": {
+      "routeId": "tokaido",
+      "station": "平塚",
+      "detailUrls": [
+        "https://wadattsu261.com/content/hiratsuka-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:大磯": {
+      "routeId": "tokaido",
+      "station": "大磯",
+      "detailUrls": [
+        "https://wadattsu261.com/content/oiso-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:二宮": {
+      "routeId": "tokaido",
+      "station": "二宮",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ninomiya-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:国府津": {
+      "routeId": "tokaido",
+      "station": "国府津",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kozu-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:鴨宮": {
+      "routeId": "tokaido",
+      "station": "鴨宮",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kamonomiya-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:小田原": {
+      "routeId": "tokaido",
+      "station": "小田原",
+      "detailUrls": [
+        "https://wadattsu261.com/content/odawara-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:早川": {
+      "routeId": "tokaido",
+      "station": "早川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:根府川": {
+      "routeId": "tokaido",
+      "station": "根府川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:真鶴": {
+      "routeId": "tokaido",
+      "station": "真鶴",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:湯河原": {
+      "routeId": "tokaido",
+      "station": "湯河原",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yugawara-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "tokaido:熱海": {
+      "routeId": "tokaido",
+      "station": "熱海",
+      "detailUrls": [
+        "https://wadattsu261.com/content/atami-tokaidohome-info/",
+        "https://wadattsu261.com/content/atami-itohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jt-tokaidohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:東京": {
+      "routeId": "yokosuka",
+      "station": "東京",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tokyo-yokosuka-soburapidhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:新橋": {
+      "routeId": "yokosuka",
+      "station": "新橋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinbashi-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:品川": {
+      "routeId": "yokosuka",
+      "station": "品川",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinagawa-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:西大井": {
+      "routeId": "yokosuka",
+      "station": "西大井",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nishioi-yokosuka-shonanshinjukuline-sotetsudirecthome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:武蔵小杉": {
+      "routeId": "yokosuka",
+      "station": "武蔵小杉",
+      "detailUrls": [
+        "https://wadattsu261.com/content/musashikosugi-yokosuka-shonanshinjukuline-sotetsudirecthome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:新川崎": {
+      "routeId": "yokosuka",
+      "station": "新川崎",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinkawasaki-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:横浜": {
+      "routeId": "yokosuka",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:保土ケ谷": {
+      "routeId": "yokosuka",
+      "station": "保土ケ谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:東戸塚": {
+      "routeId": "yokosuka",
+      "station": "東戸塚",
+      "detailUrls": [
+        "https://wadattsu261.com/content/higashitotsuka-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:戸塚": {
+      "routeId": "yokosuka",
+      "station": "戸塚",
+      "detailUrls": [
+        "https://wadattsu261.com/content/totsuka-yokosuka-shonanshinjuku-tokaidohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:大船": {
+      "routeId": "yokosuka",
+      "station": "大船",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ofuna-yokosuka-shonanshinjukuline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:北鎌倉": {
+      "routeId": "yokosuka",
+      "station": "北鎌倉",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kitakamakura-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:鎌倉": {
+      "routeId": "yokosuka",
+      "station": "鎌倉",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kamakura-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokosuka:逗子": {
+      "routeId": "yokosuka",
+      "station": "逗子",
+      "detailUrls": [
+        "https://wadattsu261.com/content/zushi-yokosukahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:大宮": {
+      "routeId": "keihin",
+      "station": "大宮",
+      "detailUrls": [
+        "https://wadattsu261.com/content/omiya-keihinhome-no1-2-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:さいたま新都心": {
+      "routeId": "keihin",
+      "station": "さいたま新都心",
+      "detailUrls": [
+        "https://wadattsu261.com/content/saitamashintoshin-keihin-tohokuhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:与野": {
+      "routeId": "keihin",
+      "station": "与野",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yono-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:北浦和": {
+      "routeId": "keihin",
+      "station": "北浦和",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kitaurawa-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:浦和": {
+      "routeId": "keihin",
+      "station": "浦和",
+      "detailUrls": [
+        "https://wadattsu261.com/content/urawa-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:南浦和": {
+      "routeId": "keihin",
+      "station": "南浦和",
+      "detailUrls": [
+        "https://wadattsu261.com/content/minamiurawa-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:蕨": {
+      "routeId": "keihin",
+      "station": "蕨",
+      "detailUrls": [
+        "https://wadattsu261.com/content/warabi-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:西川口": {
+      "routeId": "keihin",
+      "station": "西川口",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nishikawaguchi-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:川口": {
+      "routeId": "keihin",
+      "station": "川口",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kawaguchi-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:赤羽": {
+      "routeId": "keihin",
+      "station": "赤羽",
+      "detailUrls": [
+        "https://wadattsu261.com/content/akabane-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:東十条": {
+      "routeId": "keihin",
+      "station": "東十条",
+      "detailUrls": [
+        "https://wadattsu261.com/content/higashijujo-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:王子": {
+      "routeId": "keihin",
+      "station": "王子",
+      "detailUrls": [
+        "https://wadattsu261.com/content/oji-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:上中里": {
+      "routeId": "keihin",
+      "station": "上中里",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kaminakazato-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:田端": {
+      "routeId": "keihin",
+      "station": "田端",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tabata-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:西日暮里": {
+      "routeId": "keihin",
+      "station": "西日暮里",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nishinippori-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:日暮里": {
+      "routeId": "keihin",
+      "station": "日暮里",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nippori-joban-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:鶯谷": {
+      "routeId": "keihin",
+      "station": "鶯谷",
+      "detailUrls": [
+        "https://wadattsu261.com/content/uguisudani-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:上野": {
+      "routeId": "keihin",
+      "station": "上野",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ueno-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:御徒町": {
+      "routeId": "keihin",
+      "station": "御徒町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/okachimachi-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:秋葉原": {
+      "routeId": "keihin",
+      "station": "秋葉原",
+      "detailUrls": [
+        "https://wadattsu261.com/content/akihabara-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:神田": {
+      "routeId": "keihin",
+      "station": "神田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kanda-yamanote-keihin-chuorapidhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:東京": {
+      "routeId": "keihin",
+      "station": "東京",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tokyo-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:有楽町": {
+      "routeId": "keihin",
+      "station": "有楽町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yurakucho-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:新橋": {
+      "routeId": "keihin",
+      "station": "新橋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinbashi-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:浜松町": {
+      "routeId": "keihin",
+      "station": "浜松町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/hamamatsucho-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:田町": {
+      "routeId": "keihin",
+      "station": "田町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tamachi-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:高輪ゲートウェイ": {
+      "routeId": "keihin",
+      "station": "高輪ゲートウェイ",
+      "detailUrls": [
+        "https://wadattsu261.com/content/takanawagateway-yamanote-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:品川": {
+      "routeId": "keihin",
+      "station": "品川",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinagawa-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:大井町": {
+      "routeId": "keihin",
+      "station": "大井町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/oimachi-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:大森": {
+      "routeId": "keihin",
+      "station": "大森",
+      "detailUrls": [
+        "https://wadattsu261.com/content/omori-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:蒲田": {
+      "routeId": "keihin",
+      "station": "蒲田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kamata-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:川崎": {
+      "routeId": "keihin",
+      "station": "川崎",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kawasaki-tokaido-keihin-nambuhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:鶴見": {
+      "routeId": "keihin",
+      "station": "鶴見",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tsurumi-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:新子安": {
+      "routeId": "keihin",
+      "station": "新子安",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinkoyasu-keihinhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:東神奈川": {
+      "routeId": "keihin",
+      "station": "東神奈川",
+      "detailUrls": [
+        "https://wadattsu261.com/content/higashikanagawa-keihin-yokohamahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:横浜": {
+      "routeId": "keihin",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-keihin-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:桜木町": {
+      "routeId": "keihin",
+      "station": "桜木町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/sakuragicho-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/7/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:関内": {
+      "routeId": "keihin",
+      "station": "関内",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kannai-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/7/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:石川町": {
+      "routeId": "keihin",
+      "station": "石川町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ishikawacho-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/7/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:山手": {
+      "routeId": "keihin",
+      "station": "山手",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yamate-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/7/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:根岸": {
+      "routeId": "keihin",
+      "station": "根岸",
+      "detailUrls": [
+        "https://wadattsu261.com/content/negishi-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/7/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:磯子": {
+      "routeId": "keihin",
+      "station": "磯子",
+      "detailUrls": [
+        "https://wadattsu261.com/content/isogo-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/7/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:新杉田": {
+      "routeId": "keihin",
+      "station": "新杉田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinsugita-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/8/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:洋光台": {
+      "routeId": "keihin",
+      "station": "洋光台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokodai-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/8/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:港南台": {
+      "routeId": "keihin",
+      "station": "港南台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/konandai-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/8/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:本郷台": {
+      "routeId": "keihin",
+      "station": "本郷台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/hongodai-negishihome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/8/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keihin:大船": {
+      "routeId": "keihin",
+      "station": "大船",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ofuna-negishihome-no9-10-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jk-keihin-negishiall-info/8/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yokohama:横浜": {
+      "routeId": "yokohama",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-keihin-negishihome-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "shonan_u:西大井": {
+      "routeId": "shonan_u",
+      "station": "西大井",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nishioi-yokosuka-shonanshinjukuline-sotetsudirecthome-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "shonan_u:横浜": {
+      "routeId": "shonan_u",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-yokosuka-shonanshinjukuline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "shonan_t:横浜": {
+      "routeId": "shonan_t",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-yokosuka-shonanshinjukuline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keikyu:横浜": {
+      "routeId": "keikyu",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-keikyuhome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "keikyu_k:横浜": {
+      "routeId": "keikyu_k",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-keikyuhome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "keikyu_a:横浜": {
+      "routeId": "keikyu_a",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-keikyuhome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "toyoko:横浜": {
+      "routeId": "toyoko",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-tokyutoyoko-minatomiraihome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "mm:横浜": {
+      "routeId": "mm",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-tokyutoyoko-minatomiraihome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "sotetsu:横浜": {
+      "routeId": "sotetsu",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-sotetsuhome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "izumino:横浜": {
+      "routeId": "izumino",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-sotetsuhome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "blue:あざみ野": {
+      "routeId": "blue",
+      "station": "あざみ野",
+      "detailUrls": [
+        "https://wadattsu261.com/content/azamino-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:中川": {
+      "routeId": "blue",
+      "station": "中川",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nakagawa-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:センター北": {
+      "routeId": "blue",
+      "station": "センター北",
+      "detailUrls": [
+        "https://wadattsu261.com/content/centerkita-yokohamablue-greenline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:センター南": {
+      "routeId": "blue",
+      "station": "センター南",
+      "detailUrls": [
+        "https://wadattsu261.com/content/centerminami-yokohamablue-greenline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:仲町台": {
+      "routeId": "blue",
+      "station": "仲町台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nakamachidai-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:新羽": {
+      "routeId": "blue",
+      "station": "新羽",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nippa-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:北新横浜": {
+      "routeId": "blue",
+      "station": "北新横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kitashinyokohama-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:新横浜": {
+      "routeId": "blue",
+      "station": "新横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinyokohama-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:岸根公園": {
+      "routeId": "blue",
+      "station": "岸根公園",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kishinekoen-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:片倉町": {
+      "routeId": "blue",
+      "station": "片倉町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/katakuracho-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:三ツ沢上町": {
+      "routeId": "blue",
+      "station": "三ツ沢上町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/mitsuzawakamicho-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:三ツ沢下町": {
+      "routeId": "blue",
+      "station": "三ツ沢下町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/mitsuzawashimocho-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:横浜": {
+      "routeId": "blue",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:高島町": {
+      "routeId": "blue",
+      "station": "高島町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/takashimacho-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:桜木町": {
+      "routeId": "blue",
+      "station": "桜木町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/sakuragicho-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:関内": {
+      "routeId": "blue",
+      "station": "関内",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kannai-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:伊勢佐木長者町": {
+      "routeId": "blue",
+      "station": "伊勢佐木長者町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/isezakichojamachi-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:阪東橋": {
+      "routeId": "blue",
+      "station": "阪東橋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/bandobashi-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:吉野町": {
+      "routeId": "blue",
+      "station": "吉野町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yoshinocho-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:蒔田": {
+      "routeId": "blue",
+      "station": "蒔田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/maita-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:弘明寺（地下鉄）": {
+      "routeId": "blue",
+      "station": "弘明寺（地下鉄）",
+      "detailUrls": [
+        "https://wadattsu261.com/content/gumyoji-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:上大岡": {
+      "routeId": "blue",
+      "station": "上大岡",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kamiooka-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:港南中央": {
+      "routeId": "blue",
+      "station": "港南中央",
+      "detailUrls": [
+        "https://wadattsu261.com/content/konanchuo-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:上永谷": {
+      "routeId": "blue",
+      "station": "上永谷",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kaminagaya-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:下永谷": {
+      "routeId": "blue",
+      "station": "下永谷",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shimonagaya-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:舞岡": {
+      "routeId": "blue",
+      "station": "舞岡",
+      "detailUrls": [
+        "https://wadattsu261.com/content/maioka-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:戸塚": {
+      "routeId": "blue",
+      "station": "戸塚",
+      "detailUrls": [
+        "https://wadattsu261.com/content/totsuka-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:踊場": {
+      "routeId": "blue",
+      "station": "踊場",
+      "detailUrls": [
+        "https://wadattsu261.com/content/odoriba-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:中田": {
+      "routeId": "blue",
+      "station": "中田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nakada-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:立場": {
+      "routeId": "blue",
+      "station": "立場",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tateba-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:下飯田": {
+      "routeId": "blue",
+      "station": "下飯田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shimoiida-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "blue:湘南台": {
+      "routeId": "blue",
+      "station": "湘南台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/syonandai-yokohamablueline-info/"
+      ],
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keikyu_z:横浜": {
+      "routeId": "keikyu_z",
+      "station": "横浜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yokohama-keikyuhome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "yamanote:東京": {
+      "routeId": "yamanote",
+      "station": "東京",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:有楽町": {
+      "routeId": "yamanote",
+      "station": "有楽町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:新橋": {
+      "routeId": "yamanote",
+      "station": "新橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:浜松町": {
+      "routeId": "yamanote",
+      "station": "浜松町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:田町": {
+      "routeId": "yamanote",
+      "station": "田町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:高輪ゲートウェイ": {
+      "routeId": "yamanote",
+      "station": "高輪ゲートウェイ",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:品川": {
+      "routeId": "yamanote",
+      "station": "品川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:大崎": {
+      "routeId": "yamanote",
+      "station": "大崎",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:五反田": {
+      "routeId": "yamanote",
+      "station": "五反田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:目黒": {
+      "routeId": "yamanote",
+      "station": "目黒",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:恵比寿": {
+      "routeId": "yamanote",
+      "station": "恵比寿",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:渋谷": {
+      "routeId": "yamanote",
+      "station": "渋谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:原宿": {
+      "routeId": "yamanote",
+      "station": "原宿",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:代々木": {
+      "routeId": "yamanote",
+      "station": "代々木",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:新宿": {
+      "routeId": "yamanote",
+      "station": "新宿",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:新大久保": {
+      "routeId": "yamanote",
+      "station": "新大久保",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:高田馬場": {
+      "routeId": "yamanote",
+      "station": "高田馬場",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:目白": {
+      "routeId": "yamanote",
+      "station": "目白",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:池袋": {
+      "routeId": "yamanote",
+      "station": "池袋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:大塚": {
+      "routeId": "yamanote",
+      "station": "大塚",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:巣鴨": {
+      "routeId": "yamanote",
+      "station": "巣鴨",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:駒込": {
+      "routeId": "yamanote",
+      "station": "駒込",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:田端": {
+      "routeId": "yamanote",
+      "station": "田端",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:西日暮里": {
+      "routeId": "yamanote",
+      "station": "西日暮里",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:日暮里": {
+      "routeId": "yamanote",
+      "station": "日暮里",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:鶯谷": {
+      "routeId": "yamanote",
+      "station": "鶯谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:上野": {
+      "routeId": "yamanote",
+      "station": "上野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:御徒町": {
+      "routeId": "yamanote",
+      "station": "御徒町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:秋葉原": {
+      "routeId": "yamanote",
+      "station": "秋葉原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "yamanote:神田": {
+      "routeId": "yamanote",
+      "station": "神田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jy-yamanotehome-soto-uchimawari-info/6/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:東京": {
+      "routeId": "sobu",
+      "station": "東京",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:新日本橋": {
+      "routeId": "sobu",
+      "station": "新日本橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:馬喰町": {
+      "routeId": "sobu",
+      "station": "馬喰町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:錦糸町": {
+      "routeId": "sobu",
+      "station": "錦糸町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:新小岩": {
+      "routeId": "sobu",
+      "station": "新小岩",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:市川": {
+      "routeId": "sobu",
+      "station": "市川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:船橋": {
+      "routeId": "sobu",
+      "station": "船橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:津田沼": {
+      "routeId": "sobu",
+      "station": "津田沼",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:稲毛": {
+      "routeId": "sobu",
+      "station": "稲毛",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "sobu:千葉": {
+      "routeId": "sobu",
+      "station": "千葉",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jo-yokosuka-soburapidhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:品川": {
+      "routeId": "joban",
+      "station": "品川",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinagawa-tokaido-joban-uenotokyoline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:新橋": {
+      "routeId": "joban",
+      "station": "新橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:東京": {
+      "routeId": "joban",
+      "station": "東京",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:上野": {
+      "routeId": "joban",
+      "station": "上野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:日暮里": {
+      "routeId": "joban",
+      "station": "日暮里",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:三河島": {
+      "routeId": "joban",
+      "station": "三河島",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:南千住": {
+      "routeId": "joban",
+      "station": "南千住",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:北千住": {
+      "routeId": "joban",
+      "station": "北千住",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:松戸": {
+      "routeId": "joban",
+      "station": "松戸",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:柏": {
+      "routeId": "joban",
+      "station": "柏",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:我孫子": {
+      "routeId": "joban",
+      "station": "我孫子",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:天王台": {
+      "routeId": "joban",
+      "station": "天王台",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "joban:取手": {
+      "routeId": "joban",
+      "station": "取手",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jj-jobanrapidhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:東京": {
+      "routeId": "keiyo",
+      "station": "東京",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:八丁堀": {
+      "routeId": "keiyo",
+      "station": "八丁堀",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:越中島": {
+      "routeId": "keiyo",
+      "station": "越中島",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:潮見": {
+      "routeId": "keiyo",
+      "station": "潮見",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:新木場": {
+      "routeId": "keiyo",
+      "station": "新木場",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:葛西臨海公園": {
+      "routeId": "keiyo",
+      "station": "葛西臨海公園",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:舞浜": {
+      "routeId": "keiyo",
+      "station": "舞浜",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:新浦安": {
+      "routeId": "keiyo",
+      "station": "新浦安",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinurayasu-keiyohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/2/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "keiyo:市川塩浜": {
+      "routeId": "keiyo",
+      "station": "市川塩浜",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:二俣新町": {
+      "routeId": "keiyo",
+      "station": "二俣新町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:南船橋": {
+      "routeId": "keiyo",
+      "station": "南船橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:新習志野": {
+      "routeId": "keiyo",
+      "station": "新習志野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:幕張豊砂": {
+      "routeId": "keiyo",
+      "station": "幕張豊砂",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:海浜幕張": {
+      "routeId": "keiyo",
+      "station": "海浜幕張",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:検見川浜": {
+      "routeId": "keiyo",
+      "station": "検見川浜",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:稲毛海岸": {
+      "routeId": "keiyo",
+      "station": "稲毛海岸",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:千葉みなと": {
+      "routeId": "keiyo",
+      "station": "千葉みなと",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "keiyo:蘇我": {
+      "routeId": "keiyo",
+      "station": "蘇我",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/je-keiyohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:川崎": {
+      "routeId": "nambu",
+      "station": "川崎",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kawasaki-tokaido-keihin-nambuhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/4/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "nambu:尻手": {
+      "routeId": "nambu",
+      "station": "尻手",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:矢向": {
+      "routeId": "nambu",
+      "station": "矢向",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:鹿島田": {
+      "routeId": "nambu",
+      "station": "鹿島田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:平間": {
+      "routeId": "nambu",
+      "station": "平間",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:向河原": {
+      "routeId": "nambu",
+      "station": "向河原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:武蔵小杉": {
+      "routeId": "nambu",
+      "station": "武蔵小杉",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:武蔵中原": {
+      "routeId": "nambu",
+      "station": "武蔵中原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:武蔵新城": {
+      "routeId": "nambu",
+      "station": "武蔵新城",
+      "detailUrls": [
+        "https://wadattsu261.com/content/musashishinjo-nambuhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/3/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "nambu:武蔵溝ノ口": {
+      "routeId": "nambu",
+      "station": "武蔵溝ノ口",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:津田山": {
+      "routeId": "nambu",
+      "station": "津田山",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:久地": {
+      "routeId": "nambu",
+      "station": "久地",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:宿河原": {
+      "routeId": "nambu",
+      "station": "宿河原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:登戸": {
+      "routeId": "nambu",
+      "station": "登戸",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:中野島": {
+      "routeId": "nambu",
+      "station": "中野島",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:稲田堤": {
+      "routeId": "nambu",
+      "station": "稲田堤",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:矢野口": {
+      "routeId": "nambu",
+      "station": "矢野口",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:稲城長沼": {
+      "routeId": "nambu",
+      "station": "稲城長沼",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:南多摩": {
+      "routeId": "nambu",
+      "station": "南多摩",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:府中本町": {
+      "routeId": "nambu",
+      "station": "府中本町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:分倍河原": {
+      "routeId": "nambu",
+      "station": "分倍河原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:西府": {
+      "routeId": "nambu",
+      "station": "西府",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:谷保": {
+      "routeId": "nambu",
+      "station": "谷保",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:矢川": {
+      "routeId": "nambu",
+      "station": "矢川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:西国立": {
+      "routeId": "nambu",
+      "station": "西国立",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "nambu:立川": {
+      "routeId": "nambu",
+      "station": "立川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jn-nambuhome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:東京": {
+      "routeId": "utsunomiya",
+      "station": "東京",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tokyo-tokaido-uenotokyoline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/4/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "utsunomiya:上野": {
+      "routeId": "utsunomiya",
+      "station": "上野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:尾久": {
+      "routeId": "utsunomiya",
+      "station": "尾久",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:赤羽": {
+      "routeId": "utsunomiya",
+      "station": "赤羽",
+      "detailUrls": [
+        "https://wadattsu261.com/content/akabane-tohoku-shonanshinjukuline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/4/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "utsunomiya:浦和": {
+      "routeId": "utsunomiya",
+      "station": "浦和",
+      "detailUrls": [
+        "https://wadattsu261.com/content/urawa-tohoku-shonanshinjukuline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/4/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "utsunomiya:さいたま新都心": {
+      "routeId": "utsunomiya",
+      "station": "さいたま新都心",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:大宮": {
+      "routeId": "utsunomiya",
+      "station": "大宮",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:土呂": {
+      "routeId": "utsunomiya",
+      "station": "土呂",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:東大宮": {
+      "routeId": "utsunomiya",
+      "station": "東大宮",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:蓮田": {
+      "routeId": "utsunomiya",
+      "station": "蓮田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:白岡": {
+      "routeId": "utsunomiya",
+      "station": "白岡",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:新白岡": {
+      "routeId": "utsunomiya",
+      "station": "新白岡",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:久喜": {
+      "routeId": "utsunomiya",
+      "station": "久喜",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:東鷲宮": {
+      "routeId": "utsunomiya",
+      "station": "東鷲宮",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:栗橋": {
+      "routeId": "utsunomiya",
+      "station": "栗橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:古河": {
+      "routeId": "utsunomiya",
+      "station": "古河",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:野木": {
+      "routeId": "utsunomiya",
+      "station": "野木",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:間々田": {
+      "routeId": "utsunomiya",
+      "station": "間々田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:小山": {
+      "routeId": "utsunomiya",
+      "station": "小山",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:小金井": {
+      "routeId": "utsunomiya",
+      "station": "小金井",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:自治医大": {
+      "routeId": "utsunomiya",
+      "station": "自治医大",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:石橋": {
+      "routeId": "utsunomiya",
+      "station": "石橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:雀宮": {
+      "routeId": "utsunomiya",
+      "station": "雀宮",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "utsunomiya:宇都宮": {
+      "routeId": "utsunomiya",
+      "station": "宇都宮",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-utsunomiyahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:東京": {
+      "routeId": "takasaki",
+      "station": "東京",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tokyo-tokaido-uenotokyoline-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/5/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "takasaki:上野": {
+      "routeId": "takasaki",
+      "station": "上野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:尾久": {
+      "routeId": "takasaki",
+      "station": "尾久",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:赤羽": {
+      "routeId": "takasaki",
+      "station": "赤羽",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:浦和": {
+      "routeId": "takasaki",
+      "station": "浦和",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:さいたま新都心": {
+      "routeId": "takasaki",
+      "station": "さいたま新都心",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:大宮": {
+      "routeId": "takasaki",
+      "station": "大宮",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:宮原": {
+      "routeId": "takasaki",
+      "station": "宮原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:上尾": {
+      "routeId": "takasaki",
+      "station": "上尾",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:北上尾": {
+      "routeId": "takasaki",
+      "station": "北上尾",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:桶川": {
+      "routeId": "takasaki",
+      "station": "桶川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:北本": {
+      "routeId": "takasaki",
+      "station": "北本",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:鴻巣": {
+      "routeId": "takasaki",
+      "station": "鴻巣",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:北鴻巣": {
+      "routeId": "takasaki",
+      "station": "北鴻巣",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:吹上": {
+      "routeId": "takasaki",
+      "station": "吹上",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:行田": {
+      "routeId": "takasaki",
+      "station": "行田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:熊谷": {
+      "routeId": "takasaki",
+      "station": "熊谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:籠原": {
+      "routeId": "takasaki",
+      "station": "籠原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:深谷": {
+      "routeId": "takasaki",
+      "station": "深谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:岡部": {
+      "routeId": "takasaki",
+      "station": "岡部",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:本庄": {
+      "routeId": "takasaki",
+      "station": "本庄",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:神保原": {
+      "routeId": "takasaki",
+      "station": "神保原",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:新町": {
+      "routeId": "takasaki",
+      "station": "新町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:倉賀野": {
+      "routeId": "takasaki",
+      "station": "倉賀野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "takasaki:高崎": {
+      "routeId": "takasaki",
+      "station": "高崎",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/ju-takasakihome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:池袋": {
+      "routeId": "seibu_ike",
+      "station": "池袋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ikebukuro-seibuikebukurohome-no1-4-6-7-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:椎名町": {
+      "routeId": "seibu_ike",
+      "station": "椎名町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:東長崎": {
+      "routeId": "seibu_ike",
+      "station": "東長崎",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:江古田": {
+      "routeId": "seibu_ike",
+      "station": "江古田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:桜台": {
+      "routeId": "seibu_ike",
+      "station": "桜台",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:練馬": {
+      "routeId": "seibu_ike",
+      "station": "練馬",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:中村橋": {
+      "routeId": "seibu_ike",
+      "station": "中村橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:富士見台": {
+      "routeId": "seibu_ike",
+      "station": "富士見台",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:練馬高野台": {
+      "routeId": "seibu_ike",
+      "station": "練馬高野台",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:石神井公園": {
+      "routeId": "seibu_ike",
+      "station": "石神井公園",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:大泉学園": {
+      "routeId": "seibu_ike",
+      "station": "大泉学園",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:保谷": {
+      "routeId": "seibu_ike",
+      "station": "保谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:ひばりヶ丘": {
+      "routeId": "seibu_ike",
+      "station": "ひばりヶ丘",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:東久留米": {
+      "routeId": "seibu_ike",
+      "station": "東久留米",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:清瀬": {
+      "routeId": "seibu_ike",
+      "station": "清瀬",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:秋津": {
+      "routeId": "seibu_ike",
+      "station": "秋津",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:所沢": {
+      "routeId": "seibu_ike",
+      "station": "所沢",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:西所沢": {
+      "routeId": "seibu_ike",
+      "station": "西所沢",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:小手指": {
+      "routeId": "seibu_ike",
+      "station": "小手指",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:狭山ヶ丘": {
+      "routeId": "seibu_ike",
+      "station": "狭山ヶ丘",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:武蔵藤沢": {
+      "routeId": "seibu_ike",
+      "station": "武蔵藤沢",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:稲荷山公園": {
+      "routeId": "seibu_ike",
+      "station": "稲荷山公園",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:入間市": {
+      "routeId": "seibu_ike",
+      "station": "入間市",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:仏子": {
+      "routeId": "seibu_ike",
+      "station": "仏子",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:元加治": {
+      "routeId": "seibu_ike",
+      "station": "元加治",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "seibu_ike:飯能": {
+      "routeId": "seibu_ike",
+      "station": "飯能",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/si-seibuikebukurohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:府中本町": {
+      "routeId": "musashino",
+      "station": "府中本町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/fuchuhommachi-musashino-nambuhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/5/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "musashino:新座": {
+      "routeId": "musashino",
+      "station": "新座",
+      "detailUrls": [
+        "https://wadattsu261.com/content/niiza-musashinohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/4/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "musashino:西船橋": {
+      "routeId": "musashino",
+      "station": "西船橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:船橋法典": {
+      "routeId": "musashino",
+      "station": "船橋法典",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:市川大野": {
+      "routeId": "musashino",
+      "station": "市川大野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:東松戸": {
+      "routeId": "musashino",
+      "station": "東松戸",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:新八柱": {
+      "routeId": "musashino",
+      "station": "新八柱",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:新松戸": {
+      "routeId": "musashino",
+      "station": "新松戸",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:南流山": {
+      "routeId": "musashino",
+      "station": "南流山",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:三郷": {
+      "routeId": "musashino",
+      "station": "三郷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:新三郷": {
+      "routeId": "musashino",
+      "station": "新三郷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:吉川美南": {
+      "routeId": "musashino",
+      "station": "吉川美南",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:吉川": {
+      "routeId": "musashino",
+      "station": "吉川",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:越谷レイクタウン": {
+      "routeId": "musashino",
+      "station": "越谷レイクタウン",
+      "detailUrls": [
+        "https://wadattsu261.com/content/koshigayalaketown-musashinohome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/3/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "musashino:南越谷": {
+      "routeId": "musashino",
+      "station": "南越谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:東川口": {
+      "routeId": "musashino",
+      "station": "東川口",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:東浦和": {
+      "routeId": "musashino",
+      "station": "東浦和",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:南浦和": {
+      "routeId": "musashino",
+      "station": "南浦和",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:武蔵浦和": {
+      "routeId": "musashino",
+      "station": "武蔵浦和",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:西浦和": {
+      "routeId": "musashino",
+      "station": "西浦和",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:北朝霞": {
+      "routeId": "musashino",
+      "station": "北朝霞",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/4/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:東所沢": {
+      "routeId": "musashino",
+      "station": "東所沢",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:新秋津": {
+      "routeId": "musashino",
+      "station": "新秋津",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:新小平": {
+      "routeId": "musashino",
+      "station": "新小平",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:西国分寺": {
+      "routeId": "musashino",
+      "station": "西国分寺",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "musashino:北府中": {
+      "routeId": "musashino",
+      "station": "北府中",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/jm-musashinohome-all-info/5/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:浅草": {
+      "routeId": "metro_g",
+      "station": "浅草",
+      "detailUrls": [
+        "https://wadattsu261.com/content/asakusa-metroginzahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "metro_g:田原町": {
+      "routeId": "metro_g",
+      "station": "田原町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:稲荷町": {
+      "routeId": "metro_g",
+      "station": "稲荷町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:上野": {
+      "routeId": "metro_g",
+      "station": "上野",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:上野広小路": {
+      "routeId": "metro_g",
+      "station": "上野広小路",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:末広町": {
+      "routeId": "metro_g",
+      "station": "末広町",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:神田": {
+      "routeId": "metro_g",
+      "station": "神田",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:三越前": {
+      "routeId": "metro_g",
+      "station": "三越前",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:日本橋": {
+      "routeId": "metro_g",
+      "station": "日本橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:京橋": {
+      "routeId": "metro_g",
+      "station": "京橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:銀座": {
+      "routeId": "metro_g",
+      "station": "銀座",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:新橋": {
+      "routeId": "metro_g",
+      "station": "新橋",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:虎ノ門": {
+      "routeId": "metro_g",
+      "station": "虎ノ門",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:溜池山王": {
+      "routeId": "metro_g",
+      "station": "溜池山王",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/2/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:赤坂見附": {
+      "routeId": "metro_g",
+      "station": "赤坂見附",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:青山一丁目": {
+      "routeId": "metro_g",
+      "station": "青山一丁目",
+      "detailUrls": [
+        "https://wadattsu261.com/content/aoyamaicchome-metroginzahome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/3/",
+      "mode": "hybrid",
+      "source": "verified-detail+aggregate"
+    },
+    "metro_g:外苑前": {
+      "routeId": "metro_g",
+      "station": "外苑前",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:表参道": {
+      "routeId": "metro_g",
+      "station": "表参道",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "metro_g:渋谷": {
+      "routeId": "metro_g",
+      "station": "渋谷",
+      "detailUrls": [],
+      "aggregateUrl": "https://wadattsu261.com/content/g-metroginzahome-all-info/3/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "meguro:目黒": {
+      "routeId": "meguro",
+      "station": "目黒",
+      "detailUrls": [
+        "https://wadattsu261.com/content/meguro-tokyumeguro-toeimita-metronambokuhome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "meguro:日吉": {
+      "routeId": "meguro",
+      "station": "日吉",
+      "detailUrls": [
+        "https://wadattsu261.com/content/hiyoshi-tokyutoyoko-megurohome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "odakyu:新宿": {
+      "routeId": "odakyu",
+      "station": "新宿",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinjuku-odakyuodawara-localhome-info/",
+        "https://wadattsu261.com/content/shinjuku-odakyuodawara-exphome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "odakyu:登戸": {
+      "routeId": "odakyu",
+      "station": "登戸",
+      "detailUrls": [
+        "https://wadattsu261.com/content/noborito-odakyuodawarahome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "odakyu:相武台前": {
+      "routeId": "odakyu",
+      "station": "相武台前",
+      "detailUrls": [
+        "https://wadattsu261.com/content/sobudaimae-odakyuodawarahome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "keio_new:新宿": {
+      "routeId": "keio_new",
+      "station": "新宿",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinjuku-keionewline-toeishinjukuhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/ko-keiohome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "oimachi:大井町": {
+      "routeId": "oimachi",
+      "station": "大井町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/oimachi-tokyuoimachihome-no1-2-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/content/om-tokyuoimachihome-all-info/",
+      "mode": "all",
+      "source": "verified-index"
+    },
+    "meguro:元住吉": {
+      "routeId": "meguro",
+      "station": "元住吉",
+      "detailUrls": [
+        "https://wadattsu261.com/content/motosumiyoshi-tokyumeguro-toyokohome-info/"
+      ],
+      "mode": "hub",
+      "source": "verified-index"
+    }
+  },
+  "verifiedMultipageRoutes": [
+    "joban",
+    "keihin",
+    "keiyo",
+    "metro_g",
+    "musashino",
+    "nambu",
+    "seibu_ike",
+    "sobu",
+    "takasaki",
+    "tokaido",
+    "utsunomiya",
+    "yamanote",
+    "yokosuka"
+  ],
+  "generatedFor": "SILENT JOURNEY 41 / parser27"
+}

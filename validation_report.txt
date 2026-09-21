@@ -1,24 +1,44 @@
-駅間ナビ v21 検証結果
+駅間ナビ v42 validation report
+Generated: 2026-09-21 19:10 JST
 
-主な検証項目
-- index.html インラインJavaScript構文 PASS
-- sw.js JavaScript構文 PASS
-- SILENT JOURNEY · 21 PASS
-- Service Worker登録 21.0 / キャッシュ 21.0 PASS
-- オンライン解析キャッシュ parser6 PASS
-- 両方向まとめ設備見出しの誤採用防止 PASS
-- 路線意味と矛盾する上り/下りラベルの補正ロジック PASS
-- 反町の「渋谷・池袋方面(下り)」矛盾を上りへ補正する条件 PASS
-- v20のROUTES / GUIDE_ONLY_ROUTES / GUIDE_DATA 189レコードを保持 PASS
-- 56路線 / 1359駅×路線 / 902ユニーク駅を保持 PASS
-- 対応1258駅×路線 / 853ユニーク駅を保持 PASS
-- station_support.json 等の対応一覧を変更しない PASS
-- 固定ファイル名運用 PASS
+Base / rollback check
+- 作業元: 202609211823_ekikan_gps_41_32.zip (SILENT JOURNEY 41) PASS
+- v41を新規展開した pristine とv42作業ディレクトリを比較 PASS
+- 変更ファイルは8ファイルのみ PASS
+- 変更対象外13ファイルはv41と差分なし PASS
 
-補足
-掲載元の反町詳細ページは、冒頭・簡易版では2番線を上り(渋谷方面)と記載する一方、詳細節の一部に下りという矛盾があります。v21は単一の上り/下り語だけを信用せず、方面駅と路線順を併用して表示を補正します。
+今回の修正
+- 元住吉×東急目黒線: 確認済み詳細URLを直接優先 PASS
+- 元住吉: 複数路線・複数番線が同一到着文にある場合も、選択路線の事実だけを抽出 PASS
+- 元住吉: 3番線=日吉方面(+1)、4番線=目黒方面(-1)を保持 PASS
+- 元住吉: 東横線2番線・5番線が目黒線解析へ混入しない PASS
+- 元住吉: 両方向の設備ブロックでエレベーター設備を保持 PASS
+- 共通安全性: 選択路線内で+1/-1が同時に残る曖昧ケースは文脈を採用せず fail-closed PASS
 
-実行回帰
---------
-PASS 反町の矛盾方向ラベル補正
-PASS 両方向まとめ設備見出し検出
+エレベーターカード
+- 動的オンライン案内: 実解析detailに「エレベーター」を含む号車だけ `.elevator` 強調を付与 PASS
+- 静的収録案内: typesに `elevator` を持つ号車だけ `.elevator` 強調を付与 PASS
+- `.car.active.elevator` 専用の背景・枠線・軽いbox-shadowあり PASS
+- 対象カードに `号車 · EV` とエレベーターaria-labelあり PASS
+- 駅別ハードコードではなく設備実データ駆動のため、エレベーター情報を持つ全駅に共通適用 PASS
+
+Version / cache
+- SILENT JOURNEY · 42 PASS
+- semantic parser dom-semantic-1.18.0 PASS
+- dynamic cache prefix ekikan-guide-dynamic-v42-parser28 PASS
+- service worker shell 42.0 PASS
+
+Syntax / data / regression
+- index.html inline JavaScript node --check PASS
+- sw.js node --check PASS
+- guide-source-index.json parse PASS
+- 元住吉実ページ構造相当 Node parser regression: V42_MOTOSUMIYOSHI_REGRESSION_PASS
+- 反対方向同時残存のfail-closed regression: V42_AMBIGUITY_FAIL_CLOSED_PASS
+- エレベーター動的/静的データ駆動実装 source assertion PASS
+
+Packaging
+- 202609211910_ekikan_gps_42_33.zip 作成 PASS
+- unzip -t PASS
+- ZIP再展開内容とv42作業ディレクトリの全21ファイルがバイト一致 PASS
+- ZIP再展開内容とv41の差分は上記8ファイルのみ PASS
+- 変更対象外13ファイルはZIP内でもv41とバイト一致 PASS

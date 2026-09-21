@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "generatedAt": "2026-09-19T21:08:00+09:00",
+  "version": 27,
+  "generatedAt": "2026-09-20T08:40:57+09:00",
   "definitions": {
     "supported": "true = static data, verified all-stations source, or verified station-detail hub exists for this route/station. false = not yet verified.",
     "inApp": "true = app can show static data or fetch/parse the verified source in the guide UI. Online dynamic sources require network on first fetch.",
