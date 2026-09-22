@@ -7,24 +7,32 @@
 <title>iPhoneの通知・振動 — 駅間ナビ</title>
 <style>
 :root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;background:#0b0d10;color:#eee9e0}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#52493735,transparent 50%)}main{max-width:760px;margin:auto;padding:24px 20px 60px}a{color:#e4cba0;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:2px solid #ead2a7;outline-offset:5px}.back{display:inline-flex;min-height:44px;align-items:center;font-size:14px}.eyebrow{font-size:12px;color:#b8a47e;margin:22px 0 7px}h1{font-size:clamp(24px,5vw,34px);line-height:1.4;margin:0 0 14px;letter-spacing:0}h2{font-size:20px;margin:0 0 14px;line-height:1.6}h3{font-size:16px;margin:22px 0 9px}p,li{font-size:14px;line-height:1.95;color:#bcc2ca}b,strong{color:#f0e7d7;font-weight:600}.lead{font-size:16px;color:#e1d9ca}.meta,.note{font-size:12px;color:#9da8b4}.card{padding:23px;margin-top:20px;background:linear-gradient(135deg,#23272c,#151b21);border:1px solid #bdaa823b;border-radius:18px;box-shadow:inset 0 1px #ffedcd12}.recommended{border-color:#cbb18470}.steps{padding-left:23px}.steps li{padding:0 0 13px 4px}.button{display:flex;align-items:center;justify-content:center;min-height:48px;border:1px solid #e4cda6;background:linear-gradient(135deg,#e7d6b8,#bda178);color:#221e17;border-radius:12px;padding:12px;text-decoration:none;font-size:15px;font-weight:600;margin:18px 0 8px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.7}caption{text-align:left;color:#aab3bd;font-size:12px;padding-bottom:10px}th,td{text-align:left;vertical-align:top;padding:12px 8px;border-bottom:1px solid #beae8730;overflow-wrap:anywhere}th{color:#dbc49c;font-weight:600}td{color:#bdc5ce}th:first-child{width:31%}td:first-child{color:#ede6da}summary{min-height:44px;padding-block:9px;font-size:14px;color:#e2c99c;cursor:pointer}.sources li{font-size:12px;padding-bottom:8px}.sources a{overflow-wrap:anywhere}code{font-size:.95em;color:#d7c69f}footer{margin-top:26px;color:#929ca6;font-size:12px;line-height:1.8}@media(max-width:370px){main{padding-inline:13px}.card{padding:18px 14px}th,td{padding-inline:6px;font-size:12px}}@media print{:root{color-scheme:light;background:white;color:#111}body,.card{background:white;box-shadow:none}p,li,td,.meta,.note,footer{color:#333}a,h1,h2,h3,b,strong,th,td:first-child{color:#111}.button,.back{display:none}.card{break-inside:avoid}}
-</style>
+.card{background:linear-gradient(135deg,#263043bd,#131d28b0);border-color:#c0cde43a;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}body{background:radial-gradient(ellipse at 10% 20%,#60528232,transparent 50%),radial-gradient(ellipse at 90% 60%,#3274662a,transparent 45%),#090c12}.recommended{border-color:#b9d0e165}a,summary{color:#c8daee}.button{background:linear-gradient(115deg,#d7c8df,#b9cddd,#b4cfc8);border-color:#dce5ef;color:#18202a}</style>
 </head>
 <body><main>
 <a class="back" href="./">‹ 駅間ナビを開く</a>
-<p class="eyebrow">駅間ナビ 46</p>
+<p class="eyebrow">駅間ナビ 47</p>
 <h1>iPhoneの通知・振動</h1>
-<p class="lead">画面を開いて使うならBrrrowserを試す。画面を閉じて使うなら、標準のショートカットで通知を設定する。用途に合わせて選べます。</p>
-<p>どちらも開発者登録や、自作アプリのストア公開は不要です。駅間ナビには、ブラウザ移行用のURLコピー、振動テスト、各区間の降車駅をコピーする設定補助を追加しました。</p>
+<p class="lead">ホーム画面に追加して通知を許可すると、画面を開いて見守っている間の接近を、iPhoneの通知でお知らせします。</p>
+<p>ショートカットの作成や、ストア公開は不要です。通知の音・振動は端末の設定に従います。</p>
 <p class="meta">調査：2026年9月22日。公式資料・公開仕様に基づく整理です。iPhone実機での通知・振動の確認は未実施です。</p>
 
-<section class="card recommended" id="brrrowser">
+<section class="card recommended" id="home-notifications">
+<h2>ホーム画面の通知を使う</h2>
+<ol class="steps"><li>Safariで駅間ナビの公開URLを開き、共有 →「ホーム画面に追加」を選びます。「Webアプリとして開く」があればオンにします。</li><li>追加したアイコンから起動し、「その他 → 通知・振動 → 通知を許可する」を押します。</li><li>iPhoneの「設定 → 通知 → 駅間ナビ」で通知・バナー・サウンドをオンにします。</li><li>「設定 → サウンドと触覚 → 触覚」を「常に再生」または「消音モードのときに再生」にします。音を出したくない場合は本体を消音モードにします。</li><li>集中モードや時刻指定要約で通知が抑制されない設定にして、実際にテストします。</li></ol>
+<h3>電車に乗らずにテスト</h3><p>「今すぐ通知」、または10秒・30秒・60秒後の通知を選べます。GPSや乗車経路の設定は不要です。カウントダウン中は画面を開いたままにしてください。「テストを中止」で取消できます。画面オフ・別アプリへの切り替え・ページを閉じる操作でも中止し、復帰後に古いテストは実行しません。</p>
+<p>「通知の表示を要求しました」は、表示処理を受け付けたことを示します。実際にバナーが出たか、振動したかは端末で確認してください。iPhoneの振動パターンや長さを、このページから指定することはできません。</p>
+<p><b>ホーム画面に追加しても、画面オフ中のGPS監視はできません。</b>今回追加したのは、画面表示中に判断した接近をシステム通知で知らせる機能です。外部サーバーから配信するWeb Pushや、画面オフでも動く予約通知は実装していません。</p>
+<p class="note"><a href="https://support.apple.com/ja-jp/guide/iphone/iph7c3d96bab/ios">Apple：通知の設定</a> ／ <a href="https://support.apple.com/ja-jp/guide/iphone/iph07c867f28/ios">Apple：サウンドと触覚</a></p>
+</section>
+<section class="card" id="brrrowser">
 <h2>画面を開いて使う：Brrrowserを試す</h2>
 <p><b>Brrrowser</b>は、Webページ向けの振動機能を追加したiPhone用ブラウザです。開発元が<code>navigator.vibrate()</code>への対応を明記しています。<a href="#source-brrrowser-api">[12]</a> 日本のApp Storeでは無料、iOS 16.6以降対応と案内されています。<a href="#source-brrrowser-store">[13]</a></p>
 <ol class="steps">
 <li>Safari側で保存済みプリセットを使っている場合は、「保存した経路 → ファイルに書き出し」でJSONを保存します。別のブラウザには自動では引き継がれません。</li>
-<li>駅間ナビの「その他 → iPhoneの通知・振動の設定」で、このページのURLをコピーします。公開済みのHTTPSのURLを使用してください。</li>
+<li>駅間ナビの「その他 → 通知の設定・ほかの方法 → 別のブラウザ・ショートカットを使う場合」で、このページのURLをコピーします。公開済みのHTTPSのURLを使用してください。</li>
 <li>Brrrowserをインストールして、コピーした駅間ナビのURLを開きます。必要ならプリセットJSONを「保存した経路 → 読み込み」で取り込みます。</li>
-<li>「その他 → iPhoneの通知・振動の設定」から<b>「バイブを試す」</b>を押します。バイブAPIが見つかるブラウザではテストボタンが表示されます。</li>
+<li>「その他 → 通知の設定・ほかの方法 → 別のブラウザ・ショートカットを使う場合」から<b>「バイブを試す」</b>を押します。バイブAPIが見つかるブラウザではテストボタンが表示されます。</li>
 <li><b>「10秒後に試す」</b>も押し、画面を開いたまま触れずに待ちます。ボタンに触れた瞬間だけでなく、少し時間がたっても振動するか確認できます。この案内や画面を閉じるとテストは中止します。</li>
 <li>屋外などで位置情報を許可し、GPSの現在駅が取得できることを確認してから見守りを試してください。</li>
 </ol>
@@ -37,7 +45,7 @@
 <h2>画面を閉じて使う：ショートカット</h2>
 <p>普段使う降車駅・乗換駅ごとに「到着」のオートメーションを作ります。ブラウザを開き続ける必要がある駅間ナビのGPSとは別に、iPhone側の位置に基づいて実行します。<a href="#source-travel">[1]</a></p>
 <ol class="steps">
-<li>駅間ナビの「その他 → iPhoneの通知・振動の設定」、またはプリセットの「通知の設定」を開き、駅名をコピーします。見守り中は「その他の操作 → iPhoneの通知・振動」からも開けます。</li>
+<li>駅間ナビの「その他 → 通知の設定・ほかの方法 → 別のブラウザ・ショートカットを使う場合」、またはプリセットの「通知の設定」を開き、駅名をコピーします。見守り中は「その他の操作 → iPhoneの通知・振動」からも開けます。</li>
 <li>「ショートカット」アプリで、<b>オートメーション → ＋ → 到着</b>を選びます。項目名はiOSのバージョンによって異なります。</li>
 <li>「場所」で駅を検索し、同名駅と間違っていないか路線・地図を確認します。<b>地図の円で検知範囲を調整</b>できます。早めに知りたい場合は範囲を広げるか、1つ前の停車駅を使います。停車する列車かどうかも確認してください。</li>
 <li>必要なら<b>時間範囲</b>を指定します。往路は朝、復路は夕方などに分けると、通過するたびに振動するのを減らせます。</li>
@@ -76,7 +84,7 @@
 <h2>ほかの方法との比較</h2>
 <h3>ホーム画面への追加とWeb Push</h3>
 <p>ホーム画面のWebアプリなら、通知の許可を得てWeb Pushを受け取れます。Apple Developer Programへの加入は不要です。<a href="#source-push">[9]</a></p>
-<p>ただし、Web Pushは外部から届く通知の仕組みです。<b>ホーム画面への追加だけでは、ロック中のGPS監視はできません。</b>位置情報APIは表示状態の制約を受けます。<a href="#source-gps">[10]</a> 配信用サーバーを追加しても、駅への接近を検知する別の仕組みが必要です。今回の駅間ナビにはWeb Push配信を追加していません。</p>
+<p>ただし、Web Pushは外部から届く通知の仕組みです。<b>ホーム画面への追加だけでは、ロック中のGPS監視はできません。</b>位置情報APIは表示状態の制約を受けます。<a href="#source-gps">[10]</a> 配信用サーバーを追加しても、駅への接近を検知する別の仕組みが必要です。駅間ナビ47は画面表示中のシステム通知に対応しています。外部サーバーによるWeb Push配信は追加していません。</p>
 <h3>ストアに公開せず、自作のiPhoneアプリを使う</h3>
 <p>MacのXcodeと無料のApple Accountを使い、自分のiPhoneへ入れてテストする方法はあります。ただし無料のPersonal Teamではプロビジョニングが7日で期限切れになり、再ビルド・再インストールが必要です。<a href="#source-xcode">[11]</a></p>
 <p>位置監視と通知をネイティブ側に実装すれば設計の自由度は上がりますが、Macの準備、初期設定、定期的な入れ直しが増えます。手軽な個人利用を優先する現状では、先に対応ブラウザの試用や標準ショートカットを検討するのがよいと判断しました。</p>

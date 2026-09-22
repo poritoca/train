@@ -45,7 +45,7 @@ window.createJourneyExperience = function(api) {
   function lineText(p){return [...new Set(p.legs.map(l=>short(routeBy(l.routeId))))].join(' ・ ')}
   function visibleTab(){return document.querySelector('.tabs [aria-selected="true"]')?.id||'tabRide'}
   function tab(name){api.tab(name);refreshMini();if(name==='Ride')$('panelRide').scrollTop=0}
-  function closeDialog(){clearTimeout(searchTimer);cancelVibrationTest();const dlg=$('journeyDialog');if(dlg.open)dlg.close();lastFocused?.focus?.()}
+  function closeDialog(){if($('notificationDialogControls'))window.EkikanNotifications?.cancelTest('設定画面を閉じたため、テストを中止しました。');clearTimeout(searchTimer);cancelVibrationTest();const dlg=$('journeyDialog');if(dlg.open)dlg.close();lastFocused?.focus?.()}
   function dialog(title,content){cancelVibrationTest();lastFocused=document.activeElement;$('journeyDialogTitle').textContent=title;$('journeyDialogBody').onclick=null;$('journeyDialogBody').innerHTML=content;const dlg=$('journeyDialog');if(!dlg.open)dlg.showModal();dlg.scrollTop=0}
   function option(value,label,selected){return '<option value="'+esc(value)+'"'+(selected?' selected':'')+'>'+esc(label)+'</option>'}
   function legOptions(leg){const r=routeBy(leg.routeId)||api.routes[0];return r.stations.map(s=>s[0])}
@@ -190,7 +190,8 @@ window.createJourneyExperience = function(api) {
     const targets=legs.filter(x=>routeBy(x.leg.routeId)?.stations.some(s=>s[0]===x.leg.to));
     const sourceLabel=preset?bucketName(preset.bucket)+' · '+preset.name:session?'今回の経路':resume?'前回の経路':'降車駅';
     const nativeVibration=typeof navigator.vibrate==='function',pageUrl=/^https?:$/.test(location.protocol)?location.origin+location.pathname:'';
-    dialog('iPhoneの通知・振動',
+    dialog('通知・振動',
+      '<div id="notificationDialogControls"></div><details class="notification-alternatives"><summary>別のブラウザ・ショートカットを使う場合</summary>'+
       '<p class="notification-intro">画面を開いて使うか、閉じて使うかで方法が変わります。</p>'+
       '<p class="quiet-note">'+(nativeVibration?'このブラウザにはバイブ機能があります。実際の振動は端末で確認してください。':'このブラウザの自動バイブは非対応です。')+' 駅間ナビのGPS見守りは画面表示中に動作します。</p>'+
       '<section class="notification-browser"><h3 class="notification-method-heading">画面を開いて使う</h3><p>無料の「Brrrowser」は、HTMLからのバイブ対応を開発元が案内しているiPhone用ブラウザです。このページのURLを開いて試せます。</p><div class="notification-browser-actions"><button id="notificationCopyUrl" type="button"'+(!pageUrl?' disabled':'')+'>このページのURLをコピー</button><a class="notification-store-link" href="https://apps.apple.com/jp/app/brrrowser/id6747417026" target="_blank" rel="noopener noreferrer">Brrrowserを見る ↗</a></div>'+
@@ -201,7 +202,8 @@ window.createJourneyExperience = function(api) {
       '<ol class="notification-steps"><li>「ショートカット」を開き、<b>オートメーション → ＋ → 到着</b>を選びます。</li><li>駅を検索し、路線と場所を確認します。早めに知らせたい場合は、地図の範囲を広げるか、1つ前の停車駅を指定します。</li><li><b>「すぐに実行」</b>を選びます。OSによっては「実行の前に尋ねる」をオフにします。</li><li>「新規の空のオートメーション」などから、<b>「デバイスを振動させる」</b>を追加します。「繰り返す」で3回にすると気づきやすくなります。</li><li>必要なら「通知を表示」も追加し、文面に駅名を入れます。音を出したくない場合は、詳細の<b>「サウンドを再生」をオフ</b>にします。</li></ol>'+
       '<a class="notification-open primary" href="shortcuts://">ショートカットを開く</a><p class="quiet-note">iPhoneで開いてください。設定は手動で行います。位置情報の許可と振動を確認し、普段使う前に試してください。</p>'+
       '<details class="notification-notes"><summary>通知のタイミングと解除について</summary><p>位置に基づく通知には遅れや誤差があり、地下では作動しないことがあります。通過するだけでも作動するため、通勤時間などの時間範囲を指定すると使いやすくなります。</p><p><b>ショートカット側の設定は別管理です。</b>駅間ナビで経路を変更・全解除しても連動しません。使わない設定は「ショートカット」で無効化・削除してください。</p></details>'+
-      '<a class="notification-guide-link" href="./iphone-alerts.html" target="_blank" rel="noopener noreferrer">ブラウザ別の対応・ほかの方法を読む ↗</a>');
+      '<a class="notification-guide-link" href="./iphone-alerts.html" target="_blank" rel="noopener noreferrer">ブラウザ別の対応・ほかの方法を読む ↗</a></details>');
+    window.EkikanNotifications?.mount($('notificationDialogControls'));
     $('journeyDialogBody').onclick=async e=>{
       const b=e.target.closest('[data-notification-copy],#notificationCopyUrl');if(!b)return;
       const isUrl=b.id==='notificationCopyUrl',target=isUrl?null:targets[Number(b.dataset.notificationCopy)];if(isUrl?!pageUrl:!target)return;
@@ -340,7 +342,7 @@ window.createJourneyExperience = function(api) {
     holder.onclick=e=>{const b=e.target.closest('[data-match]');if(!b)return;const m=matches[Number(b.dataset.match)];if(m)api.quickApply(m,Number(b.dataset.dir))};
   }
   function init(){
-    $('journeyDialogClose').onclick=closeDialog;$('journeyDialog').addEventListener('cancel',()=>lastFocused?.focus?.());$('journeyDialog').addEventListener('close',cancelVibrationTest);
+    $('journeyDialogClose').onclick=closeDialog;$('journeyDialog').addEventListener('cancel',()=>lastFocused?.focus?.());$('journeyDialog').addEventListener('close',()=>{cancelVibrationTest();if($('notificationDialogControls'))window.EkikanNotifications?.cancelTest('設定画面を閉じたため、テストを中止しました。')});
     $('watchReset').onclick=()=>clearCurrent();
     $('homeNew').onclick=()=>openEditor();$('homeSaved').onclick=manage;$('homeLocate').onclick=locate;
     $('watchGoal').onclick=editCurrentGoal;$('watchMore').onclick=showTripMenu;$('watchGuide').onclick=openArrival;$('watchMiniBack').onclick=()=>tab('Ride');
