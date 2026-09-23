@@ -1,3 +1,75 @@
+v60 / 2026-09-23
+================
+- 4桁PINを指定値へ変更。平文は保存せず、PBKDF2-SHA-256（120,000回）で照合。
+- パスワード用テキストボックスを独自10キーへ変更し、iOSの自動キーボード表示制限に依存しない操作にした。
+- 4桁上限・4桁目入力時の自動照合・誤入力時の自動クリア・1桁削除を実装。
+- テンキー初期フォーカスと外付けキーボードの数字/Backspace操作に対応。
+- PIN変更時に旧解除状態を引き継がないよう保存キーを更新。
+- Service Workerとローカル資産のバージョンを60.0へ更新。既存のnoindex/no-referrer/直接fetch禁止は維持。
+
+変更ファイル（v59からv60）
+README.txt
+changes.txt
+github_pages_fix.txt
+index.html
+iphone-alerts.html
+sw.js
+validation_report.txt
+
+v59 / 2026-09-23
+================
+- 検索エンジン向け noindex/nofollow/noarchive/nosnippet/noimageindex をindex.htmlへ追加。Googlebot/Bingbotにも明示。
+- 家族・身内向けの簡易パスワードゲートを追加。入力欄自動フォーカス、Enter/Return送信に対応。
+- パスワード平文をコードへ保存せず、SHA-256ハッシュ比較に変更。
+- 解除状態をlocalStorageへ保存し、次回以降は入力不要。「この端末をロック」で解除状態を削除可能。
+- 未解除時はメインIIFEを待機させ、GPS・アプリ初期化・オンライン案内処理を開始しないよう変更。
+- iphone-alerts.htmlにもnoindex/no-referrerと解除チェックを追加。未解除ならメインへ戻す。
+- v58の参照元抑制・掲載元直接fetch禁止を維持。
+- Service Workerとローカル資産のバージョンを59.0へ更新。保存形式は変更なし。
+
+変更ファイル（v58からv59）
+README.txt
+changes.txt
+github_pages_fix.txt
+index.html
+iphone-alerts.html
+sw.js
+validation_report.txt
+
+v58 / 2026-09-23
+================
+- document-wide referrer policy を no-referrer に設定。
+- 外部リンクへ noreferrer / noopener / referrerPolicy=no-referrer を重ねて適用し、動的リンクにも同じ保護を追加。
+- わだっつログのWordPress REST APIへのブラウザ直接fetchを廃止。通常取得をReader＋AllOrigins Rawの中継経路へ変更。
+- 駅別ページ探索も掲載元REST APIの直接検索を廃止し、中継経由のサイト内検索ページ解析へ変更。
+- guideFetchText に wadattsu261.com への直接fetch拒否ガードを追加。
+- 外部fetchに credentials=omit / referrerPolicy=no-referrer / mode=cors / redirect=follow を明示。
+- Service Workerとローカル資産のバージョンを58.0へ更新。保存形式・通知・降車位置キャッシュ形式は変更なし。
+
+変更ファイル（v57からv58）
+README.txt
+changes.txt
+github_pages_fix.txt
+index.html
+sw.js
+validation_report.txt
+
+v57 / 2026-09-23
+================
+- 降車位置タブ・オンライン案内・その他タブの案内カードで、説明文・出典・リンク・注意文が画面幅で折り返されず横にはみ出す不具合を修正。
+- ガイド/案内カード内の本文・補足文・設備ラベル・リンクに折り返し用スタイルを追加し、英数字やURL混在でも改行できるようにした。
+- パネルの横スクロールを抑止し、内容全体が左右へずれて読みにくくならないよう改善。
+- Service Workerとローカル資産のバージョンを57.0へ更新。保存形式・通知・降車位置パーサーは変更なし。
+
+変更ファイル（v56からv57）
+README.txt
+changes.txt
+github_pages_fix.txt
+index.html
+journey.css
+sw.js
+validation_report.txt
+
 v53 / 2026-09-23
 ================
 - 東北新幹線を東京〜郡山へ延長し、新白河・郡山を追加。
@@ -271,4 +343,12 @@ v41 (2026-09-21)
 - 現在位置より10px以上手前の駅に route-station-passed を動的付与し、出発済み/乗換済み/通過済みを表示。GPS補正で位置が戻れば状態も復元。
 - 通常画面と節電画面で同じ通過判定・表示を適用。
 - Service Worker / 資産クエリを55.0へ更新。
+
+[v56] 降車情報の掲載元説明文を非表示化
+- オンライン取得結果の direction/detail/place/編成条件/代替条件を表示前に構造化事実へ正規化し、掲載元の説明文をDOMへ出さない表示ファイアウォールを追加。
+- 方面見出しは番線・方向軸・行先だけで構成し、解析元テキストをフォールバック表示しない。
+- 設備欄は階段・エスカレーター・エレベーター・スロープ・改札・出口等だけを表示。
+- 改札/乗換先欄は短い事実ラベルのみ表示し、文章的な補足は除去。内蔵データのnoteも画面表示しない。
+- 既存端末キャッシュにも同じ表示フィルターを適用するため、再取得しなくても説明文は表示されない。
+- 掲載元リンクは維持。Service Worker / 資産クエリを56.0へ更新。
 

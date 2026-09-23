@@ -1,3 +1,120 @@
+駅間ナビ v60 検証結果
+====================
+更新元: 202609232216_ekikan_gps_59_10.zip
+更新元ZIP SHA-256: fc06c380480fb34fc15dac990086bff5ddc31fbc2ee73e101006c588f05279f8
+更新元ZIPと作業元27ファイルがファイル名・SHA-256とも一致することを確認してから更新。旧版は使用していません。
+
+今回の確認
+- 4桁PINの照合値をPBKDF2-SHA-256（salt付き、120,000回）で生成し、指定PINのみ一致し、旧PINおよび別PINが一致しないことを検証。
+- 配布ディレクトリ内のテキストファイルを検索し、指定PINの4桁文字列が平文で残っていないことを確認。
+- 独自10キーはpin.length>=4で5桁目以降を拒否し、4桁目でcomplete()を自動実行することを静的確認。
+- 誤入力時はPINを自動クリアし、⌫と物理キーボードのBackspace/Deleteに対応。
+- 起動時はテンキーの「1」ボタンへフォーカス。テキスト入力欄・送信ボタン・Enter操作への依存なし。
+- v59のnoindex/nofollow/noarchive/nosnippet/noimageindex、no-referrer、wadattsu261.comへの直接fetch禁止を維持。
+- JavaScript構文: index.htmlインラインscript / journey-ui.js / dim-screen.js / notifications.js / visual-effects.js / sw.js を node --check で確認。
+- HTML: id重複なし。CSS: パーサーエラー0件。
+- Service Worker: 60.0、ローカル資産クエリ v=60.0。
+
+実機確認推奨
+- 初回表示で10キーが出て、4桁目を押した瞬間に解除されること。
+- 5桁目を入力できないこと、誤入力時に4桁が自動クリアされること、⌫で1桁戻せること。
+- 一度解除後の再読込では認証画面をスキップし、「この端末をロック」で再び認証画面へ戻ること。
+
+以下は前版v59の検証記録
+------------------------
+駅間ナビ v59 検証結果
+====================
+更新元: 202609232147_ekikan_gps_58_09.zip
+更新元ZIP SHA-256: 4ed1127bd5f46bc7ada72050e07ba2c2d23b75c182734bbdc65bb30120e09e2f
+直前に作成したv58の27ファイルを直接展開し、その内容のみを基準に更新。旧版は使用していません。
+
+今回の確認
+- index.htmlにrobots/googlebot/bingbotのnoindex,nofollow,noarchive,nosnippet,noimageindexを追加。referrer=no-referrerも維持。
+- 起動ゲートはform submitで処理するため、ボタンクリックだけでなくEnter/Returnでも解除処理へ進むことを静的確認。
+- password inputにautofocusを付け、ロック時はrequestAnimationFrame後にもfocus()を実行。
+- パスワード値の平文を配布ファイルへ保存せず、SHA-256ハッシュ照合を使用。
+- 解除状態はlocalStorageの専用キーへ証明値を保存。ロック操作でキーを削除してreloadする実装を確認。
+- メインアプリIIFEをasync化し、window.__EK_ACCESS_PROMISE__の解決までGPS・通常初期化を待機。
+- iphone-alerts.htmlにnoindex/no-referrerと解除状態チェックを追加し、未解除時は./へreplaceする実装を確認。
+- v58の掲載元直接fetch禁止ガード、外部リンクno-referrer/noreferrer設定を維持。
+- JavaScript構文、HTML id重複、CSS構文を検証。
+- Service Worker: 59.0、ローカル資産クエリ v=59.0。
+
+注意
+- 静的GitHub Pages上のクライアント側ゲートであり、本物のサーバー認証ではない。公開リポジトリや静的ファイルを直接読む操作までは防止しない。
+- 短い数字パスワードはハッシュ化しても総当たり可能。平文露出を避ける目的の実装。
+
+以下は前版v58の検証記録
+------------------------
+駅間ナビ v58 検証結果
+====================
+更新元: 202609232140_ekikan_gps_57_08.zip
+更新元ZIP SHA-256: 4eaee1ed38f99e14534ea05fbc46ae4ab5bc5459c5ef9a6653fb3227b1c9c178
+私が直前に作成したv57の27ファイルを直接展開して更新し、旧版は使用していません。
+
+今回の確認
+- v57 ZIPと作業フォルダの全27ファイルのSHA-256を比較し、修正開始時点で差分0件を確認。
+- index.htmlに meta name=referrer content=no-referrer が存在することを確認。
+- 外部リンクの動的生成処理で rel=noopener noreferrer と referrerPolicy=no-referrer を設定することを確認。
+- 通常の自動取得は r.jina.ai と api.allorigins.win を使用し、wadattsu261.com をfetch先にするコード経路を除去。
+- 旧WordPress REST API検索を中継経由のサイト内検索解析へ置換。
+- guideFetchText に wadattsu261.com 直接fetch拒否ガードがあることを確認。
+- JavaScript構文: index.htmlインラインscript / journey-ui.js / dim-screen.js / notifications.js / visual-effects.js / sw.js を node --check で確認。
+- HTML: id重複なし。CSS: journey.css のパーサーエラー0件。
+- Service Worker: 58.0、ローカル資産クエリ v=58.0。
+
+注意
+- 掲載元リンクを利用者が明示的に開けば掲載元への直接通信になります。Refererは抑止しますが、IP/User-Agent等まで隠すものではありません。
+- 自動取得では中継事業者へ通信するため、中継側にはOriginやIP等が見える可能性があります。
+- GitHub Pagesや公開リポジトリ自体の検索・閲覧を防止する機能ではありません。
+
+以下は前版v57の検証記録
+------------------------
+駅間ナビ v57 検証結果
+====================
+更新元: 202609232110_ekikan_gps_56_07.zip
+更新元ZIP SHA-256: 481dea9cb817ad2d9c4fa409384009bd44f6ee398e7befc54a51fcf7997f94d9
+私が直前に作成したv56の27ファイルを直接展開して更新し、旧版は使用していません。
+
+今回の確認
+- journey.css の案内カード系スタイルへ、長文・URL・英数字を含む文でも折り返せる overflow-wrap/word-break/white-space 設定を追加。
+- .panel に overflow-x:hidden を追加し、横スクロールで内容が左右へずれる経路を抑止。
+- ガイド/案内カードで使う .source-credit / .guide-mode-note / .mini / #guideCaution / .facility-* / .guide-links a などへ max-width:100% と折り返しスタイルを付与したことを静的確認。
+- JavaScript構文: index.htmlインラインscript / journey-ui.js / dim-screen.js / notifications.js / visual-effects.js / sw.js を node --check で確認。
+- HTML: id重複なし。CSS: journey.css のパーサーエラー0件。
+- Service Worker: 57.0、ローカル資産クエリ v=57.0。
+
+実機確認推奨
+- iPhone Safariで、降車位置タブ下部の「掲載元」「収録状況メモ」「詳細版は号車…」などの文がカード幅内で折り返されること。
+- 左右へスワイプしても、案内パネル内の内容全体が横にずれて欠けないこと。
+- オンライン案内カードで英数字やURLを含む出典表示・注意文も同様に折り返されること。
+
+以下は前版v56の検証記録
+------------------------
+駅間ナビ v56 検証結果
+====================
+更新元: 202609232005_ekikan_gps_55_06(1).zip
+更新元ZIP SHA-256: b495f649724ce8518039f588655dd69c9363d2d2d899be4cbdd2211a74eb135a
+今回添付されたv55の27ファイルを直接展開して更新し、旧版は使用していません。
+
+今回の確認
+- 動的オンライン案内の表示層にホワイトリスト型フィルターを追加し、item.detail / item.place / item.variantContext / item.altContext / direction の生文字列をDOMへ直接出す経路がないことを静的検索で確認。
+- 方面見出しは番線・方向軸・行先の構造化情報だけを表示し、認識できない元見出しは「方面情報」として処理することを確認。
+- 設備種別はエレベーター・エスカレーター・階段・スロープ・改札・連絡口・出口だけに正規化。
+- 場所ラベルは短い改札名・出口・方面・番線等を維持し、文章形式の補足は切り落とす処理を追加。内蔵GUIDE_DATAのnoteは236件すべて表示経路から除外。
+- 既存キャッシュはデータ形式を変更せず、描画時フィルターで説明文を非表示にするため、キャッシュ再取得を必須にしない設計を確認。
+- 乗換駅小窓の確認済みフォールバックでもnoteを表示せず、構造化した号車・設備・番線と掲載元リンクのみを表示。
+- JavaScript構文: index.htmlインラインscript / journey-ui.js / dim-screen.js / notifications.js / visual-effects.js / sw.js を node --check で確認。
+- HTML: id重複なし。CSS: journey.cssのパーサーエラー0件。
+- Service Worker: 56.0、ローカル資産クエリ v=56.0。
+
+実機確認推奨
+- 新橋など内蔵詳細案内で、号車・ドア・設備・改札方面は残り、時間帯や移動方法などのnote文章が表示されないこと。
+- オンライン号車案内で、掲載元ページに長い説明文が含まれていても、カードには設備種別・号車位置・方面/番線・短い改札名だけが表示されること。
+- 乗換駅タップの小窓でも同じ基準で表示され、「掲載元を開く」リンクが機能すること。
+
+以下は前版v55の検証記録
+------------------------
 駅間ナビ v55 検証結果
 ====================
 更新元: 202609231950_ekikan_gps_54_05.zip

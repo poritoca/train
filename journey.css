@@ -123,3 +123,10 @@ body.large .route-station.transfer-guide-trigger b::after,body.large .transfer-g
 .route-station-passed{opacity:.78!important}.route-station-passed b{color:#aebbb9!important}.route-station-passed small{color:#8fb5a7!important;font-weight:650;letter-spacing:.01em}.route-station-passed i{background:#47675b!important;border-color:#82a899!important;box-shadow:0 0 0 3px #0c1219!important}.route-station-current-position{opacity:1!important}.route-station-current-position b{color:#f4f8fb!important;font-weight:700}.route-station-current-position small{display:none}.journey-overview .route-station-completed:not(.route-station-passed){opacity:.64}
 .dim-route .route-station-passed{opacity:.74!important}.dim-route .route-station-passed b{color:#78988a!important}.dim-route .route-station-passed small{color:#6f9b86!important}.dim-route .route-station-passed i{background:#365649!important;border-color:#658675!important;box-shadow:0 0 0 3px #000!important}.dim-route .route-station-current-position b{color:#b2cdbf!important}
 @media(max-width:370px){.route-current-marker b{max-width:calc(100% - 38px);font-size:9px;padding-inline:6px}}
+
+
+/* v57: prevent horizontal overflow and force wrapping in guide/info cards on narrow screens. */
+.panel{overflow-x:hidden}
+.card,.guide-variant,.guide-direction-group,.guide-source-row,.guide-links,.guide-links a,.facility,.facility-destination,.door-position,.facility-kind,.source-credit,.guide-mode-note,.mini,.hint,#guideCaution{min-width:0;max-width:100%}
+.guide-links,.guide-source-row,.source-credit,.guide-mode-note,.mini,.hint,#guideCaution,.facility-destination,.door-position,.facility-kind,.card p,.card a,.card span,.card strong,.card small{white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+.guide-links a{display:inline-block;max-width:100%}
