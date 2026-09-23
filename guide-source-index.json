@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-23T02:50:35.349Z",
-  "description": "v41 verified station source index: v40 mappings plus direct pages for Keio New Line Shinjuku and Tokyu Oimachi Line Oimachi; Hiyoshi route-name collision/direction preservation and terminal/access-position parser hardening. v48: verified Keio Inokashira, Tobu Skytree, Keisei and TX station links; distinguish stations not listed by the source; seven reported guide cases. v49: verified Honkawagoe/Kuhonbutsu detail pages and official TX maps for ten unlisted stations.",
+  "generatedAt": "2026-09-23T19:47:03+09:00",
+  "description": "v54 verified guide source index. Existing mappings are retained; added Tohoku Shinkansen station pages (Tokyo through Koriyama), Atami sources for Ito Line/Odoriko, and official fail-closed fallbacks for Banetsu West at Koriyama/Aizu-Wakamatsu.",
   "pairs": {
     "tokaido:東京": {
       "routeId": "tokaido",
@@ -4203,6 +4203,194 @@
       "aggregateUrl": "",
       "source": "verified-detail-v49",
       "checkedAt": "2026-09-23"
+    },
+    "tohoku_shinkansen:東京": {
+      "routeId": "tohoku_shinkansen",
+      "station": "東京",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tokyo-tohokushinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "tohoku_shinkansen:上野": {
+      "routeId": "tohoku_shinkansen",
+      "station": "上野",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ueno-shinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "tohoku_shinkansen:大宮": {
+      "routeId": "tohoku_shinkansen",
+      "station": "大宮",
+      "detailUrls": [
+        "https://wadattsu261.com/content/omiya-shinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "tohoku_shinkansen:小山": {
+      "routeId": "tohoku_shinkansen",
+      "station": "小山",
+      "detailUrls": [
+        "https://wadattsu261.com/content/oyama-shinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "tohoku_shinkansen:宇都宮": {
+      "routeId": "tohoku_shinkansen",
+      "station": "宇都宮",
+      "detailUrls": [
+        "https://wadattsu261.com/content/utsunomiya-shinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "tohoku_shinkansen:那須塩原": {
+      "routeId": "tohoku_shinkansen",
+      "station": "那須塩原",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nasushiobara-shinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "tohoku_shinkansen:新白河": {
+      "routeId": "tohoku_shinkansen",
+      "station": "新白河",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinshirakawa-shinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "tohoku_shinkansen:郡山": {
+      "routeId": "tohoku_shinkansen",
+      "station": "郡山",
+      "detailUrls": [
+        "https://wadattsu261.com/content/koriyama-shinkansenhome-info/"
+      ],
+      "aggregateUrl": "https://wadattsu261.com/jrh-jre-jrw-shinkansenhome-info/",
+      "mode": "hub",
+      "source": "verified-index"
+    },
+    "ito:熱海": {
+      "routeId": "ito",
+      "station": "熱海",
+      "detailUrls": [
+        "https://wadattsu261.com/content/atami-itohome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "station",
+      "source": "verified-index"
+    },
+    "banetsu_west:会津若松": {
+      "routeId": "banetsu_west",
+      "station": "会津若松",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/stations/18.html",
+      "sourceUrl": "https://media.jreast.co.jp/articles/6596"
+    },
+    "banetsu_west:郡山": {
+      "routeId": "banetsu_west",
+      "station": "郡山",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=675",
+      "sourceUrl": "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=675"
+    },
+    "odoriko:熱海": {
+      "routeId": "odoriko",
+      "station": "熱海",
+      "detailUrls": [
+        "https://wadattsu261.com/content/atami-tokaidohome-info/2/"
+      ],
+      "aggregateUrl": "",
+      "mode": "station",
+      "source": "verified-index"
+    },
+    "ito:来宮": {
+      "routeId": "ito",
+      "station": "来宮",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/stations/600.html",
+      "sourceUrl": "https://www.jreast.co.jp/estation/stations/600.html"
+    },
+    "ito:伊豆多賀": {
+      "routeId": "ito",
+      "station": "伊豆多賀",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/stations/121.html",
+      "sourceUrl": "https://www.jreast.co.jp/estation/stations/121.html"
+    },
+    "ito:網代": {
+      "routeId": "ito",
+      "station": "網代",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/stations/58.html",
+      "sourceUrl": "https://www.jreast.co.jp/estation/stations/58.html"
+    },
+    "ito:宇佐美": {
+      "routeId": "ito",
+      "station": "宇佐美",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/stations/220.html",
+      "sourceUrl": "https://www.jreast.co.jp/estation/stations/220.html"
+    },
+    "ito:伊東": {
+      "routeId": "ito",
+      "station": "伊東",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/stations/143.html",
+      "sourceUrl": "https://www.jreast.co.jp/estation/stations/143.html"
+    },
+    "odoriko:伊東": {
+      "routeId": "odoriko",
+      "station": "伊東",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "official-map",
+      "source": "verified-index",
+      "availability": "not-listed",
+      "officialMapUrl": "https://www.jreast.co.jp/estation/stations/143.html",
+      "sourceUrl": "https://www.jreast.co.jp/estation/stations/143.html"
     }
   },
   "verifiedMultipageRoutes": [
@@ -4220,5 +4408,5 @@
     "yamanote",
     "yokosuka"
   ],
-  "generatedFor": "v49"
+  "generatedFor": "v54 transfer-station quick guide and newly added route guide expansion"
 }

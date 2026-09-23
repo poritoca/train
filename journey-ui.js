@@ -293,7 +293,7 @@ window.createJourneyExperience = function(api) {
   function renderSegment(st,hide){
     const box=$('watchSegment'),track=$('segmentTrack'),marker=$('segmentMarker'),data=st.segmentProgress;box.hidden=hide;
     const ratio=data?.ratio,known=Number.isFinite(ratio),percent=known?Math.round(ratio*100):0;
-    $('segmentFrom').textContent=data?.from||'—';$('segmentTo').textContent=data?.to||st.next||'次の停車駅';
+    const segmentFromName=data?.from||'—',segmentToName=data?.to||st.next||'次の停車駅';$('segmentFrom').textContent=segmentFromName;$('segmentTo').textContent=segmentToName;decorateTransferStation($('segmentFrom'),segmentFromName);decorateTransferStation($('segmentTo'),segmentToName);
     track.classList.toggle('estimated',!!data?.estimated);track.classList.toggle('unknown',!known);
     if(known)track.setAttribute('aria-valuenow',String(percent));else track.removeAttribute('aria-valuenow');
     marker.hidden=!known;if(known)marker.style.left=(ratio*100)+'%';
@@ -315,14 +315,20 @@ window.createJourneyExperience = function(api) {
     return{...model,ys,totalHeight,currentY,legCount:1,stationCount:n};
   }
   function currentLeg(){return session?.legs?.[session.index]||null}
+  function transferMetaForStation(name){
+    if(!session?.legs?.length||!name)return null;for(let i=0;i<session.legs.length-1;i++){const a=session.legs[i],b=session.legs[i+1];if(a?.to===name&&b?.from===name)return{routeId:a.routeId,station:name,dir:Number(a.dir)||1,nextRouteId:b.routeId,legIndex:i}}return null;
+  }
+  function clearTransferAttrs(el){if(!el)return;el.classList.remove('transfer-guide-trigger','segment-transfer-trigger');el.removeAttribute('role');el.removeAttribute('tabindex');el.removeAttribute('aria-label');for(const k of ['routeId','station','dir','nextRouteId'])delete el.dataset[k]}
+  function decorateTransferStation(el,name){if(!el)return;clearTransferAttrs(el);const meta=transferMetaForStation(name);if(!meta)return;el.classList.add('transfer-guide-trigger','segment-transfer-trigger');el.setAttribute('role','button');el.tabIndex=0;el.setAttribute('aria-label',name+'の降車位置・乗換設備を見る');el.dataset.routeId=meta.routeId;el.dataset.station=meta.station;el.dataset.dir=String(meta.dir);el.dataset.nextRouteId=meta.nextRouteId||''}
+  function openTransferFromElement(el){if(!el?.classList?.contains('transfer-guide-trigger'))return false;api.openTransferGuide?.(el.dataset.routeId,el.dataset.station,Number(el.dataset.dir)||1,el.dataset.nextRouteId||'');return true}
   function journeyOverview(st){
     if(!session?.legs?.length||!api.legOverview)return null;const raw=session.legs.map((leg,index)=>({leg,index,model:api.legOverview(leg)}));if(raw.some(x=>!x.model))return null;
     const stationCount=raw.reduce((n,x)=>n+x.model.stations.length,0),minGap=stationCount<=18?48:stationCount<=36?44:40,rows=[],legBadges=[],legLayouts=[];let y=40;
     for(const item of raw){const {leg,index,model}=item,routeName=short(routeBy(leg.routeId)),local=model.stations,segments=[];for(let j=0;j<local.length-1;j++)segments.push(Math.max(1,local[j+1].distanceFromStart-local[j].distanceFromStart));const avg=segments.reduce((a,b)=>a+b,0)/Math.max(1,segments.length),ys=[];let shared=false;
       if(index===0){ys.push(y);legBadges.push({y:4,index,routeName})}
-      else{const prev=rows.at(-1);shared=!!prev&&prev.name===local[0].name;if(shared){ys.push(prev.y);prev.kind='transfer';prev.transferTo=routeName;prev.nextLegIndex=index;legBadges.push({y:prev.y+17,index,routeName})}else{y=(prev?.y??y)+42;ys.push(y);legBadges.push({y:y-28,index,routeName})}}
-      if(!shared){const src=local[0],kind=index===0?'start':index===raw.length-1&&local.length===1?'end':src.kind;rows.push({...src,y:ys[0],kind,legIndex:index,routeName,legStart:true})}
-      for(let j=1;j<local.length;j++){const d=segments[j-1],factor=Math.max(1,Math.min(1.7,.88+.32*Math.sqrt(d/Math.max(1,avg)))),extra=shared&&j===1?30:0;y=(ys[j-1]??y)+extra+minGap*factor;ys.push(y);const src=local[j],last=j===local.length-1,kind=index===raw.length-1&&last?'end':last?'transfer':src.kind;rows.push({...src,y,kind,legIndex:index,routeName,legStart:false,transferTo:last&&index<raw.length-1?short(routeBy(raw[index+1].leg.routeId)):''})}
+      else{const prev=rows.at(-1);shared=!!prev&&prev.name===local[0].name;if(shared){ys.push(prev.y);prev.kind='transfer';prev.transferTo=routeName;prev.nextLegIndex=index;prev.nextRouteId=leg.routeId;legBadges.push({y:prev.y+17,index,routeName})}else{y=(prev?.y??y)+42;ys.push(y);legBadges.push({y:y-28,index,routeName})}}
+      if(!shared){const src=local[0],kind=index===0?'start':index===raw.length-1&&local.length===1?'end':src.kind;rows.push({...src,y:ys[0],kind,legIndex:index,routeName,routeId:leg.routeId,dir:leg.dir,legStart:true})}
+      for(let j=1;j<local.length;j++){const d=segments[j-1],factor=Math.max(1,Math.min(1.7,.88+.32*Math.sqrt(d/Math.max(1,avg)))),extra=shared&&j===1?30:0;y=(ys[j-1]??y)+extra+minGap*factor;ys.push(y);const src=local[j],last=j===local.length-1,kind=index===raw.length-1&&last?'end':last?'transfer':src.kind;rows.push({...src,y,kind,legIndex:index,routeName,routeId:leg.routeId,dir:leg.dir,legStart:false,transferTo:last&&index<raw.length-1?short(routeBy(raw[index+1].leg.routeId)):'',nextRouteId:last&&index<raw.length-1?raw[index+1].leg.routeId:''})}
       legLayouts[index]={model,ys};
     }
     const active=session.index,layout=legLayouts[active],activeLeg=session.legs[active],activePosition=activeLeg&&st.routeId===activeLeg.routeId?api.routeOverview?.(activeLeg.from,activeLeg.to,activeLeg.dir):null;let currentY=null,estimated=!!st.fix&&!st.fresh,manual=!!st.manual;
@@ -335,10 +341,15 @@ window.createJourneyExperience = function(api) {
   }
   function stationTag(x){if(x.kind==='start')return'出発';if(x.kind==='end')return'最終';if(x.kind==='transfer')return x.transferTo?'乗換 → '+x.transferTo:'乗換';return x.isStop?'停車':'通過'}
   function stationStateClass(x,model){if(!model.journey)return'';const ids=[x.legIndex,Number.isInteger(x.nextLegIndex)?x.nextLegIndex:null].filter(Number.isInteger);if(ids.includes(model.currentLegIndex))return' route-station-current-leg';if(ids.length&&ids.every(i=>i<model.currentLegIndex))return' route-station-completed';return' route-station-future'}
+  function passedStationLabel(x){if(x?.kind==='start')return'✓ 出発済み';if(x?.kind==='transfer')return'✓ 乗換済み';return'✓ 通過済み'}
+  function updateRouteStationProgress(canvas,model){
+    const current=model?.currentY,known=Number.isFinite(current),els=[...canvas.querySelectorAll('.route-station')];
+    els.forEach((el,i)=>{const y=Number(model?.ys?.[i]),x=model?.stations?.[i],passed=known&&Number.isFinite(y)&&y<current-10,atCurrent=known&&Number.isFinite(y)&&Math.abs(y-current)<=10&&!passed,small=el.querySelector('small');el.classList.toggle('route-station-passed',passed);el.classList.toggle('route-station-current-position',atCurrent);if(small){if(!small.dataset.baseTag)small.dataset.baseTag=small.textContent||'';small.textContent=passed?passedStationLabel(x):small.dataset.baseTag}if(!el.dataset.baseAria)el.dataset.baseAria=el.getAttribute('aria-label')||'';el.setAttribute('aria-label',el.dataset.baseAria+(passed?'、通過済み':atCurrent?'、現在位置付近':''))});
+  }
   function overviewMarkup(model){
     const firstY=model.ys[0]||20,lastY=model.ys.at(-1)||firstY,lineStyle='top:'+firstY+'px;bottom:'+Math.max(0,model.totalHeight-lastY)+'px';
     const badges=(model.legBadges||[]).map(b=>'<span class="route-leg-badge '+(b.index<model.currentLegIndex?'completed':b.index===model.currentLegIndex?'current':'future')+'" style="top:'+b.y+'px">区間 '+(b.index+1)+' · '+esc(b.routeName)+'</span>').join('');
-    const stations=model.stations.map((x,i)=>'<span class="route-station route-station-'+x.kind+stationStateClass(x,model)+'" style="top:'+model.ys[i]+'px" aria-label="'+esc(x.name)+'、区間 '+(Number(x.legIndex??0)+1)+'、'+esc(stationTag(x))+'"><i aria-hidden="true"></i><b>'+esc(x.name)+'</b><small>'+esc(stationTag(x))+'</small></span>').join('');
+    const stations=model.stations.map((x,i)=>{const tappable=x.kind==='transfer'&&x.routeId,cls='route-station route-station-'+x.kind+stationStateClass(x,model)+(tappable?' transfer-guide-trigger':''),attrs=tappable?' role="button" tabindex="0" data-route-id="'+esc(x.routeId)+'" data-station="'+esc(x.name)+'" data-dir="'+esc(x.dir||1)+'" data-next-route-id="'+esc(x.nextRouteId||'')+'"':'';return '<span class="'+cls+'"'+attrs+' style="top:'+model.ys[i]+'px" aria-label="'+esc(x.name)+'、区間 '+(Number(x.legIndex??0)+1)+'、'+esc(stationTag(x))+(tappable?'、タップで降車位置を表示':'')+'"><i aria-hidden="true"></i><b>'+esc(x.name)+'</b><small>'+esc(stationTag(x))+'</small></span>'}).join('');
     return'<span class="route-overview-line" style="'+lineStyle+'" aria-hidden="true"><span class="route-overview-line-fill"></span></span>'+badges+stations+'<span class="route-current-marker" aria-hidden="true"><i></i><b></b></span>';
   }
   function centerNormalRoute(behavior){const marker=$('watchRouteCanvas')?.querySelector('.route-current-marker:not([hidden])');marker?.scrollIntoView?.({block:'center',inline:'nearest',behavior:behavior||(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches?'auto':'smooth')})}
@@ -346,7 +357,7 @@ window.createJourneyExperience = function(api) {
     const view=$('watchRouteOverview'),canvas=$('watchRouteCanvas');view.hidden=hide;if(hide)return;const model=overviewFor(st);if(!model){$('watchRouteRange').textContent='全区間を確認中';canvas.className='route-overview-canvas route-overview-empty';canvas.style.height='120px';canvas.innerHTML='<p>出発地と各乗換・最終目的地を確認すると、旅程全体を表示します。</p>';canvas.removeAttribute('aria-valuenow');canvas.setAttribute('aria-valuetext','旅程全体を確認中');return}
     $('watchRouteRange').textContent=model.from+' → '+model.to+' · '+(model.legCount>1?model.legCount+'区間 · ':'')+model.stationCount+'駅';const signature=[model.from,model.to,model.currentLegIndex,model.stations.map(x=>x.name+':'+x.kind+':'+x.legIndex+':'+(x.transferTo||'')).join('|'),model.totalHeight].join('::');
     if(canvas.dataset.signature!==signature){canvas.dataset.signature=signature;canvas.className='route-overview-canvas'+(model.journey?' journey-overview':'');canvas.style.height=model.totalHeight+'px';canvas.innerHTML=overviewMarkup(model)}
-    const marker=canvas.querySelector('.route-current-marker'),fill=canvas.querySelector('.route-overview-line-fill'),known=Number.isFinite(model.currentY),pct=Math.round(model.progressRatio*100),firstY=model.ys[0]||20;marker.hidden=!known;if(known){marker.style.top=model.currentY+'px';marker.classList.toggle('estimated',!!model.estimated);marker.classList.toggle('manual',!!model.manual);marker.querySelector('b').textContent=(model.manual?'手動位置':model.estimated?'推定現在地':'現在地')+(model.journey?' · 区間 '+(model.currentLegIndex+1):'');fill.style.height=Math.max(0,model.currentY-firstY)+'px';canvas.setAttribute('aria-valuenow',String(pct));canvas.setAttribute('aria-valuetext',model.from+'から'+model.to+'まで '+(model.estimated?'推定 ':'')+pct+'%')}else{fill.style.height='0px';canvas.removeAttribute('aria-valuenow');canvas.setAttribute('aria-valuetext','現在地を確認中')}
+    const marker=canvas.querySelector('.route-current-marker'),fill=canvas.querySelector('.route-overview-line-fill'),known=Number.isFinite(model.currentY),pct=Math.round(model.progressRatio*100),firstY=model.ys[0]||20;marker.hidden=!known;if(known){marker.style.top=model.currentY+'px';marker.classList.toggle('estimated',!!model.estimated);marker.classList.toggle('manual',!!model.manual);marker.querySelector('b').textContent=(model.manual?'手動位置':model.estimated?'推定現在地':'現在地')+(model.journey?' · 区間 '+(model.currentLegIndex+1):'');fill.style.height=Math.max(0,model.currentY-firstY)+'px';canvas.setAttribute('aria-valuenow',String(pct));canvas.setAttribute('aria-valuetext',model.from+'から'+model.to+'まで '+(model.estimated?'推定 ':'')+pct+'%')}else{fill.style.height='0px';canvas.removeAttribute('aria-valuenow');canvas.setAttribute('aria-valuetext','現在地を確認中')}updateRouteStationProgress(canvas,model);
     if(routeCenterRequested){routeCenterRequested=false;if(known)requestAnimationFrame(()=>centerNormalRoute())}
   }
   function setProgressViewMode(mode,center=true){if(!['segment','route'].includes(mode)||progressViewMode===mode){if(mode==='route'&&center){routeCenterRequested=true;tick()}return}progressViewMode=mode;routeCenterRequested=mode==='route'&&center;tick()}
@@ -358,7 +369,7 @@ window.createJourneyExperience = function(api) {
     const leap=d.index-session.index;if(leap>1&&!d.veryStrong){resetLegDetect(true);return false}if(legDetect.candidate===d.index)legDetect.hits++;else{legDetect.candidate=d.index;legDetect.hits=1}const needed=session.phase==='transfer'?2:leap===1?3:5;if(legDetect.hits<needed)return false;
     return activateSessionLeg(d.index,{auto:true});
   }
-  const dimScreen=window.createDimScreen?.(api,{getMode:()=>progressViewMode,setMode:m=>setProgressViewMode(m,true),getOverview:st=>overviewFor(st)});
+  const dimScreen=window.createDimScreen?.(api,{getMode:()=>progressViewMode,setMode:m=>setProgressViewMode(m,true),getOverview:st=>overviewFor(st),getTransferMeta:name=>transferMetaForStation(name),openTransferGuide:meta=>api.openTransferGuide?.(meta.routeId,meta.station,meta.dir,meta.nextRouteId||'')});
   let latestWatchState=null;
   setInterval(()=>{if(!booted||document.hidden||!latestWatchState||$('watchHero')?.hidden)return;paintGpsAge($('watchGpsAge'),latestWatchState)},1000);
   function tick(){
@@ -412,6 +423,7 @@ window.createJourneyExperience = function(api) {
     $('watchReset').onclick=()=>clearCurrent();
     $('homeNew').onclick=()=>openEditor();$('homeSaved').onclick=manage;$('homeLocate').onclick=locate;
     $('watchGoal').onclick=editCurrentGoal;$('watchMore').onclick=showTripMenu;$('watchGuide').onclick=openArrival;$('watchMiniBack').onclick=()=>tab('Ride');$('watchViewSegment').onclick=()=>setProgressViewMode('segment');$('watchViewRoute').onclick=()=>setProgressViewMode('route');$('watchRouteCenter').onclick=()=>centerNormalRoute();
+    const transferClick=e=>{const el=e.target.closest?.('.transfer-guide-trigger');if(el)openTransferFromElement(el)},transferKey=e=>{if(!['Enter',' '].includes(e.key))return;const el=e.target.closest?.('.transfer-guide-trigger');if(el){e.preventDefault();openTransferFromElement(el)}};for(const el of [$('segmentFrom'),$('segmentTo'),$('watchRouteCanvas')]){el?.addEventListener('click',transferClick);el?.addEventListener('keydown',transferKey)}
     $('journeyEco').checked=store.eco;$('journeyEco').onchange=()=>{store.eco=$('journeyEco').checked;saveStore();tick()};
     $('journeyUpdateApply').onclick=()=>{if(session||api.state().armed){api.toast('見守り終了後に更新できます。');return}location.reload()};
     $('settingsPresets').onclick=manage;$('notificationHelp').onclick=()=>showNotificationHelp();
@@ -421,7 +433,7 @@ window.createJourneyExperience = function(api) {
     $('stationQuickClear').onclick=()=>{$('stationQuickInput').value='';$('stationQuickInput').focus();api.quickSearch(true)};
     $('stationQuickInput').addEventListener('focus',()=>{if(!$('stationQuickInput').value.trim())api.quickSearch(true)});
     $('openHistory').onclick=()=>{api.tab('History');refreshMini()};$('openSettings').onclick=()=>{api.tab('Settings');refreshMini()};
-    $('copyDiagnostics').onclick=async()=>{const s=api.state(),text='駅間ナビ 50\n路線: '+s.routeName+'\n方向: '+s.directionLabel+'\n目的駅: '+(s.target||'未設定')+'\n位置状態: '+(s.fresh?'確認済み':s.manual?'手動':'未確認・推定')+'\n見守り: '+(s.armed?'開始':'停止')+'\n状態: '+(s.conflict||s.error||'通常')+'\nバイブAPI: '+(typeof navigator.vibrate==='function'?'あり（実機確認が必要）':'なし')+'\nホーム画面起動: '+(navigator.standalone||window.matchMedia?.('(display-mode: standalone)').matches?'はい':'いいえ');try{await navigator.clipboard.writeText(text);api.toast('状況をコピーしました。緯度・経度は含みません。')}catch{dialog('動作状況をコピー','<textarea readonly>'+esc(text)+'</textarea>')}};
+    $('copyDiagnostics').onclick=async()=>{const s=api.state(),text='駅間ナビ 54\n路線: '+s.routeName+'\n方向: '+s.directionLabel+'\n目的駅: '+(s.target||'未設定')+'\n位置状態: '+(s.fresh?'確認済み':s.manual?'手動':'未確認・推定')+'\n見守り: '+(s.armed?'開始':'停止')+'\n状態: '+(s.conflict||s.error||'通常')+'\nバイブAPI: '+(typeof navigator.vibrate==='function'?'あり（実機確認が必要）':'なし')+'\nホーム画面起動: '+(navigator.standalone||window.matchMedia?.('(display-mode: standalone)').matches?'はい':'いいえ');try{await navigator.clipboard.writeText(text);api.toast('状況をコピーしました。緯度・経度は含みません。')}catch{dialog('動作状況をコピー','<textarea readonly>'+esc(text)+'</textarea>')}};
     window.addEventListener('pagehide',()=>{cancelVibrationTest();saveSession(true)});
     document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){cancelVibrationTest();saveSession(true)}else tick()});
     booted=true;tick();
