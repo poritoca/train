@@ -6,7 +6,7 @@ toei_e	都営大江戸線｜光が丘〜都庁前〜環状部	all	true	https://w
 seibu_shinjuku	西武新宿線｜西武新宿〜本川越	all	true	https://wadattsu261.com/content/ss-seibushinjukuhome-all-info/	降車位置ガイド専用路線
 rinkai	りんかい線｜大崎〜新木場	all	true	https://wadattsu261.com/content/r-rinkaihome-all-info/	降車位置ガイド専用路線
 oimachi	東急大井町線｜大井町〜溝の口	all	true	https://wadattsu261.com/content/om-tokyuoimachihome-all-info/	降車位置ガイド専用路線
-tx	つくばエクスプレス｜秋葉原〜つくば	hub	true	https://wadattsu261.com/tx-tsukubaexpresshome-info/	降車位置ガイド専用路線
+tx	つくばエクスプレス｜秋葉原〜つくば	hub	true	https://wadattsu261.com/tx-tsukubaexpresshome-info/	降車位置ガイド専用路線 / v48: 一覧に駅別リンクがある10駅のみ対応確認済み。他の10駅は掲載未確認。
 monorail	東京モノレール｜浜松町〜羽田空港第2ターミナル	hub	true	https://wadattsu261.com/mo-tokyomonorailhome-info/	降車位置ガイド専用路線
 tobu_skytree	東武スカイツリーライン等｜浅草・押上〜久喜（詳細掲載駅）	hub	true	https://wadattsu261.com/ts-tobuisezakihome-info/	降車位置ガイド専用路線
 keisei_main	京成本線｜京成上野〜成田空港	hub	true	https://wadattsu261.com/ks-keiseihome-info/	降車位置ガイド専用路線

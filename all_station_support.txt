@@ -1,4 +1,4 @@
-v37 全登録駅 対応状況
+v48 全登録駅 対応状況
 true=少なくとも1路線で対応 / false=全登録路線で未対応
 
 false	false	YRP野比
@@ -15,23 +15,23 @@ true	true	たまプラーザ
 true	true	つきのわ
 true	true	つきみ野
 true	true	つくし野
-true	true	つくば
+false	false	つくば
 true	true	つつじヶ丘
 true	true	とうきょうスカイツリー
 true	true	ときわ台
 true	true	ひばりヶ丘
 true	true	ふじみ野
 true	true	みずほ台
-true	true	みどりの
+false	false	みどりの
 true	true	みなとみらい
-true	true	みらい平
+false	false	みらい平
 true	true	ゆめが丘
 true	true	センター北
 true	true	センター南
 true	true	モノレール浜松町
 true	true	ユーカリが丘
 true	true	一之江
-true	true	万博記念公園
+false	false	万博記念公園
 true	true	三ツ境
 true	true	三ツ沢上町
 true	true	三ツ沢下町
@@ -119,7 +119,7 @@ true	true	京急東神奈川
 false	false	京急田浦
 true	true	京急蒲田
 false	false	京急長沢
-true	true	京急鶴見
+true	false	京急鶴見
 true	true	京成上野
 true	true	京成中山
 true	true	京成佐倉
@@ -173,7 +173,7 @@ true	true	公津の杜
 true	true	六本木
 true	true	六本木一丁目
 false	false	六浦
-true	true	六町
+false	false	六町
 false	false	六郷土手
 true	true	内幸町
 true	true	分倍河原
@@ -301,14 +301,14 @@ false	false	大鳥居
 true	true	天王台
 true	true	天王洲アイル
 true	true	天王町
-true	true	天空橋
+true	false	天空橋
 true	true	奥沢
 true	true	妙典
 true	true	妙蓮寺
 false	false	子安
 true	true	学芸大学
 true	true	宇都宮
-true	true	守谷
+false	false	守谷
 false	false	安針塚
 true	true	宗吾参道
 true	true	宝町
@@ -529,8 +529,8 @@ true	true	板橋
 true	true	板橋区役所前
 true	true	板橋本町
 true	true	柏
-true	true	柏たなか
-true	true	柏の葉キャンパス
+false	false	柏たなか
+false	false	柏の葉キャンパス
 true	true	柳瀬川
 true	true	柴崎
 true	true	柿生
@@ -674,7 +674,7 @@ true	true	矢野口
 true	true	石川町
 true	true	石橋
 true	true	石神井公園
-true	true	研究学園
+false	false	研究学園
 true	true	磯子
 true	true	祐天寺
 true	true	祖師ヶ谷大蔵
@@ -855,7 +855,7 @@ true	true	雑司が谷
 false	false	雑色
 true	true	霞ケ関
 true	true	霞ヶ関
-true	true	青井
+false	false	青井
 true	true	青山一丁目
 true	true	青物横丁
 true	true	青砥

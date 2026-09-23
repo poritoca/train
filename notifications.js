@@ -42,7 +42,7 @@
         (async () => {
           const scope = new URL('./', location.href).href;
           let reg = await navigator.serviceWorker.getRegistration(scope);
-          if (!reg || reg.scope !== scope) reg = await navigator.serviceWorker.register('./sw.js?v=47.0', { scope: './' });
+          if (!reg || reg.scope !== scope) reg = await navigator.serviceWorker.register('./sw.js?v=49.0', { scope: './' });
           if (!reg.active) reg = await navigator.serviceWorker.ready;
           if (reg.scope !== scope || typeof reg.showNotification !== 'function') throw new Error('unavailable');
           return reg;
@@ -90,7 +90,7 @@
   }
   async function testNow(epoch = ++testEpoch) {
     const ok = await notify('駅間ナビ · 通知テスト', '通知テストです。電車やGPSは使っていません。表示と振動を確認してください。', { test: true, epoch });
-    if (ok && epoch === testEpoch) message = '通知の表示を要求しました。バナーや通知センター、実際の振動を確認してください。';
+    if (ok && epoch === testEpoch) { message = '通知の表示を要求しました。バナーや通知センター、実際の振動を確認してください。'; window.EkikanEffects?.announce('通知テスト', '降車のお知らせも、この光で表示します。'); }
     refresh();
   }
   function startTest() {

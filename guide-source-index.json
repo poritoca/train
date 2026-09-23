@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-21T18:23:00+09:00",
-  "description": "v41 verified station source index: v40 mappings plus direct pages for Keio New Line Shinjuku and Tokyu Oimachi Line Oimachi; Hiyoshi route-name collision/direction preservation and terminal/access-position parser hardening.",
+  "generatedAt": "2026-09-23T02:50:35.349Z",
+  "description": "v41 verified station source index: v40 mappings plus direct pages for Keio New Line Shinjuku and Tokyu Oimachi Line Oimachi; Hiyoshi route-name collision/direction preservation and terminal/access-position parser hardening. v48: verified Keio Inokashira, Tobu Skytree, Keisei and TX station links; distinguish stations not listed by the source; seven reported guide cases. v49: verified Honkawagoe/Kuhonbutsu detail pages and official TX maps for ten unlisted stations.",
   "pairs": {
     "tokaido:東京": {
       "routeId": "tokaido",
@@ -3051,6 +3051,1158 @@
       ],
       "mode": "hub",
       "source": "verified-index"
+    },
+    "keio_inokashira:渋谷": {
+      "routeId": "keio_inokashira",
+      "station": "渋谷",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shibuya-keioinokashirahome-info/",
+        "https://wadattsu261.com/content/shibuya-stationhome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:神泉": {
+      "routeId": "keio_inokashira",
+      "station": "神泉",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinsen-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:駒場東大前": {
+      "routeId": "keio_inokashira",
+      "station": "駒場東大前",
+      "detailUrls": [
+        "https://wadattsu261.com/content/komabatodaimae-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:池ノ上": {
+      "routeId": "keio_inokashira",
+      "station": "池ノ上",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ikenoue-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:下北沢": {
+      "routeId": "keio_inokashira",
+      "station": "下北沢",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shimokitazawa-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:新代田": {
+      "routeId": "keio_inokashira",
+      "station": "新代田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shindaita-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:東松原": {
+      "routeId": "keio_inokashira",
+      "station": "東松原",
+      "detailUrls": [
+        "https://wadattsu261.com/content/higashimatsubara-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:明大前": {
+      "routeId": "keio_inokashira",
+      "station": "明大前",
+      "detailUrls": [
+        "https://wadattsu261.com/content/meidaimae-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:永福町": {
+      "routeId": "keio_inokashira",
+      "station": "永福町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/eifukucho-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:西永福": {
+      "routeId": "keio_inokashira",
+      "station": "西永福",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nishieifuku-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:浜田山": {
+      "routeId": "keio_inokashira",
+      "station": "浜田山",
+      "detailUrls": [
+        "https://wadattsu261.com/content/hamadayama-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:高井戸": {
+      "routeId": "keio_inokashira",
+      "station": "高井戸",
+      "detailUrls": [
+        "https://wadattsu261.com/content/takaido-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:富士見ヶ丘": {
+      "routeId": "keio_inokashira",
+      "station": "富士見ヶ丘",
+      "detailUrls": [
+        "https://wadattsu261.com/content/fujimigaoka-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:久我山": {
+      "routeId": "keio_inokashira",
+      "station": "久我山",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kugayama-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:三鷹台": {
+      "routeId": "keio_inokashira",
+      "station": "三鷹台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/mitakadai-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:井の頭公園": {
+      "routeId": "keio_inokashira",
+      "station": "井の頭公園",
+      "detailUrls": [
+        "https://wadattsu261.com/content/inokashirakoen-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keio_inokashira:吉祥寺": {
+      "routeId": "keio_inokashira",
+      "station": "吉祥寺",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kichijoji-keioinokashirahome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "all",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:久喜": {
+      "routeId": "tobu_skytree",
+      "station": "久喜",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kuki-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:東武動物公園": {
+      "routeId": "tobu_skytree",
+      "station": "東武動物公園",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tobudobutsukoen-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:春日部": {
+      "routeId": "tobu_skytree",
+      "station": "春日部",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kasukabe-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:せんげん台": {
+      "routeId": "tobu_skytree",
+      "station": "せんげん台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/sengendai-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:北越谷": {
+      "routeId": "tobu_skytree",
+      "station": "北越谷",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kitakoshigaya-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:越谷": {
+      "routeId": "tobu_skytree",
+      "station": "越谷",
+      "detailUrls": [
+        "https://wadattsu261.com/content/koshigaya-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:新越谷": {
+      "routeId": "tobu_skytree",
+      "station": "新越谷",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinkoshigaya-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:蒲生": {
+      "routeId": "tobu_skytree",
+      "station": "蒲生",
+      "detailUrls": [
+        "https://wadattsu261.com/content/gamou-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:新田": {
+      "routeId": "tobu_skytree",
+      "station": "新田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinden-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:獨協大学前": {
+      "routeId": "tobu_skytree",
+      "station": "獨協大学前",
+      "detailUrls": [
+        "https://wadattsu261.com/content/dokkyodaigakumae-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:草加": {
+      "routeId": "tobu_skytree",
+      "station": "草加",
+      "detailUrls": [
+        "https://wadattsu261.com/content/soka-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:谷塚": {
+      "routeId": "tobu_skytree",
+      "station": "谷塚",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yatsuka-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:竹ノ塚": {
+      "routeId": "tobu_skytree",
+      "station": "竹ノ塚",
+      "detailUrls": [
+        "https://wadattsu261.com/content/takenotsuka-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:西新井": {
+      "routeId": "tobu_skytree",
+      "station": "西新井",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nishiarai-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:梅島": {
+      "routeId": "tobu_skytree",
+      "station": "梅島",
+      "detailUrls": [
+        "https://wadattsu261.com/content/umejima-tobuisezakihome-info/",
+        "https://wadattsu261.com/content/takenotsuka-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:五反野": {
+      "routeId": "tobu_skytree",
+      "station": "五反野",
+      "detailUrls": [
+        "https://wadattsu261.com/content/gotanno-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:小菅": {
+      "routeId": "tobu_skytree",
+      "station": "小菅",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kosuge-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:北千住": {
+      "routeId": "tobu_skytree",
+      "station": "北千住",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kitasenju-metrohibiyahome-info/",
+        "https://wadattsu261.com/content/kitasenju-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:曳舟": {
+      "routeId": "tobu_skytree",
+      "station": "曳舟",
+      "detailUrls": [
+        "https://wadattsu261.com/content/hikifune-tobuisezaki-kameidohome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:押上": {
+      "routeId": "tobu_skytree",
+      "station": "押上",
+      "detailUrls": [
+        "https://wadattsu261.com/content/oshiage-metrohanzomon-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:牛田": {
+      "routeId": "tobu_skytree",
+      "station": "牛田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ushida-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:堀切": {
+      "routeId": "tobu_skytree",
+      "station": "堀切",
+      "detailUrls": [
+        "https://wadattsu261.com/content/horikiri-tobuisezaki-kameidohome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:鐘ヶ淵": {
+      "routeId": "tobu_skytree",
+      "station": "鐘ヶ淵",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kanegafuchi-tobuisezaki-kameidohome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:東向島": {
+      "routeId": "tobu_skytree",
+      "station": "東向島",
+      "detailUrls": [
+        "https://wadattsu261.com/content/higashimukojima-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:とうきょうスカイツリー": {
+      "routeId": "tobu_skytree",
+      "station": "とうきょうスカイツリー",
+      "detailUrls": [
+        "https://wadattsu261.com/content/tokyoskytree-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tobu_skytree:浅草": {
+      "routeId": "tobu_skytree",
+      "station": "浅草",
+      "detailUrls": [
+        "https://wadattsu261.com/content/asakusa-tobuisezakihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:成田空港": {
+      "routeId": "keisei_main",
+      "station": "成田空港",
+      "detailUrls": [
+        "https://wadattsu261.com/content/naritaairport-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:空港第2ビル": {
+      "routeId": "keisei_main",
+      "station": "空港第2ビル",
+      "detailUrls": [
+        "https://wadattsu261.com/content/naritaairportterminal2-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成成田": {
+      "routeId": "keisei_main",
+      "station": "京成成田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseinarita-keisei-shibayamarailwayhome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成佐倉": {
+      "routeId": "keisei_main",
+      "station": "京成佐倉",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseisakura-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:ユーカリが丘": {
+      "routeId": "keisei_main",
+      "station": "ユーカリが丘",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yukarigaoka-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:勝田台": {
+      "routeId": "keisei_main",
+      "station": "勝田台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/katsutadai-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成大和田": {
+      "routeId": "keisei_main",
+      "station": "京成大和田",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseiowada-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:八千代台": {
+      "routeId": "keisei_main",
+      "station": "八千代台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yachiyodai-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:実籾": {
+      "routeId": "keisei_main",
+      "station": "実籾",
+      "detailUrls": [
+        "https://wadattsu261.com/content/mimomi-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成大久保": {
+      "routeId": "keisei_main",
+      "station": "京成大久保",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseiokubo-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成津田沼": {
+      "routeId": "keisei_main",
+      "station": "京成津田沼",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseitsudanuma-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:谷津": {
+      "routeId": "keisei_main",
+      "station": "谷津",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yatsu-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:船橋競馬場": {
+      "routeId": "keisei_main",
+      "station": "船橋競馬場",
+      "detailUrls": [
+        "https://wadattsu261.com/content/funabashikeibajo-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:大神宮下": {
+      "routeId": "keisei_main",
+      "station": "大神宮下",
+      "detailUrls": [
+        "https://wadattsu261.com/content/daijingushita-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成船橋": {
+      "routeId": "keisei_main",
+      "station": "京成船橋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseifunabashi-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:海神": {
+      "routeId": "keisei_main",
+      "station": "海神",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kaijin-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成西船": {
+      "routeId": "keisei_main",
+      "station": "京成西船",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseinishifuna-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:東中山": {
+      "routeId": "keisei_main",
+      "station": "東中山",
+      "detailUrls": [
+        "https://wadattsu261.com/content/higashinakayama-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成中山": {
+      "routeId": "keisei_main",
+      "station": "京成中山",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseinakayama-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:鬼越": {
+      "routeId": "keisei_main",
+      "station": "鬼越",
+      "detailUrls": [
+        "https://wadattsu261.com/content/onigoe-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成八幡": {
+      "routeId": "keisei_main",
+      "station": "京成八幡",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseiyawata-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:菅野": {
+      "routeId": "keisei_main",
+      "station": "菅野",
+      "detailUrls": [
+        "https://wadattsu261.com/content/sugano-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:市川真間": {
+      "routeId": "keisei_main",
+      "station": "市川真間",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ichikawamama-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:国府台": {
+      "routeId": "keisei_main",
+      "station": "国府台",
+      "detailUrls": [
+        "https://wadattsu261.com/content/konodai-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:江戸川": {
+      "routeId": "keisei_main",
+      "station": "江戸川",
+      "detailUrls": [
+        "https://wadattsu261.com/content/edogawa-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成小岩": {
+      "routeId": "keisei_main",
+      "station": "京成小岩",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseikoiwa-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成高砂": {
+      "routeId": "keisei_main",
+      "station": "京成高砂",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseitakasago-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:青砥": {
+      "routeId": "keisei_main",
+      "station": "青砥",
+      "detailUrls": [
+        "https://wadattsu261.com/content/aoto-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:お花茶屋": {
+      "routeId": "keisei_main",
+      "station": "お花茶屋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/ohanajaya-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:堀切菖蒲園": {
+      "routeId": "keisei_main",
+      "station": "堀切菖蒲園",
+      "detailUrls": [
+        "https://wadattsu261.com/content/horikirishobuen-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成関屋": {
+      "routeId": "keisei_main",
+      "station": "京成関屋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseisekiya-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:千住大橋": {
+      "routeId": "keisei_main",
+      "station": "千住大橋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/senjuohashi-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:町屋": {
+      "routeId": "keisei_main",
+      "station": "町屋",
+      "detailUrls": [
+        "https://wadattsu261.com/content/machiya-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:新三河島": {
+      "routeId": "keisei_main",
+      "station": "新三河島",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinmikawashima-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:日暮里": {
+      "routeId": "keisei_main",
+      "station": "日暮里",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nippori-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "keisei_main:京成上野": {
+      "routeId": "keisei_main",
+      "station": "京成上野",
+      "detailUrls": [
+        "https://wadattsu261.com/content/keiseiueno-keiseihome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:秋葉原": {
+      "routeId": "tx",
+      "station": "秋葉原",
+      "detailUrls": [
+        "https://wadattsu261.com/content/akihabara-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:新御徒町": {
+      "routeId": "tx",
+      "station": "新御徒町",
+      "detailUrls": [
+        "https://wadattsu261.com/content/shinokachimachi-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:浅草": {
+      "routeId": "tx",
+      "station": "浅草",
+      "detailUrls": [
+        "https://wadattsu261.com/content/asakusa-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:南千住": {
+      "routeId": "tx",
+      "station": "南千住",
+      "detailUrls": [
+        "https://wadattsu261.com/content/minamisenju-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:北千住": {
+      "routeId": "tx",
+      "station": "北千住",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kitasenju-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:青井": {
+      "routeId": "tx",
+      "station": "青井",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/aoi/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2025_06_jp.pdf"
+    },
+    "tx:六町": {
+      "routeId": "tx",
+      "station": "六町",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/rokucho/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2025_07_jp.pdf"
+    },
+    "tx:八潮": {
+      "routeId": "tx",
+      "station": "八潮",
+      "detailUrls": [
+        "https://wadattsu261.com/content/yashio-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:三郷中央": {
+      "routeId": "tx",
+      "station": "三郷中央",
+      "detailUrls": [
+        "https://wadattsu261.com/content/misatochuo-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:南流山": {
+      "routeId": "tx",
+      "station": "南流山",
+      "detailUrls": [
+        "https://wadattsu261.com/content/minaminagareyama-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:流山セントラルパーク": {
+      "routeId": "tx",
+      "station": "流山セントラルパーク",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nagareyamacentralpark-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:流山おおたかの森": {
+      "routeId": "tx",
+      "station": "流山おおたかの森",
+      "detailUrls": [
+        "https://wadattsu261.com/content/nagareyamaotakanomori-tsukubaexpresshome-info/"
+      ],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "source": "verified-route-links-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "tx:柏の葉キャンパス": {
+      "routeId": "tx",
+      "station": "柏の葉キャンパス",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/kashiwanoha-campus/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_13_jp_2.pdf"
+    },
+    "tx:柏たなか": {
+      "routeId": "tx",
+      "station": "柏たなか",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/kashiwa-tanaka/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2026_14_jp.pdf"
+    },
+    "tx:守谷": {
+      "routeId": "tx",
+      "station": "守谷",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/moriya/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_15_jp_2.pdf"
+    },
+    "tx:みらい平": {
+      "routeId": "tx",
+      "station": "みらい平",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/miraidaira/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_16_jp.pdf"
+    },
+    "tx:みどりの": {
+      "routeId": "tx",
+      "station": "みどりの",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/midorino/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2025_17_jp.pdf"
+    },
+    "tx:万博記念公園": {
+      "routeId": "tx",
+      "station": "万博記念公園",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/bampaku-kinenkoen/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_18_jp_2.pdf"
+    },
+    "tx:研究学園": {
+      "routeId": "tx",
+      "station": "研究学園",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/kenkyu-gakuen/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/kenkyu-gakuen/"
+    },
+    "tx:つくば": {
+      "routeId": "tx",
+      "station": "つくば",
+      "detailUrls": [],
+      "aggregateUrl": "",
+      "mode": "hub",
+      "availability": "not-listed",
+      "checkedAt": "2026-09-23",
+      "sourceUrl": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/tsukuba/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/tsukuba/"
+    },
+    "oimachi:溝の口": {
+      "routeId": "oimachi",
+      "station": "溝の口",
+      "detailUrls": [
+        "https://wadattsu261.com/content/mizonokuchi-tokyudenentoshi-oimachihome-info/"
+      ],
+      "aggregateUrl": "",
+      "source": "verified-detail-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "seibu_shinjuku:入曽": {
+      "routeId": "seibu_shinjuku",
+      "station": "入曽",
+      "detailUrls": [
+        "https://wadattsu261.com/content/iriso-seibushinjukuhome-info/"
+      ],
+      "aggregateUrl": "",
+      "source": "verified-detail-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "seibu_shinjuku:狭山市": {
+      "routeId": "seibu_shinjuku",
+      "station": "狭山市",
+      "detailUrls": [
+        "https://wadattsu261.com/content/sayamashi-seibushinjukuhome-info/"
+      ],
+      "aggregateUrl": "",
+      "source": "verified-detail-v48",
+      "checkedAt": "2026-09-23"
+    },
+    "seibu_shinjuku:本川越": {
+      "routeId": "seibu_shinjuku",
+      "station": "本川越",
+      "detailUrls": [
+        "https://wadattsu261.com/content/honkawagoe-seibushinjukuhome-no1-2-4-info/"
+      ],
+      "aggregateUrl": "",
+      "source": "verified-detail-v49",
+      "checkedAt": "2026-09-23"
+    },
+    "oimachi:九品仏": {
+      "routeId": "oimachi",
+      "station": "九品仏",
+      "detailUrls": [
+        "https://wadattsu261.com/content/kuhonbutsu-tokyuoimachihome-info/"
+      ],
+      "aggregateUrl": "",
+      "source": "verified-detail-v49",
+      "checkedAt": "2026-09-23"
     }
   },
   "verifiedMultipageRoutes": [
@@ -3068,5 +4220,5 @@
     "yamanote",
     "yokosuka"
   ],
-  "generatedFor": "SILENT JOURNEY 41 / parser27"
+  "generatedFor": "v49"
 }

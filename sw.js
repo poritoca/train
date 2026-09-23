@@ -1,14 +1,14 @@
 'use strict';
 // Cache only this app's shell, and keep caches for other GitHub Pages projects intact.
 const PREFIX='ekikan-shell-'+encodeURIComponent(self.registration.scope)+'-';
-const CACHE=PREFIX+'47.0';
-const SHELL=['./','./index.html','./journey.css','./journey-ui.js','./notifications.js','./iphone-alerts.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./station_coverage_report.txt','./station_coverage_report.tsv','./station_support.json','./all_station_support.txt','./supported_stations.txt','./unsupported_stations.txt','./partially_supported_stations.txt','./source_inventory.tsv','./changes.txt','./validation_report.txt','./github_pages_fix.txt','./parser_regression_tests.txt','./guide-source-index.json'];
+const CACHE=PREFIX+'51.0';
+const SHELL=['./','./index.html','./journey.css','./journey-ui.js','./notifications.js','./dim-screen.js','./visual-effects.js','./iphone-alerts.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./station_coverage_report.txt','./station_coverage_report.tsv','./station_support.json','./all_station_support.txt','./supported_stations.txt','./unsupported_stations.txt','./partially_supported_stations.txt','./source_inventory.tsv','./changes.txt','./validation_report.txt','./github_pages_fix.txt','./parser_regression_tests.txt','./guide-source-index.json'];
 const urls=SHELL.map(p=>new URL(p,self.registration.scope).href);
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(urls);await self.skipWaiting()})()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})()));
 self.addEventListener('fetch',event=>{
  const request=event.request;if(request.method!=='GET')return;
- const url=new URL(request.url);if(url.searchParams.has('v')&&url.searchParams.get('v')!=='47.0')return;url.search='';url.hash='';
+ const url=new URL(request.url);if(url.searchParams.has('v')&&url.searchParams.get('v')!=='51.0')return;url.search='';url.hash='';
  if(!urls.includes(url.href))return;
  event.respondWith((async()=>{
   const cache=await caches.open(CACHE),key=url.href;

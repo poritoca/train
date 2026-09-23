@@ -1,8 +1,8 @@
 {
-  "version": 27,
-  "generatedAt": "2026-09-20T08:40:57+09:00",
+  "version": 49,
+  "generatedAt": "2026-09-23",
   "definitions": {
-    "supported": "true = static data, verified all-stations source, or verified station-detail hub exists for this route/station. false = not yet verified.",
+    "supported": "true = static data, verified all-stations source, or verified station-detail hub exists for this route/station. false = not yet verified. v48: route hub existence alone does not imply station coverage; confirmed unlisted TX stations are false.",
     "inApp": "true = app can show static data or fetch/parse the verified source in the guide UI. Online dynamic sources require network on first fetch.",
     "fullySupported": "true = every registered route entry for the same station is supported.",
     "navigationRoute": "true = route participates in GPS ride navigation.",
@@ -17,13 +17,13 @@
     "guideOnlyRouteStationPairs": 283,
     "allRouteStationPairs": 1359,
     "registeredUniqueStations": 902,
-    "supportedRouteStationPairs": 1258,
-    "unsupportedRouteStationPairs": 101,
-    "inAppRouteStationPairs": 1258,
-    "supportedUniqueStations": 853,
-    "unsupportedUniqueStations": 49,
+    "supportedRouteStationPairs": 1248,
+    "unsupportedRouteStationPairs": 111,
+    "inAppRouteStationPairs": 1248,
+    "supportedUniqueStations": 843,
+    "unsupportedUniqueStations": 59,
     "partiallySupportedUniqueStations": 2,
-    "inAppUniqueStations": 853,
+    "inAppUniqueStations": 843,
     "staticGuideRecords": 189,
     "staticRouteStationPairs": 71,
     "newGuideOnlyUniqueStations": 208,
@@ -536,9 +536,9 @@
       "navigationRoute": false,
       "manualGuideOnly": true,
       "stations": 20,
-      "supported": 20,
-      "inApp": 20,
-      "unsupported": 0
+      "supported": 10,
+      "inApp": 10,
+      "unsupported": 10
     },
     {
       "routeId": "monorail",
@@ -873,19 +873,19 @@
     },
     {
       "station": "つくば",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -999,19 +999,19 @@
     },
     {
       "station": "みどりの",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -1044,19 +1044,19 @@
     },
     {
       "station": "みらい平",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -1170,19 +1170,19 @@
     },
     {
       "station": "万博記念公園",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -4266,19 +4266,19 @@
     },
     {
       "station": "六町",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -7380,19 +7380,19 @@
     },
     {
       "station": "守谷",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -12456,37 +12456,37 @@
     },
     {
       "station": "柏たなか",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
     {
       "station": "柏の葉キャンパス",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -15867,19 +15867,19 @@
     },
     {
       "station": "研究学園",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -19863,19 +19863,19 @@
     },
     {
       "station": "青井",
-      "supported": true,
-      "fullySupported": true,
-      "inApp": true,
-      "fullyInApp": true,
+      "supported": false,
+      "fullySupported": false,
+      "inApp": false,
+      "fullyInApp": false,
       "routes": [
         {
           "routeId": "tx",
           "routeName": "つくばエクスプレス｜秋葉原〜つくば",
           "navigationRoute": false,
           "manualGuideOnly": true,
-          "supported": true,
-          "inApp": true,
-          "supportType": "dynamic_hub"
+          "supported": false,
+          "inApp": false,
+          "supportType": "source_not_listed"
         }
       ]
     },
@@ -38312,10 +38312,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/aoi/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2025_06_jp.pdf"
     },
     {
       "routeId": "tx",
@@ -38326,10 +38329,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/rokucho/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2025_07_jp.pdf"
     },
     {
       "routeId": "tx",
@@ -38410,10 +38416,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/kashiwanoha-campus/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_13_jp_2.pdf"
     },
     {
       "routeId": "tx",
@@ -38424,10 +38433,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/kashiwa-tanaka/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2026_14_jp.pdf"
     },
     {
       "routeId": "tx",
@@ -38438,10 +38450,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/moriya/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_15_jp_2.pdf"
     },
     {
       "routeId": "tx",
@@ -38452,10 +38467,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/miraidaira/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_16_jp.pdf"
     },
     {
       "routeId": "tx",
@@ -38466,10 +38484,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/midorino/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2025_17_jp.pdf"
     },
     {
       "routeId": "tx",
@@ -38480,10 +38501,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/bampaku-kinenkoen/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/assets/pdf/2024_18_jp_2.pdf"
     },
     {
       "routeId": "tx",
@@ -38494,10 +38518,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/kenkyu-gakuen/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/kenkyu-gakuen/"
     },
     {
       "routeId": "tx",
@@ -38508,10 +38535,13 @@
       "yokohamaServing": false,
       "navigationRoute": false,
       "manualGuideOnly": true,
-      "supported": true,
-      "inApp": true,
-      "supportType": "dynamic_hub",
-      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/"
+      "supported": false,
+      "inApp": false,
+      "supportType": "source_not_listed",
+      "source": "https://wadattsu261.com/tx-tsukubaexpresshome-info/",
+      "checkedAt": "2026-09-23",
+      "officialStationUrl": "https://www.mir.co.jp/route_map/tsukuba/",
+      "officialMapUrl": "https://www.mir.co.jp/route_map/tsukuba/"
     },
     {
       "routeId": "monorail",
@@ -39984,23 +40014,19 @@
     "つきのわ",
     "つきみ野",
     "つくし野",
-    "つくば",
     "つつじヶ丘",
     "とうきょうスカイツリー",
     "ときわ台",
     "ひばりヶ丘",
     "ふじみ野",
     "みずほ台",
-    "みどりの",
     "みなとみらい",
-    "みらい平",
     "ゆめが丘",
     "センター北",
     "センター南",
     "モノレール浜松町",
     "ユーカリが丘",
     "一之江",
-    "万博記念公園",
     "三ツ境",
     "三ツ沢上町",
     "三ツ沢下町",
@@ -40131,7 +40157,6 @@
     "公津の杜",
     "六本木",
     "六本木一丁目",
-    "六町",
     "内幸町",
     "分倍河原",
     "初台",
@@ -40257,7 +40282,6 @@
     "妙蓮寺",
     "学芸大学",
     "宇都宮",
-    "守谷",
     "宗吾参道",
     "宝町",
     "実籾",
@@ -40472,8 +40496,6 @@
     "板橋区役所前",
     "板橋本町",
     "柏",
-    "柏たなか",
-    "柏の葉キャンパス",
     "柳瀬川",
     "柴崎",
     "柿生",
@@ -40610,7 +40632,6 @@
     "石川町",
     "石橋",
     "石神井公園",
-    "研究学園",
     "磯子",
     "祐天寺",
     "祖師ヶ谷大蔵",
@@ -40780,7 +40801,6 @@
     "雑司が谷",
     "霞ケ関",
     "霞ヶ関",
-    "青井",
     "青山一丁目",
     "青物横丁",
     "青砥",
@@ -40827,6 +40847,10 @@
   ],
   "unsupportedStations": [
     "YRP野比",
+    "つくば",
+    "みどりの",
+    "みらい平",
+    "万博記念公園",
     "三崎口",
     "三浦海岸",
     "井土ヶ谷",
@@ -40838,6 +40862,7 @@
     "京急長沢",
     "八丁畷",
     "六浦",
+    "六町",
     "六郷土手",
     "北久里浜",
     "北品川",
@@ -40847,12 +40872,15 @@
     "大森町",
     "大鳥居",
     "子安",
+    "守谷",
     "安針塚",
     "屏風浦",
     "弘明寺",
     "戸部",
     "新大津",
     "新馬場",
+    "柏たなか",
+    "柏の葉キャンパス",
     "梅屋敷",
     "横須賀中央",
     "汐入",
@@ -40860,6 +40888,7 @@
     "浦賀",
     "生麦",
     "県立大学",
+    "研究学園",
     "神奈川",
     "神武寺",
     "穴守稲荷",
@@ -40871,6 +40900,7 @@
     "逸見",
     "金沢八景",
     "雑色",
+    "青井",
     "馬堀海岸",
     "鮫洲",
     "鶴見市場",
@@ -40894,23 +40924,19 @@
     "つきのわ",
     "つきみ野",
     "つくし野",
-    "つくば",
     "つつじヶ丘",
     "とうきょうスカイツリー",
     "ときわ台",
     "ひばりヶ丘",
     "ふじみ野",
     "みずほ台",
-    "みどりの",
     "みなとみらい",
-    "みらい平",
     "ゆめが丘",
     "センター北",
     "センター南",
     "モノレール浜松町",
     "ユーカリが丘",
     "一之江",
-    "万博記念公園",
     "三ツ境",
     "三ツ沢上町",
     "三ツ沢下町",
@@ -41041,7 +41067,6 @@
     "公津の杜",
     "六本木",
     "六本木一丁目",
-    "六町",
     "内幸町",
     "分倍河原",
     "初台",
@@ -41167,7 +41192,6 @@
     "妙蓮寺",
     "学芸大学",
     "宇都宮",
-    "守谷",
     "宗吾参道",
     "宝町",
     "実籾",
@@ -41382,8 +41406,6 @@
     "板橋区役所前",
     "板橋本町",
     "柏",
-    "柏たなか",
-    "柏の葉キャンパス",
     "柳瀬川",
     "柴崎",
     "柿生",
@@ -41520,7 +41542,6 @@
     "石川町",
     "石橋",
     "石神井公園",
-    "研究学園",
     "磯子",
     "祐天寺",
     "祖師ヶ谷大蔵",
@@ -41690,7 +41711,6 @@
     "雑司が谷",
     "霞ケ関",
     "霞ヶ関",
-    "青井",
     "青山一丁目",
     "青物横丁",
     "青砥",
@@ -48572,18 +48592,6 @@
     },
     {
       "routeId": "tx",
-      "station": "青井",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "六町",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
       "station": "八潮",
       "inApp": true,
       "supportType": "dynamic_hub"
@@ -48609,54 +48617,6 @@
     {
       "routeId": "tx",
       "station": "流山おおたかの森",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "柏の葉キャンパス",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "柏たなか",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "守谷",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "みらい平",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "みどりの",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "万博記念公園",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "研究学園",
-      "inApp": true,
-      "supportType": "dynamic_hub"
-    },
-    {
-      "routeId": "tx",
-      "station": "つくば",
       "inApp": true,
       "supportType": "dynamic_hub"
     },
@@ -49689,6 +49649,46 @@
     {
       "routeId": "keikyu_z",
       "station": "逗子・葉山"
+    },
+    {
+      "routeId": "tx",
+      "station": "青井"
+    },
+    {
+      "routeId": "tx",
+      "station": "六町"
+    },
+    {
+      "routeId": "tx",
+      "station": "柏の葉キャンパス"
+    },
+    {
+      "routeId": "tx",
+      "station": "柏たなか"
+    },
+    {
+      "routeId": "tx",
+      "station": "守谷"
+    },
+    {
+      "routeId": "tx",
+      "station": "みらい平"
+    },
+    {
+      "routeId": "tx",
+      "station": "みどりの"
+    },
+    {
+      "routeId": "tx",
+      "station": "万博記念公園"
+    },
+    {
+      "routeId": "tx",
+      "station": "研究学園"
+    },
+    {
+      "routeId": "tx",
+      "station": "つくば"
     }
   ]
 }
